@@ -1,0 +1,28 @@
+{
+  "name": "personalwebsite",
+  "version": "1.0.0",
+  "description": "Personal website of Jonathan ATGER",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathanatger/personalwebsite.git"
+  },
+  "author": "Jonathan ATGER",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathanatger/personalwebsite/issues"
+  },
+  "homepage": "https://github.com/jonathanatger/personalwebsite#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "serve-static": "^1.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

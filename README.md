@@ -1,2 +1,2 @@
 # personalwebsite
-Host repository for the personal website
+Host repository for the personal website.
