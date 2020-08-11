@@ -4,7 +4,7 @@ import {Route, Switch} from 'react-router-dom'
 import {HomePage} from './pages/HomePage.js'
 import {Cv} from './pages/Cv.js'
 
-export default function App() {
+/* export default function App() {
     return (
      <Switch>
          <Route exact path ='/' component = {HomePage} />
@@ -12,5 +12,14 @@ export default function App() {
      </Switch>
     )
 };
+ */
 
-
+export default function App() {
+    return (
+     <div>
+         <p>
+             Test App
+         </p>
+     </div>
+    )
+};

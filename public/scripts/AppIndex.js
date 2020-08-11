@@ -1,33 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom' 
+import React from 'react';
+import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
 
-
-
-/* import {BrowserRouter} from 'react-router-dom'
-import App from './App' */
-
-/* 
-class Main extends React.Component{
-
-    render(){
-        <p>
-            Main
-        </p>
-    }
-}
-
-
-ReactDOM.render (
-     <BrowserRouter>
-        <App />
-    </BrowserRouter> 
-    <Main/>
-    ,
+render(
+    <div>
+        Test render AppIndex 
+    </div>,
     document.getElementById('#root')
-)
- */
- 
+  );  
 
 
-document.getElementById('#root').innerText = "TEST the shit out of the app";
+  document.getElementById('#seconddiv').innerText = 'Test the seconddiv';
