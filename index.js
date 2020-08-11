@@ -6,7 +6,7 @@ var serveStatic = require('serve-static');
 const bodyParser = require('body-parser');
 
 
-
+//Config express and declare its components
 var app = express();
 var router = express.Router();
 
@@ -17,22 +17,23 @@ app.use(cors()) ;
 
 var PORT = process.env.PORT || 3000;
 
-//app.use('/', express.static('app/public'), serveStatic('app/public', {'icons': true}))
+//files to send
 app.use(express.static(path.join(__dirname, '/public/dist')));
+
+//get the ability to parse http requests
 app.use(bodyParser.json());
 
-
+//Routes config
 router.get('/', function(req, res){
     res.sendFile(__dirname + '/public/dist/index.html');
-
 });
 
+router.get('/cv', function(req, res){
+    res.sendFile(__dirname + '/public/dist/index.html');
+});
 
-/* router.get('/home', function(req, res){
-    res.sendFile(__dirname + '/app/public/opaloapp.html');
-}); */
-
-
+//Make use of the router
 app.use('/', router);
 
+//launch the server
 app.listen(PORT, function(){ console.log(`Listening at port ${PORT} `)});
