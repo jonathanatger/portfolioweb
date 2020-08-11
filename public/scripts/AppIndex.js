@@ -5,11 +5,10 @@ import App from './App';
 
 
 render(
-    <div>
-        Test render AppIndex 
-    </div>,
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>,
     document.getElementById('#root')
   );  
 
 
-  document.getElementById('#seconddiv').innerText = 'Test the seconddiv';

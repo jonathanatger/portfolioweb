@@ -2,9 +2,13 @@ import React from 'react'
 
 
 export default class Cv extends React.Component {
-
-    render (){
-        <p> THIS is the Cv page ! </p>
+    
+    render(){
+        return(
+        <div>
+            <p> THIS is the Cv of the dude </p>
+        </div>
+        )
     }
-
 }
+
