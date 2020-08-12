@@ -1,6 +1,51 @@
 $font: Helvetica, sans-serif;
+$secondary-font : Arial;
+$font-color:black;
+$font-light-color:#7f7d7d;
 
+a{
+    outline: none;
+    text-decoration: none;
+    color:$font-color;
+}
 
 body{
-    font : $font;
+    font-style : $font;
+    overflow-x: hidden;
 }
+
+.body-frame {
+    margin : 40px;
+}
+
+.navbar-default{
+    display : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    padding-bottom : 40px;
+    
+    & .main-title {
+        font-size: 28px;
+        font-family: raleway, sans-serif;
+        font-weight: 800;
+        letter-spacing: 3px;
+    }
+        
+    & ul {
+        display : flex;
+        flex-direction: row;
+        justify-content: flex-end; 
+        list-style-type: none;
+
+        & li {
+            font-family: raleway, sans-serif;
+            font-size: 16px;
+            font-weight : 300;
+            padding : 0 30px 0 0;  
+        }
+    }
+
+}
+

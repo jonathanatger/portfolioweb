@@ -24,11 +24,23 @@ app.use(express.static(path.join(__dirname, '/public/dist')));
 app.use(bodyParser.json());
 
 //Routes config
-router.get('/', function(req, res){
+router.get('/cv', function(req, res){
     res.sendFile(__dirname + '/public/dist/index.html');
 });
 
-router.get('/cv', function(req, res){
+router.get('/blog', function(req, res){
+    res.sendFile(__dirname + '/public/dist/index.html');
+});
+
+router.get('/blog/:title', function(req, res){
+    res.sendFile(__dirname + '/public/dist/index.html');
+});
+
+router.get('/contact', function(req, res){
+    res.sendFile(__dirname + '/public/dist/index.html');
+});
+
+router.get('/', function(req, res){
     res.sendFile(__dirname + '/public/dist/index.html');
 });
 

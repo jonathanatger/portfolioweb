@@ -1,4 +1,61 @@
+a {
+  outline: none;
+  text-decoration: none;
+  color: black;
+}
+
 body {
-  font: Helvetica, sans-serif;
+  font-style: Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.body-frame {
+  margin: 40px;
+}
+
+.navbar-default {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 40px;
+}
+
+.navbar-default .main-title {
+  font-size: 28px;
+  font-family: raleway, sans-serif;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.navbar-default ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style-type: none;
+}
+
+.navbar-default ul li {
+  font-family: raleway, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0 30px 0 0;
 }
 /*# sourceMappingURL=general.css.map */
