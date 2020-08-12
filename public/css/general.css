@@ -4,13 +4,62 @@ a {
   color: black;
 }
 
+.background-img {
+  height: 100vh;
+  position: absolute;
+  top: 50px;
+  width: 100vw;
+  z-index: -1;
+}
+
 body {
-  font-style: Helvetica, sans-serif;
+  font-style: raleway, sans-serif;
   overflow-x: hidden;
 }
 
 .body-frame {
   margin: 40px;
+}
+
+.credits {
+  color: grey;
+  right: 50%;
+  font-size: 7px;
+}
+
+.french-font {
+  color: #7f7d7d;
+}
+
+.main-container {
+  width: 50%;
+  height: 90vh;
+  /* background-color: red; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h2 {
+  font-family: raleway, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-family: raleway, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-top: 0px;
 }
 
 .navbar-default {

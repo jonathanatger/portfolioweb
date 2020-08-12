@@ -1,12 +1,20 @@
-$font: Helvetica, sans-serif;
-$secondary-font : Arial;
+$font: raleway, sans-serif;
+$secondary-font : raleway, sans-serif;
 $font-color:black;
 $font-light-color:#7f7d7d;
 
 a{
     outline: none;
     text-decoration: none;
-    color:$font-color;
+    color: $font-color;
+}
+
+.background-img{
+    height : 100vh;
+    position :absolute;
+    top : 50px;
+    width : 100vw;
+    z-index: -1;
 }
 
 body{
@@ -16,6 +24,41 @@ body{
 
 .body-frame {
     margin : 40px;
+}
+
+.credits {
+    color:grey;
+    right: 50%;
+    font-size : 7px;
+}
+
+.french-font{
+    color: $font-light-color;
+}
+
+.main-container{
+    width : 50%;
+    height : 90vh;
+    /* background-color: red; */
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+h2 {    
+    font-family: $font;
+    font-size : 48px;
+    font-weight : 400;
+    margin-bottom :0px;
+    padding-bottom:20px;
+}
+
+h3{
+    font-family: $font;
+    font-size : 36px;
+    font-weight : 400;
+    margin-top: 0px;
 }
 
 .navbar-default{
