@@ -11,7 +11,7 @@ export default class HomePage extends React.Component {
             <h2> Hi, I'm Jonathan Atger, an architect and civil engineer 
                 who specialised in the technology behind the design of buildings.
             </h2>
-            <h3 className ='french-font'> Bonjour, je suis Jonathan Atger, un architecte et ingénieur spécialisé dans 
+            <h3 className ='light-font'> Bonjour, je suis Jonathan Atger, un architecte et ingénieur spécialisé dans 
                 les technologies utilisées dans la conception de bâtiments.
             </h3> 
             <h3> I have been involved in integrating various technologies at architecture and engineering offices,

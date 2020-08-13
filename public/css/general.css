@@ -27,7 +27,65 @@ body {
   font-size: 7px;
 }
 
-.french-font {
+.cv-date-location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.cv-date-location h5 {
+  text-align: right;
+}
+
+.cv-first-column {
+  padding-right: 80px;
+}
+
+.cv-global-container {
+  width: 100%;
+}
+
+.cv-second-column {
+  width: 100%;
+  max-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cv-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.cv-work-xp-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cv-work-xp-paragraph {
+  margin: 25px 0px;
+}
+
+.light-font {
   color: #7f7d7d;
 }
 
@@ -49,7 +107,7 @@ body {
 
 h2 {
   font-family: raleway, sans-serif;
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 400;
   margin-bottom: 0px;
   padding-bottom: 20px;
@@ -57,7 +115,33 @@ h2 {
 
 h3 {
   font-family: raleway, sans-serif;
-  font-size: 36px;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+h4 {
+  font-family: raleway, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+
+h5 {
+  font-family: raleway, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+h6 {
+  font-family: raleway, sans-serif;
+  font-size: 16px;
   font-weight: 400;
   margin-top: 0px;
 }
