@@ -21,10 +21,41 @@ body {
   margin: 40px;
 }
 
+.bottom-spacing {
+  margin-bottom: 10px !important;
+}
+
 .credits {
   color: grey;
   right: 50%;
   font-size: 7px;
+}
+
+.cv-ed-exp-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cv-ed-exp-location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .cv-date-location {
@@ -44,8 +75,17 @@ body {
   text-align: right;
 }
 
+.cv-divider {
+  height: 1px;
+  background-color: #dfdfdf;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
 .cv-first-column {
-  padding-right: 80px;
+  width: 550px;
 }
 
 .cv-global-container {
@@ -69,6 +109,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  margin-top: 0px;
 }
 
 .cv-work-xp-header {
@@ -82,7 +123,7 @@ body {
 }
 
 .cv-work-xp-paragraph {
-  margin: 25px 0px;
+  margin: 0px 0px 35px 0px;
 }
 
 .light-font {
