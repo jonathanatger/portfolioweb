@@ -123,14 +123,31 @@ export default class Cv extends React.Component {
             <div className = 'cv-section'>
                 <div className ='cv-first-column'>
                     <h3>EDUCATION</h3>
+                    <h3 className='light-font'>ÉDUCATION</h3>
                 </div>
                 <div className='cv-second-column'>  
                     <EducationExperience
-                        title = 'ARCHITECT'
-                        school = 'ENSA Paris la Villette'
-                        location = "Paris" 
+                        title = 'ARCHITECTURE DEGREE'
+                        school = 'ENSA Paris la Villette, Paris'
+                        dates ='2010-2017'
+                        description = 'Part of a 7-year double-degree curriculum with the engineering degree below.'
+                        />
+
+                    <EducationExperience
+                        title = 'CIVIL ENGINEERING DEGREE'
+                        school = 'ESTP, Paris and Cachan'
                         dates ='2010-2017'
                         />
+
+                    <EducationExperience
+                        title = 'FRONT END AND BACK END WEB DEVELOPMENT'
+                        school = 'FreeCodeCamp'
+                        dates ='2020'
+                        description = 'FreeCodeCamp provides a complete full-stack web development curriculum, with training and projects designed to give theory and practice to anybody motivated enough to learn. It covers anything from HTML to React, Node, Express or security basics and data visualizations. Certifications can be found on the FreeCodeCamp site, for example '
+                        externallink = 'here.'
+                        externallinkroute =  'https://www.freecodecamp.org/certification/jonathanatger/front-end-libraries'
+                        />
+                    
                 </div>
             </div>
             
