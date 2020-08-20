@@ -2,6 +2,8 @@ $font: raleway, sans-serif;
 $secondary-font : raleway, sans-serif;
 $font-color:black;
 $font-light-color:#7f7d7d;
+$--navbar-height:100px;
+$--homepage-message-width:800px;
 
 a{
     outline: none;
@@ -10,18 +12,15 @@ a{
     font-family:$font;
 }
 
-.background-img{
-    height : 100vh;
-    position :absolute;
-    top : 50px;
-    width : 90vw;
-    right:0vw;
-    z-index: -1;
-}
+
 
 body{
     font-style : $font;
     overflow-x: hidden;
+}
+
+.body-content{
+    padding-top : $--navbar-height;
 }
 
 .body-frame {
@@ -49,11 +48,12 @@ body{
     width : 100%;
     min-height : 50vh;
     display : flex;
+    flex-wrap: wrap;
 }
 
 .contact-welcome-message{
     width: 40%;
-    min-width : 600px;
+    /* min-width : 600px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,11 +97,13 @@ body{
     margin-right: 15px;
     margin-bottom: 30px;
     margin-top: 30px;
+    max-width: 88%;
 }
 
 .cv-first-column{
     
-    width : 550px
+    width : 550px;
+    padding-bottom:20px;
 }
 
 .cv-global-container{
@@ -109,14 +111,16 @@ body{
 }
 
 .cv-second-column{
-    width : 100%;
+    width : 88%;
     max-width: 800px;
+    padding-right:10px;
     display : flex;
     flex-direction : column;    
 }
 
 .cv-section {
     display : flex;
+    flex-wrap:wrap;
     width : 100%;
     margin-top : 0px;
 }
@@ -135,10 +139,22 @@ body{
     color: $font-light-color;
 }
 
-.main-container{
-    width : 50%;
-    min-width:600px;
+.hp-background-img{
+    height : 100vh;
+    position :absolute;
+    top : $--navbar-height;
+    width : 90vw;
+    min-width: 1400px;
+    left:10vw;
+    z-index: -1;
+}
+
+.hp-main-container{
+        
     height : 90vh;
+    max-width: 800px;
+    width:90%;
+    min-width: 200px;
     /* background-color: red; */
     display : flex;
     flex-direction: column;
@@ -198,32 +214,43 @@ h6 {
 }
 
 .navbar-default{
+    position : fixed;
+    width:88vw;        
     display : flex;
+    flex-wrap:wrap;
+    top:0;
     flex-direction : row;
     justify-content: space-between;
     background-color: white;
     align-items: center;
-    padding-bottom : 40px;
+    height:$--navbar-height;
     
-    & .main-title {
+    & .navbar-main-title {
         font-size: 28px;
         font-family: raleway, sans-serif;
         font-weight: 800;
         letter-spacing: 3px;
+        margin : 10px 0px;
     }
         
-    & ul {
-        display : flex;
-        flex-direction: row;
-        justify-content: flex-end; 
-        list-style-type: none;
+    
+    }
 
-        & li {
-            font-family: raleway, sans-serif;
-            font-size: 16px;
-            font-weight : 300;
-            padding : 0 30px 0 0;  
-        }
+    .navbar-links{
+        & ul {
+            display : flex;
+            flex-direction: row;
+            justify-content: flex-start; 
+            list-style-type: none;
+            padding-left: 0px;
+            margin:1px;
+    
+            & li {
+                font-family: raleway, sans-serif;
+                font-size: 16px;
+                font-weight : 300;
+                padding : 0 30px 0 0;  
+            }
     }
 
 }

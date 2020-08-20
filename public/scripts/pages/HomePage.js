@@ -7,7 +7,7 @@ export default class HomePage extends React.Component {
     
     render(){
         return(
-        <div className ='main-container'>
+        <div className ='hp-main-container'>
             <h2> Hi, I'm Jonathan Atger, an architect and civil engineer 
                 who specialised in the technology behind the design of buildings.
             </h2>
@@ -18,12 +18,13 @@ export default class HomePage extends React.Component {
                 amongst them BIM, virtual/augmented reality, visual programming... I'm not a software engineer but 
                 knowledgable enough in programming (web development especially, machine learning) to design and realise custom tools.
             </h3>    
-            <img src={techbackground} className='background-img'></img>
+            <img src={techbackground} className='hp-background-img'></img>
             <a href="https://fr.vecteezy.com/vecteur-libre/abstrait"
                 className = 'credits'>
                 Abstrait Vecteurs par Vecteezy
             </a>
         </div>
+
 
         )
     }

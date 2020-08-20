@@ -14,34 +14,36 @@ render(
     <div className = 'body-frame'>
         <BrowserRouter>
             <nav className = 'navbar-default'>
-                <a><Link to="/" className = 'main-title'>JONATHAN ATGER</Link></a>
-                <ul>
-                    <li><Link to="/">ABOUT </Link></li>
-                    <li><Link to="/blog">BLOG </Link></li>
-                    <li><Link to="/cv">CV </Link></li>                
-                    <li><Link to="/contact">CONTACT </Link></li>
-                </ul> 
-                {/* <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fas fa-bars"></i>
-                </a> */}
+                <a><Link to="/" className = 'navbar-main-title'>JONATHAN ATGER</Link></a>
+                <div className='navbar-links'>
+                    <ul>
+                        <li><Link to="/">ABOUT </Link></li>
+                        <li><Link to="/blog">BLOG </Link></li>
+                        <li><Link to="/cv">CV </Link></li>                
+                        <li><Link to="/contact">CONTACT </Link></li>
+                    </ul>  
+                </div>
+                               
             </nav>  
-            <Switch> 
-                <Route path ='/blog/:title'>
-                    <BlogPostContainer/>    
-                </Route>
-                <Route path ='/blog'>
-                    <BlogSummary />    
-                </Route>
-                <Route path ='/cv'>
-                    <Cv />    
-                </Route>
-                <Route path ='/contact'>
-                    <ContactSheet />    
-                </Route>
-                <Route path ='/'>
-                    <HomePage />    
-                </Route>
-            </Switch>
+            <div className='body-content'>
+                <Switch> 
+                    <Route path ='/blog/:title'>
+                        <BlogPostContainer blogtitle='title' />    
+                    </Route>
+                    <Route path ='/blog'>
+                        <BlogSummary />    
+                    </Route>
+                    <Route path ='/cv'>
+                        <Cv />    
+                    </Route>
+                    <Route path ='/contact'>
+                        <ContactSheet />    
+                    </Route>
+                    <Route path ='/'>
+                        <HomePage />    
+                    </Route>
+                </Switch>
+            </div>
         </BrowserRouter>
     </div>
     ,

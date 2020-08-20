@@ -1,13 +1,21 @@
 import React from 'react'
+import Articles from './blogposts/Articles.js'
 
 
 export default class BlogPostContainer extends React.Component {
-    
+        
     render(){
         return(
-        <div>
-            <p> THIS is the blog post container for now... </p>
-        </div>
+            <div>
+                <div>
+                    <h1>
+                        {this.props.title}
+                    </h1>
+                </div>
+                <div>
+                    {this.props.blogpostcomponents}
+                </div>
+            </div>
         )
     }
 }
