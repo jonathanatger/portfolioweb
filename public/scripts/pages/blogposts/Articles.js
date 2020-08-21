@@ -1,24 +1,40 @@
 import React from 'react';
 import {BlogPost, BlogPostText, BlogPostImage} from './BlogPost.js'
-import { render } from 'react-dom';
-import { text } from 'express';
 
 
-export default class Article extends React.Component {
-    constructor(){
-        super()
-        text1='Lorem ipsum'; 
 
+
+let ArticlesSummary = [
+    {
+        title : 'Article 1',
+        date : '20191027',
+        headimage : 'techbckgrnd.jpg',
+        component : Article1
+    },
+    {
+        title : 'Article 2',
+        date : '20200327',
+        headimage : 'techbckgrnd.jpg',
+        component : Article1
     }
-    
-    
-    
-    render(){
-        return(
-            <BlogPost>
-                
-            </BlogPost>
-        )
-    }
+]
+
+
+
+function Article1(){
+    return(
+        <BlogPost
+        contents = {[
+            <BlogPostText/>,
+            <BlogPostImage />
+        ]}
+        
+        
+        
+        />
+    )
 }
 
+
+
+export {ArticlesSummary}

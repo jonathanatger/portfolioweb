@@ -1,5 +1,5 @@
 import React from 'react'
-import techbackground from '../../dist/techbckgrnd.jpg'
+import techbackground from '../../content/techbckgrnd.jpg'
 import '../../css/general.css'
 
 

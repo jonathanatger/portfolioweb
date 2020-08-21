@@ -12,7 +12,14 @@ a{
     font-family:$font;
 }
 
+.blog-article-summary{
+    display : flex;
+    flex-direction:column;
+}
 
+.blog-full-width-img{
+    width: 100%;
+}
 
 body{
     font-style : $font;

@@ -1,6 +1,23 @@
 import React from 'react';
 import '../../../css/general.css'
 
+
+class BlogPost extends React.Component{
+    constructor(){
+        super();
+        
+    }
+
+    render(){
+        return(
+            <div>
+                {this.props.contents}
+            </div>
+        )        
+    }
+
+}
+
 class BlogPostText extends React.Component{
     render() {
         return(
