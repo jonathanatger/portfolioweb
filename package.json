@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "node index.js",
-    "start": "node index.js",
+    "dev": "node index.js",
     "react-dev": "webpack --config webpack.config.js --mode development --watch",
     "server-dev": "nodemon index.js",
-    "debug": "nodemon --inspect index.js"
+    "debug": "nodemon --inspect index.js",
+    "heroku-postbuild": "webpack -p"
   },
   "repository": {
     "type": "git",
