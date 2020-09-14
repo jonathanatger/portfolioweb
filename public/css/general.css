@@ -130,11 +130,17 @@ body {
   padding-top: 100px;
 }
 
+@media screen and (max-width: 600px) {
+  .body-content {
+    padding-top: 60px;
+  }
+}
+
 .body-frame {
   margin-left: 6vw;
   margin-right: 6vw;
   margin-top: 40px;
-  min-width: 400px;
+  min-width: 300px;
 }
 
 .bottom-spacing {
@@ -383,5 +389,20 @@ body {
   font-size: 16px;
   font-weight: 300;
   padding: 0 30px 0 0;
+}
+
+@media screen and (max-width: 600px) and (max-width: 600px) {
+  .navbar-default {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-default .navbar-main-title {
+    font-size: 20px;
+  }
+  .navbar-links ul li {
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=general.css.map */
