@@ -4,6 +4,7 @@ $font-color:black;
 $font-light-color:#7f7d7d;
 $sec-color:#f5bb50;
 $--navbar-height:100px;
+$--navbar-height-dim:60px;
 $--homepage-message-width:800px;
 
 
@@ -148,11 +149,17 @@ body{
     padding-top : $--navbar-height;
 }
 
+@media screen and (max-width: 600px) {
+    .body-content{
+        padding-top : $--navbar-height-dim;
+    }
+}
+
 .body-frame {
     margin-left: 6vw;
     margin-right : 6vw;
     margin-top : 40px;
-    min-width:400px;
+    min-width:300px;
 }
 .bottom-spacing{
     margin-bottom: 10px !important;
@@ -291,6 +298,8 @@ body{
     color:$sec-color;
 }
 
+
+
 .navbar-default{
     position : fixed;
     width:88vw;        
@@ -335,5 +344,26 @@ body{
             }
     }
 
+}
+
+@media screen and (max-width: 600px){
+
+    .navbar-default{
+        @media screen and (max-width: 600px) {
+            height:$--navbar-height-dim;
+        }
+
+        & .navbar-main-title{
+        font-size: 20px;
+        }
+    }
+
+    .navbar-links{
+        & ul{
+            & li{
+                font-size : 12px;
+            }
+        }
+    }
 }
 
