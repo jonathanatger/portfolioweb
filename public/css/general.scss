@@ -270,16 +270,12 @@ body{
     /* background-color: red; */
     display : flex;
     flex-direction: column;
-    justify-content: center;
-    
+    justify-content: center;    
 }
-
 
 .navbar-active{
     color:$sec-color;
 }
-
-
 
 .navbar-default{
     position : fixed;
