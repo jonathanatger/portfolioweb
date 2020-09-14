@@ -1,3 +1,99 @@
+@media screen and (min-width: 601px) {
+  h1 {
+    font-family: raleway, sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  h2 {
+    font-family: raleway, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    margin-top: 0px;
+  }
+  h3 {
+    font-family: raleway, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+  h4 {
+    font-family: raleway, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 3px;
+  }
+  h5 {
+    font-family: raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    text-align: justify;
+    line-height: 1.5;
+  }
+  h6 {
+    font-family: raleway, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-family: raleway, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  h2 {
+    font-family: raleway, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    margin-top: 0px;
+  }
+  h3 {
+    font-family: raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+  h4 {
+    font-family: raleway, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 3px;
+  }
+  h5 {
+    font-family: raleway, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    text-align: justify;
+    line-height: 1.5;
+  }
+  h6 {
+    font-family: raleway, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 0px;
+  }
+}
+
 a {
   outline: none;
   text-decoration: none;
@@ -38,7 +134,7 @@ body {
   margin-left: 6vw;
   margin-right: 6vw;
   margin-top: 40px;
-  min-width: 600px;
+  min-width: 400px;
 }
 
 .bottom-spacing {
@@ -212,7 +308,6 @@ body {
   height: 90vh;
   max-width: 800px;
   width: 90%;
-  min-width: 200px;
   /* background-color: red; */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -224,57 +319,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-h1 {
-  font-family: raleway, sans-serif;
-  font-size: 48px;
-  font-weight: 400;
-  padding-bottom: 20px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-}
-
-h2 {
-  font-family: raleway, sans-serif;
-  font-size: 36px;
-  font-weight: 400;
-  margin-bottom: 0px;
-  padding-bottom: 20px;
-  margin-top: 0px;
-}
-
-h3 {
-  font-family: raleway, sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  margin-top: 0px;
-  margin-bottom: 5px;
-}
-
-h4 {
-  font-family: raleway, sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  margin-top: 0px;
-  margin-bottom: 3px;
-}
-
-h5 {
-  font-family: raleway, sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: 0px;
-  margin-bottom: 3px;
-  text-align: justify;
-  line-height: 1.5;
-}
-
-h6 {
-  font-family: raleway, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  margin-top: 0px;
 }
 
 .navbar-active {
@@ -289,7 +333,9 @@ h6 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  top: 0;
+  top: 0px;
+  left: 0px;
+  margin: 0 6vw 0 6vw;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -324,9 +370,9 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   list-style-type: none;
   padding-left: 0px;
   margin: 1px;

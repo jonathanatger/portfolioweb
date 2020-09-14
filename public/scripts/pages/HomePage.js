@@ -1,5 +1,5 @@
 import React from 'react'
-import techbackground from '../../content/techbckgrnd.jpg'
+
 import '../../css/general.css'
 
 
@@ -18,11 +18,6 @@ export default class HomePage extends React.Component {
                 amongst them BIM, virtual/augmented reality, visual programming... I'm not a software engineer but 
                 knowledgable enough in programming (web development especially, machine learning) to design and realise custom tools.
             </h3>    
-            <img src={techbackground} className='hp-background-img'></img>
-            <a href="https://fr.vecteezy.com/vecteur-libre/abstrait"
-                className = 'credits'>
-                Abstrait Vecteurs par Vecteezy
-            </a>
         </div>
 
 
