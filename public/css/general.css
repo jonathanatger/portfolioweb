@@ -121,6 +121,7 @@ body {
   margin-right: 6vw;
   margin-top: 40px;
   min-width: 300px;
+  padding: 0;
 }
 
 .contact-links {
@@ -306,6 +307,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+body {
+  padding: 0;
+  margin: 0;
 }
 
 .navbar-active {
