@@ -2,6 +2,7 @@ $font: raleway, sans-serif;
 $secondary-font : raleway, sans-serif;
 $font-color:black;
 $font-light-color:#7f7d7d;
+$sec-color:#f5bb50;
 $--navbar-height:100px;
 $--homepage-message-width:800px;
 
@@ -15,6 +16,13 @@ a{
 .blog-article-summary{
     display : flex;
     flex-direction:column;
+}
+
+.blog-embedded-link{
+    font-weight: bold;
+    color:$sec-color;
+    text-decoration : underline;
+
 }
 
 .blog-full-width-img{
@@ -220,6 +228,10 @@ h6 {
     margin-top: 0px;
 }
 
+.navbar-active{
+    color:$sec-color;
+}
+
 .navbar-default{
     position : fixed;
     width:88vw;        
@@ -238,9 +250,11 @@ h6 {
         font-weight: 800;
         letter-spacing: 3px;
         margin : 10px 0px;
-    }
-        
-    
+        }
+     }
+
+    .navbar-elt:hover{
+        color:$sec-color;
     }
 
     .navbar-links{
