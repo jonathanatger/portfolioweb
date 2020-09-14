@@ -7,8 +7,8 @@ export default class ContactSheet extends React.Component {
         return(
         <div className="contact-main">
             <div className='contact-welcome-message'>
-                <h2 className='bottom-spacing'> Don't be a stranger,</h2>
-                <h1>And say hello !</h1>
+                <h2> You are very welcome to</h2>
+                <h1 className='navbar-active'>Say hello !</h1>
             </div>
             <div className='contact-links'>
                 <a target='_blank' href="mailto:jonathan.atger@yahoo.fr"><i class="fa fa-envelope"></i>  jonathan.atger@yahoo.fr</a>

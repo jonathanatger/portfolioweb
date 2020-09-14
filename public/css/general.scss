@@ -10,7 +10,7 @@ $--homepage-message-width:800px;
 
 //fonts
 
-@media screen and (min-width: 601px) {
+
     h1 {    
         font-family: $font;
         font-size : 48px;
@@ -26,6 +26,7 @@ $--homepage-message-width:800px;
         margin-bottom :0px;
         padding-bottom:20px;
         margin-top:0px;
+        text-align:justify;
     }
     
     h3{
@@ -34,6 +35,7 @@ $--homepage-message-width:800px;
         font-weight : 400;
         margin-top: 0px;
         margin-bottom : 5px;
+        text-align:justify;
     }
     
     h4{
@@ -42,6 +44,7 @@ $--homepage-message-width:800px;
         font-weight : 400;
         margin-top: 0px;
         margin-bottom : 3px;
+        text-align:justify;
     }
     
     h5{
@@ -59,58 +62,33 @@ $--homepage-message-width:800px;
         font-size : 16px;
         font-weight : 400;
         margin-top: 0px;
+        text-align:justify;
     }
-  }
+  
 
   @media screen and (max-width: 600px) {
-    h1 {    
-        font-family: $font;
+    h1 {            
         font-size : 30px;
-        font-weight : 400;
-        padding-bottom :20px;
-        margin-bottom : 0px;
-        margin-top : 0px;
-    }
+           }
     h2 {    
-        font-family: $font;
+       
         font-size : 24px;
-        font-weight : 400;
-        margin-bottom :0px;
-        padding-bottom:20px;
-        margin-top:0px;
-    }
+            }
     
     h3{
-        font-family: $font;
-        font-size : 18px;
-        font-weight : 400;
-        margin-top: 0px;
-        margin-bottom : 5px;
-    }
+         font-size : 18px;
+            }
     
     h4{
-        font-family: $font;
-        font-size : 16px;
-        font-weight : 400;
-        margin-top: 0px;
-        margin-bottom : 3px;
-    }
+       font-size : 16px;
+        }
     
     h5{
-        font-family: $font;
         font-size : 14px;
-        font-weight : 400;
-        margin-top: 0px;
-        margin-bottom : 3px;
-        text-align:justify;
-        line-height: 1.5;
     }
     
-    h6 {
-        font-family: $font;
+    h6 {       
         font-size : 12px;
-        font-weight : 400;
-        margin-top: 0px;
     }
   }
 
@@ -161,9 +139,6 @@ body{
     margin-top : 40px;
     min-width:300px;
 }
-.bottom-spacing{
-    margin-bottom: 10px !important;
-}
 
 .contact-links{
     display : flex;
@@ -176,6 +151,14 @@ body{
     }
 }
 
+@media screen and (max-width:600px){
+    .contact-links{
+        & a{
+            font-size:18px;
+        }
+    }
+}
+
 .contact-main{
     width : 100%;
     min-height : 50vh;
@@ -185,10 +168,11 @@ body{
 
 .contact-welcome-message{
     width: 40%;
-    /* min-width : 600px; */
+    min-width : 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom : 40px;
 }
 
 
@@ -282,23 +266,16 @@ body{
 }
 
 .hp-main-container{
-        
-    height : 90vh;
-    max-width: 800px;
     width:90%;    
     /* background-color: red; */
     display : flex;
     flex-direction: column;
-    justify-content: center;
-    
+    justify-content: center;    
 }
-
 
 .navbar-active{
     color:$sec-color;
 }
-
-
 
 .navbar-default{
     position : fixed;

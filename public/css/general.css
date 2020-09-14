@@ -1,96 +1,76 @@
-@media screen and (min-width: 601px) {
-  h1 {
-    font-family: raleway, sans-serif;
-    font-size: 48px;
-    font-weight: 400;
-    padding-bottom: 20px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-  }
-  h2 {
-    font-family: raleway, sans-serif;
-    font-size: 36px;
-    font-weight: 400;
-    margin-bottom: 0px;
-    padding-bottom: 20px;
-    margin-top: 0px;
-  }
-  h3 {
-    font-family: raleway, sans-serif;
-    font-size: 30px;
-    font-weight: 400;
-    margin-top: 0px;
-    margin-bottom: 5px;
-  }
-  h4 {
-    font-family: raleway, sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    margin-top: 0px;
-    margin-bottom: 3px;
-  }
-  h5 {
-    font-family: raleway, sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    margin-top: 0px;
-    margin-bottom: 3px;
-    text-align: justify;
-    line-height: 1.5;
-  }
-  h6 {
-    font-family: raleway, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 0px;
-  }
+h1 {
+  font-family: raleway, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+h2 {
+  font-family: raleway, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
+  margin-top: 0px;
+  text-align: justify;
+}
+
+h3 {
+  font-family: raleway, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+h4 {
+  font-family: raleway, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  text-align: justify;
+}
+
+h5 {
+  font-family: raleway, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+h6 {
+  font-family: raleway, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0px;
+  text-align: justify;
 }
 
 @media screen and (max-width: 600px) {
   h1 {
-    font-family: raleway, sans-serif;
     font-size: 30px;
-    font-weight: 400;
-    padding-bottom: 20px;
-    margin-bottom: 0px;
-    margin-top: 0px;
   }
   h2 {
-    font-family: raleway, sans-serif;
     font-size: 24px;
-    font-weight: 400;
-    margin-bottom: 0px;
-    padding-bottom: 20px;
-    margin-top: 0px;
   }
   h3 {
-    font-family: raleway, sans-serif;
     font-size: 18px;
-    font-weight: 400;
-    margin-top: 0px;
-    margin-bottom: 5px;
   }
   h4 {
-    font-family: raleway, sans-serif;
     font-size: 16px;
-    font-weight: 400;
-    margin-top: 0px;
-    margin-bottom: 3px;
   }
   h5 {
-    font-family: raleway, sans-serif;
     font-size: 14px;
-    font-weight: 400;
-    margin-top: 0px;
-    margin-bottom: 3px;
-    text-align: justify;
-    line-height: 1.5;
   }
   h6 {
-    font-family: raleway, sans-serif;
     font-size: 12px;
-    font-weight: 400;
-    margin-top: 0px;
   }
 }
 
@@ -143,10 +123,6 @@ body {
   min-width: 300px;
 }
 
-.bottom-spacing {
-  margin-bottom: 10px !important;
-}
-
 .contact-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -165,6 +141,12 @@ body {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 600px) {
+  .contact-links a {
+    font-size: 18px;
+  }
+}
+
 .contact-main {
   width: 100%;
   min-height: 50vh;
@@ -177,7 +159,7 @@ body {
 
 .contact-welcome-message {
   width: 40%;
-  /* min-width : 600px; */
+  min-width: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,6 +170,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 40px;
 }
 
 .credits {
@@ -311,8 +294,6 @@ body {
 }
 
 .hp-main-container {
-  height: 90vh;
-  max-width: 800px;
   width: 90%;
   /* background-color: red; */
   display: -webkit-box;
