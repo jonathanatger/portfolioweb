@@ -2,8 +2,23 @@ import React from 'react'
 import {ArticlesSummary} from './blogposts/Articles.js'
 import '../../css/general.css' 
 
+
+export default class BlogSummary extends React.Component {
+    render(){
+        return(
+            <div>
+                <h4>The blog section is coming soon !</h4>
+                <br></br>
+                <h3>You can visit former blog space <a className='blog-embedded-link' target='_blank' href='https://outputbuilding.wordpress.com/'>output=building</a> for articles on design technology and walkthroughs of some of the tools I built.</h3>
+            </div>
+        )
+    }
+}
+
+
+/* 
 function importAll(r) {
-    /* return r.keys().map(r); */
+    // return r.keys().map(r); 
 
 
     let images = {};
@@ -44,3 +59,4 @@ export default class BlogSummary extends React.Component {
     }
 }
 
+ */

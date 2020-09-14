@@ -16,8 +16,7 @@ export default class ContactSheet extends React.Component {
                 <a target='_blank' href="https://github.com/jonathanatger"><i class="fab fa-github"></i>  https://github.com/jonathanatger</a>       
                 <a target='_blank' href="https://twitter.com/jonathanatger"><i class="fab fa-twitter"></i>  https://twitter.com/jonathanatger</a>  
 
-                
-            </div>
+                </div>
 
         </div>
         )

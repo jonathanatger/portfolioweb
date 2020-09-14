@@ -15,6 +15,12 @@ a {
           flex-direction: column;
 }
 
+.blog-embedded-link {
+  font-weight: bold;
+  color: #f5bb50;
+  text-decoration: underline;
+}
+
 .blog-full-width-img {
   width: 100%;
 }
@@ -271,6 +277,10 @@ h6 {
   margin-top: 0px;
 }
 
+.navbar-active {
+  color: #f5bb50;
+}
+
 .navbar-default {
   position: fixed;
   width: 88vw;
@@ -300,6 +310,10 @@ h6 {
   font-weight: 800;
   letter-spacing: 3px;
   margin: 10px 0px;
+}
+
+.navbar-elt:hover {
+  color: #f5bb50;
 }
 
 .navbar-links ul {

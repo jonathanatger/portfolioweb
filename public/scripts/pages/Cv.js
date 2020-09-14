@@ -11,7 +11,7 @@ export default class Cv extends React.Component {
             <div className = 'cv-section'>
                 <div className ='cv-first-column'>
                     <h3>WORK EXPERIENCE</h3>
-                    <h3 className = 'light-font'>EXPÉRIENCE PROFESSIONNELLE</h3>
+                    
                 </div>
                 <div className='cv-second-column'>                    
                     <WorkExperience 
@@ -19,7 +19,7 @@ export default class Cv extends React.Component {
                      company = 'Ingérop'
                      dates = 'july 2018 - today'
                      location = 'Paris'
-                     description = 'I worked on all aspects related to the use of BIM and technology in the design stage at an engineering firm. It involved consultancy work with clients, team support in the projects, creating new workflows and tools. Amongst the missions, I was supervising the BIM process of a hospital in the building stage for a client, doing BIM coordination work for a 200.000 square meters office project, developing Revit plugins, testing augmented and virtual reality tools, and leading a research on the application of machine learning in our field of expertise. Additional missions revolved around building design coordination with an emphasis on the interface of MEP and other trades.'
+                     description = 'I worked on all aspects related to the use of BIM and technology in the design stage at an engineering firm. It involved consultancy work with clients, team support in the projects, creating new workflows and tools. Amongst the missions, I was supervising the BIM process of a hospital in the building stage for a client, doing BIM coordination work for a 200.000 square meters office project, developing Revit plugins, testing augmented and virtual reality tools, and doing practical research on the application of machine learning in our field of expertise. Additional missions revolved around building design coordination with an emphasis on the interface of MEP and other trades.'
                         />
 
                     <WorkExperience 
@@ -109,7 +109,7 @@ export default class Cv extends React.Component {
                 <div className='cv-second-column'>  
                     <SkillSet 
                     skillsetname='Dynamo packages LinlkIt and Morpheus' 
-                    description = 'For the needs of a demanding project, I created an open-source dynamo package called LinkIt. It allows users to automate the linking of models in Revit. It then grew into other uses and got a new name in Morpheus to acknowledge that. Source code can be found '
+                    description = 'For the needs of a demanding project, I created an open-source dynamo package called LinkIt allowing users to automate the linking of models in Revit. It then grew into other uses and got a new name in Morpheus. Source code can be found '
                     externallink = 'here.'
                     externallinkroute = 'https://github.com/jonathanatger/dynamo'
                         />
