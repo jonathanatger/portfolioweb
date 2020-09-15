@@ -3,7 +3,7 @@ $secondary-font : raleway, sans-serif;
 $font-color:black;
 $font-light-color:#7f7d7d;
 $sec-color:#f5bb50;
-$--navbar-height:100px;
+$--navbar-height:60px;
 $--navbar-height-dim:60px;
 $--homepage-message-width:800px;
 
@@ -299,6 +299,7 @@ body{
     flex-wrap:wrap;
     top:0px;
     left:0px;
+    right:0;
     margin:0 6vw 0 6vw;
     flex-direction : row;
     justify-content: space-between;
