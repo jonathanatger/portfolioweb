@@ -1,19 +1,22 @@
 import React from 'react'
-import Articles from './blogposts/Articles.js'
+
 
 
 export default class BlogPostContainer extends React.Component {
+    constructor(){
+        super();
+    }
         
     render(){
         return(
             <div>
                 <div>
                     <h1>
-                        {this.props.title}
+                        TITLE
                     </h1>
                 </div>
                 <div>
-                    {this.props.blogpostcomponents}
+                    This is a test of component BlogPostContainer
                 </div>
             </div>
         )

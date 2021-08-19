@@ -33,8 +33,9 @@ router.get('/blog', function(req, res){
 });
 
 router.get('/blog/:title', function(req, res){
-    res.sendFile(__dirname + '/public/dist/index.html');
+    res.sendFile(__dirname + '/public/dist/index.html');    
 });
+
 
 router.get('/contact', function(req, res){
     res.sendFile(__dirname + '/public/dist/index.html');
