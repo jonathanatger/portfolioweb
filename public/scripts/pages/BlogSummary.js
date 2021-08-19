@@ -4,7 +4,7 @@ import {ArticlesSummary} from './blogposts/Articles.js'
 import '../../css/general.css' 
 
 
-/*
+
 export default class BlogSummary extends React.Component {
     render(){
         return(
@@ -16,7 +16,9 @@ export default class BlogSummary extends React.Component {
         )
     }
 }
-*/
+
+
+/*
 
 // import all images
 function importAll(r) {
@@ -62,3 +64,4 @@ export default class BlogSummary extends React.Component {
 }
 
  
+*/

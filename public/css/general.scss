@@ -262,6 +262,14 @@ body{
     justify-content: center;      
     min-width:300px;
     
+    
+    & h1, h2{
+        text-align: justify;
+    }
+    h1 {
+        text-justify: distribute;
+    }
+    
    
 }
 

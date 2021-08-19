@@ -297,6 +297,14 @@ body {
   min-width: 300px;
 }
 
+.hp-description h1, .hp-description h2 {
+  text-align: justify;
+}
+
+.hp-description h1 {
+  text-justify: distribute;
+}
+
 .hp-img {
   max-height: 50vh;
   max-width: 100%;
