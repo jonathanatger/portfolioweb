@@ -10,40 +10,57 @@ export default class Cv extends React.Component {
             {/* Work experiences */}
             <div className = 'cv-section'>
                 <div className ='cv-first-column'>
-                    <h3>WORK EXPERIENCE</h3>
+                    <h3>EXPERIENCE PROFESSIONNELLE</h3>
                     
                 </div>
                 <div className='cv-second-column'>                    
                     <WorkExperience 
-                     jobtitle = 'BIM Manager / Design technology implementation'
+                     jobtitle = 'BIM Manager / Spécialiste technologies de la conception'
                      company = 'Ingérop'
-                     dates = 'july 2018 - today'
+                     dates = 'july 2018 - juillet 2021'
                      location = 'Paris'
-                     description = 'I worked on all aspects related to the use of BIM and technology in the design stage at an engineering firm. It involved consultancy work with clients, team support in the projects, creating new workflows and tools. Amongst the missions, I was supervising the BIM process of a hospital in the building stage for a client, doing BIM coordination work for a 200.000 square meters office project, developing Revit plugins, testing augmented and virtual reality tools, and doing practical research on the application of machine learning in our field of expertise. Additional missions revolved around building design coordination with an emphasis on the interface of MEP and other trades.'
+                     description = "Implémentation BIM sur tout types de projets, en conception et réalisation. Conseil et assistance technique auprès de clients et partenaires. Définition des procédures en interne pour le BIM et les nouveaux outils numériques affiliés. Programmation d'outils logiciels dédiés."
+                     description2 = "Exemple de missions :"
+                     projet = "Pilote BIM en exécution sur le nouvel hôpital de Guadeloupe"
+                     projet2 = "Assistance technique pour la réalisation de modèles numériques du Louvre"
+                     projet3 = "BIM Management ligne 18 grand Paris"
+                     projet4 = "Mise en oeuvre d'un outil de visualisation holographique"
+                     projet5 = "Programmation d'outils automatisés d'intégration continue des données architecte dans les modèles BIM de l'ingéniérie"
+                        />
+                        
+                    <WorkExperience 
+                     jobtitle = 'Enseignant Conception assistée par ordinateur'
+                     company = 'Ecole spéciale architecture - ESTP'
+                     dates = "février 2021 - Aujourd'hui"
+                     location = 'Paris/Troyes'
+                     description = "Enseignement aux étudiants du double-cursus architecte-ingénieur conjoint ESA/ESTP. Participation à la définition du cadre de cet enseignement afin de le rapprocher le plus possible des besoins futurs des étudiants, tout en ouvrant des perspectives sur l'évolution rapide des techniques de CAO et les conséquences pour le futur de la conception."
                         />
 
                     <WorkExperience 
                      jobtitle = 'BIM Manager'
                      company = 'Sightline'
-                     dates = 'september 2017 - july 2018'
+                     dates = 'septembre 2017 - juillet 2018'
                      location = 'Paris'
-                     description = 'BIM Management and visual programming. BIM quality management in missions of modelling of existing structures. Led training classes on the basics of BIM software and visual programming for architects.'
+                     description = "BIM Management et programmation visuelle. Contrôle de modèles numériques de l'existant."
+                     description2 = "Exemple de missions :"
+                     projet = "BIM Management projet tertiaire Saint-Ouen Bauer"
+                     projet2 = "Formation d'introduction à Dynamo pour architecte"
                         />
 
                     <WorkExperience 
-                     jobtitle = 'Worksite conductor'
+                     jobtitle = "Maîtrise d'oeuvre d'exécution"
                      company = 'Builders and Partners'
-                     dates = 'february 2017 - april 2017'
+                     dates = 'février 2017 - avril 2017'
                      location = 'Paris'
-                     description = 'Short mission during a pause in the studies. Worksite surveillance and reporting on the state of the worksite and the quality of architectural work. Tower mainly comprised of offices in the south of Paris.'
+                     description = "Mission courte lors des études. Assistance au suivi des corps d'état techniques sur un projet d'IGH à Porte de Vanves."
                         />
 
                     <WorkExperience 
-                     jobtitle = 'Architect'
+                     jobtitle = 'Architecte'
                      company = 'Brunet Saunier Architecture'
-                     dates = 'june 2015 - february 2016'
+                     dates = 'juin 2015 - février 2016'
                      location = 'Paris'
-                     description = "Worked on an hospital project under construction in Switzerland. BIM drafting, creation of documents for studies and on worksite execution. Project awarded the BIM d'Or prize for the best french BIM model for an international building."
+                     description = "Travail au sein de l'équipe dédiée à l'hôpital du Limmattal à Zürich - projet récipient du prix du BIM d'Or pour la meilleure mise en oeuvre du BIM sur un bâtiment à l'international."
                         />    
                 </div>
                 
@@ -54,8 +71,8 @@ export default class Cv extends React.Component {
             {/* Skills */}
             <div className = 'cv-section'>
                 <div className ='cv-first-column'>
-                        <h3>SKILLS</h3>
-                        <h3 className='light-font'>COMPÉTENCES</h3>
+                        <h3>COMPÉTENCES</h3>
+                        
                 </div>
                 <div className='cv-second-column'>  
                     <SkillSet 
@@ -176,6 +193,14 @@ class WorkExperience extends React.Component {
                     </div>                    
                 </div>
                 <h5 >{this.props.description}<i><Link to = {this.props.linkroute}>{this.props.link}</Link><a target="_blank" href={this.props.externallinkroute}>{this.props.externallink}</a></i></h5>
+                <h5>{this.props.description2}</h5>
+                <ul>
+                    <h5>{this.props.projet}</h5>
+                    <h5>{this.props.projet2}</h5>
+                    <h5>{this.props.projet3}</h5>
+                    <h5>{this.props.projet4}</h5>
+                    <h5>{this.props.projet5}</h5>                
+                </ul>
             </div>
           )
       }

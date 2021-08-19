@@ -22,13 +22,13 @@ export default class HomePage extends React.Component {
                 </h3>
                 <ul>                    
                     <h3>
-                    - participer à définir la stratégie de mise en place d'outils numériques dans votre structure
+                        - Participer à définir la stratégie de mise en place d'outils numériques dans votre structure
                     </h3>
                     <h3>
-                    - réaliser des missions de BIM Management et d'intervenir comme prestataire
+                        - Réaliser des missions de BIM Management et d'intervenir comme prestataire
                     </h3>                
                     <h3>
-                        - de dispenser des formations aux outils souhaités
+                        - Dispenser des formations aux outils souhaités
                     </h3>
                 </ul>
            
