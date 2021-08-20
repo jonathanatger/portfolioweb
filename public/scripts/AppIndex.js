@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter, Link, Route, Switch, NavLink} from 'react-router-dom';
+import { BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import HomePage from './pages/HomePage.js'
 import Cv from './pages/Cv.js'
 import BlogSummary from './pages/BlogSummary.js'
@@ -19,12 +19,12 @@ render(
 
             <div className='body-content'>
                 <Switch> 
-                    <Route path ='/blog/:title'>
-                        <BlogPostContainer blogtitle='title' />    
-                    </Route>
-                    <Route path ='/blog'>
+                    <Route exact path ='/blog'>
                         <BlogSummary />    
                     </Route>
+                    <Route path ='/blog/:title' component ={BlogPostContainer}/>                       
+                        
+                                       
                     <Route path ='/cv'>
                         <Cv />    
                     </Route>
@@ -42,7 +42,7 @@ render(
     document.getElementById('#root')
   );  
 
- 
+
 
   
 

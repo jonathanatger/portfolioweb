@@ -8,13 +8,13 @@ let ArticlesSummary = [
     {
         title : 'Article 1',
         date : '20191027',
-        headimage : 'techbckgrnd.jpg',
+        headimage : 'orange.jpg',
         component : Article1
     },
     {
         title : 'Article 2',
         date : '20200327',
-        headimage : 'techbckgrnd.jpg',
+        headimage : 'orange.jpg',
         component : Article1
     }
 ]

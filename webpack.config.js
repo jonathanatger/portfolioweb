@@ -4,7 +4,9 @@ const DIST_DIR = path.join(__dirname, '/public/dist');
 module.exports = {
     entry: `${SRC_DIR}/AppIndex.js`,
     output: {filename: 'bundle.js',
-        path: DIST_DIR,},
+        path: DIST_DIR,
+        publicPath : '/'
+    },
     module: {
         rules: [{test: /\.js$/,
         exclude: /node_modules/,

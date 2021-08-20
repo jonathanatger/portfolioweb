@@ -12,9 +12,9 @@ export default class NavigationBar extends React.Component{
                     <a><Link to="/" className = 'navbar-main-title'>JONATHAN ATGER</Link></a>
                     <div className='navbar-links'>
                         <ul>
-                            <li ><NavLink to="/" className='navbar-elt' activeClassName='navbar-active' exact={true}>ABOUT </NavLink></li>
-                            <li ><NavLink to="/blog" className='navbar-elt' activeClassName='navbar-active' exact={true}>BLOG </NavLink></li>
-                            <li ><NavLink to="/cv" className='navbar-elt' activeClassName='navbar-active' exact={true}>CV </NavLink></li>                
+                            <li ><NavLink to="/" className='navbar-elt' activeClassName='navbar-active' exact={true}>À PROPOS </NavLink></li>
+                            <li ><NavLink to="/cv" className='navbar-elt' activeClassName='navbar-active' exact={true}>C.V. </NavLink></li>   
+                            <li ><NavLink to="/blog" className='navbar-elt' activeClassName='navbar-active' exact={true}>BLOG </NavLink></li>                                          
                             <li ><NavLink to="/contact" className='navbar-elt' activeClassName='navbar-active' exact={true}>CONTACT </NavLink></li>
                         </ul>  
                     </div>                               
