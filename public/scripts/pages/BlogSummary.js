@@ -14,7 +14,7 @@ export default class BlogSummary extends React.Component {
                 <br></br>
                 <h3>Le blog peut être visité ici : <a className='blog-embedded-link' target='_blank' href='https://outputbuilding.wordpress.com/'>output=building</a>.</h3>
                 <div className='blog-img-ctn'>
-                    <img src={Photo} className='hp-img'></img>   
+                    <a href="https://outputbuilding.wordpress.com/2019/10/27/using-machine-learning-to-recognize-bim-objects-with-their-names/" target='_blank'><img src={Photo} className='hp-img'></img></a>  
                 </div> 
             </div>
         )
