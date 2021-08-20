@@ -118,6 +118,15 @@ a{
     width: 100%;
 }
 
+.blog-img-ctn{
+    flex-grow:1;    
+    display : flex;
+    justify-content: center;
+    
+    margin:30px;
+    
+}
+
 body{
     font-style : $font;
     overflow-x: hidden;
@@ -173,6 +182,7 @@ body{
     flex-direction: column;
     justify-content: center;
     margin-bottom : 40px;    
+    margin-right: 100px;
 }
 
 

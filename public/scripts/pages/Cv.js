@@ -126,9 +126,9 @@ export default class Cv extends React.Component {
                 </div>
                 <div className='cv-second-column'>  
                     <SkillSet 
-                    skillsetname='Dynamo packages LinlkIt and Morpheus' 
-                    description = 'For the needs of a demanding project, I created an open-source dynamo package called LinkIt allowing users to automate the linking of models in Revit. It then grew into other uses and got a new name in Morpheus. Source code can be found '
-                    externallink = 'here.'
+                    skillsetname='Packages Dynamo LinlkIt and Morpheus' 
+                    description = "Pour les besoins d'un projet exigeant, j'ai créé un package appelé LinkIt permettant aux utilisateurs d'automatiser le liens des modèles Revit. Ce package a ensuite évolué et intégré d'autres usages, prenant le nom Morpheus. Le code derrière ces packages est open-source et "                    
+                    externallink = ' peut être trouvé ici.'
                     externallinkroute = 'https://github.com/jonathanatger/dynamo'
                         />
                     
@@ -140,29 +140,28 @@ export default class Cv extends React.Component {
             {/* Education */}
             <div className = 'cv-section'>
                 <div className ='cv-first-column'>
-                    <h3>EDUCATION</h3>
-                    <h3 className='light-font'>ÉDUCATION</h3>
+                    <h3>ÉDUCATION</h3>                    
                 </div>
                 <div className='cv-second-column'>  
                     <EducationExperience
-                        title = 'ARCHITECTURE DEGREE'
+                        title = "DIPLÔME D'ARCHITECTE"
                         school = 'ENSA Paris la Villette, Paris'
                         dates ='2010-2017'
-                        description = 'Part of a 7-year double-degree curriculum with the engineering degree below.'
+                        description = "Fait partie d'un double-cursus de 7 ans avec le diplôme d'ingénieur ci-dessous."
                         />
 
                     <EducationExperience
-                        title = 'CIVIL ENGINEERING DEGREE'
-                        school = 'ESTP, Paris and Cachan'
+                        title = "DIPLÔME D'INGÉNIEUR EN GÉNIE CIVIL"
+                        school = 'ESTP, Paris et Cachan'
                         dates ='2010-2017'
                         />
 
                     <EducationExperience
-                        title = 'FRONT END AND BACK END WEB DEVELOPMENT'
+                        title = 'DÉVELOPPEMENT WEB FRONT END ET BACK END'
                         school = 'FreeCodeCamp'
                         dates ='2020'
-                        description = 'FreeCodeCamp provides a complete full-stack web development curriculum, with training and projects designed to give theory and practice to anybody motivated enough to learn. It covers anything from HTML to React, Node, Express or security basics and data visualizations. Certifications can be found on the FreeCodeCamp site, for example '
-                        externallink = 'here.'
+                        description = "Cursus donnant un aperçu complet des compétences nécessaires pour le développement web full-stack. Les diplômes sont disponibles en ligne, "                         
+                        externallink = 'par exemple ici.'
                         externallinkroute =  'https://www.freecodecamp.org/certification/jonathanatger/front-end-libraries'
                         />
                     
@@ -193,7 +192,7 @@ class WorkExperience extends React.Component {
                         <h5>{this.props.location}</h5>
                     </div>                    
                 </div>
-                <h5 >{this.props.description}<i><Link to = {this.props.linkroute}>{this.props.link}</Link><a target="_blank" href={this.props.externallinkroute}>{this.props.externallink}</a></i></h5>
+                <h5 >{this.props.description}<i><u><Link to = {this.props.linkroute}>{this.props.link}</Link><a target="_blank" href={this.props.externallinkroute}>{this.props.externallink}</a></u></i></h5>
                 <h5>{this.props.description2}</h5>
                 <ul>
                     <h5>{this.props.projet}</h5>
@@ -226,7 +225,7 @@ class EducationExperience extends React.Component {
                         <h5>{this.props.location}</h5>
                     </div>                    
                 </div>
-                <h5 >{this.props.description}<i><Link to = {this.props.linkroute}>{this.props.link}</Link><a target="_blank" href={this.props.externallinkroute}>{this.props.externallink}</a></i></h5>
+                <h5 >{this.props.description}<u><i><Link to = {this.props.linkroute}>{this.props.link}</Link><a target="_blank" href={this.props.externallinkroute}>{this.props.externallink}</a></i></u></h5>
             </div>
           )
       }
@@ -254,7 +253,7 @@ class SkillSet extends React.Component {
                         <h4>{this.props.skillsetname}</h4>                        
                     </div>                
                 </div>
-                <h5 className='bottom-spacing'><i>{this.props.subtitle}</i> {this.props.description}<i><Link to = {this.props.linkroute}>{this.props.link}</Link><a target="_blank" href={this.props.externallinkroute}>{this.props.externallink}</a></i></h5> 
+                <h5 className='bottom-spacing'><i>{this.props.subtitle}</i> {this.props.description}<i><u><Link to = {this.props.linkroute}>{this.props.link}</Link><a target="_blank" href={this.props.externallinkroute}>{this.props.externallink}</a></u></i></h5> 
                 <h5 className='bottom-spacing'><i>{this.props.subtitle2}</i> {this.props.description2}<i><Link to = {this.props.linkroute2}>{this.props.link2}</Link><a target="_blank" href={this.props.externallinkroute2}>{this.props.externallink2}</a></i></h5>
                 <h5 className='bottom-spacing'><i>{this.props.subtitle3}</i> {this.props.description3}<i><Link to = {this.props.linkroute3}>{this.props.link3}</Link><a target="_blank" href={this.props.externallinkroute3}>{this.props.externallink3}</a></i></h5>
                 <h5 className='bottom-spacing'><i>{this.props.subtitle4}</i> {this.props.description4}<i><Link to = {this.props.linkroute3}>{this.props.link4}</Link><a target="_blank" href={this.props.externallinkroute4}>{this.props.externallink4}</a></i></h5>

@@ -101,6 +101,19 @@ a {
   width: 100%;
 }
 
+.blog-img-ctn {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px;
+}
+
 body {
   font-style: raleway, sans-serif;
   overflow-x: hidden;
@@ -171,6 +184,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 40px;
+  margin-right: 100px;
 }
 
 .credits {

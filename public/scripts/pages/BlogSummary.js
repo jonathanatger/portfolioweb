@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {ArticlesSummary} from './blogposts/Articles.js'
 import '../../css/general.css' 
+import Photo from '../../content/CaptureO-B.png' 
 
 
 
@@ -9,9 +10,12 @@ export default class BlogSummary extends React.Component {
     render(){
         return(
             <div>
-                <h4>The blog section is coming soon !</h4>
+                <h4>Vous pouvez retrouver dans ce blog des réflexions (en anglais) sur des outils et recherches conduites sur le thème des technologies numérique dans la construcion.</h4>
                 <br></br>
-                <h3>You can visit former blog space <a className='blog-embedded-link' target='_blank' href='https://outputbuilding.wordpress.com/'>output=building</a> for articles on design technology and walkthroughs of some of the tools I built.</h3>
+                <h3>Le blog peut être visité ici : <a className='blog-embedded-link' target='_blank' href='https://outputbuilding.wordpress.com/'>output=building</a>.</h3>
+                <div className='blog-img-ctn'>
+                    <img src={Photo} className='hp-img'></img>   
+                </div> 
             </div>
         )
     }
