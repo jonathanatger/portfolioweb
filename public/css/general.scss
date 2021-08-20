@@ -121,9 +121,8 @@ a{
 .blog-img-ctn{
     flex-grow:1;    
     display : flex;
-    justify-content: center;
-    
-    margin:30px;
+    justify-content: center;    
+    margin-top:30px;
     
 }
 
@@ -177,7 +176,7 @@ body{
 
 .contact-welcome-message{
     width: 40%;
-    min-width : 450px;
+    min-width : 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;

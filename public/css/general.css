@@ -111,7 +111,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 30px;
+  margin-top: 30px;
 }
 
 body {
@@ -172,7 +172,7 @@ body {
 
 .contact-welcome-message {
   width: 40%;
-  min-width: 450px;
+  min-width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

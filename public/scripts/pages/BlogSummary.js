@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {ArticlesSummary} from './blogposts/Articles.js'
 import '../../css/general.css' 
-import Photo from '../../content/CaptureO-B.png' 
+import Photo from '../../content/CaptureOB.png' 
 
 
 
