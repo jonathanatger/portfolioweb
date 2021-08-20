@@ -76,41 +76,42 @@ export default class Cv extends React.Component {
                 </div>
                 <div className='cv-second-column'>  
                     <SkillSet 
-                    skillsetname='Software' 
-                    description='Proficient in BIM software : Revit, Dynamo, Navisworks, BIM 360 and other Forge applications, Tekla BIMSight, Twinmotion, Enscape. Used Rhino, Grasshopper, Solibri MC, ArchiCAD, AutoCAD.'
-                    description2='Usage of Unity and Blender for testing purposes. Extensive use of the Adobe Creative suite, mostly Photoshop, Indesign and Lightroom.' 
+                    skillsetname='Logiciels' 
+                    description="Expert dans les logiciels suivants : Revit, Dynamo, BIM 360 et les autres applications Forge, Tekla BIMsight, Twinmotion, Enscape." 
+                    description2="Utilisation professionnelle de Rhino, Grasshopper, Solibri MC, ArchiCAD, AutoCAD."                    
+                    description3="Compétences additionnelles sur Unity, Blender, suite Adobe Creative."                    
                     /> 
 
                     <SkillSet 
-                    skillsetname='Coding'
-                    description='I have no formal training but completed an online 1500 hour long course on FreeCodeCamp for web development. Other skills were acquired on my free time mostly and put into action at the workplace to serve the development of software tools.'
-                    subtitle2='Web development :'
-                    description2=' HTML/CSS/Javascript, most used frameworks are React, Node, Express, MongoDB, Redux, Webpack. This website was entirely coded using those skills.' 
-                    subtitle3='Revit and Dynamo development :'
-                    description3='I coded multiple plugins to be used for everyday work in the Revit Software. I also am proficient at Dynamo and authoring custom nodes and a package (see Open source). Python and C# were used for this tasks.'
-                    subtitle4="Machine learning :"
-                    description4="I learned to use machine learning frameworks as part of a research towards understanding what it could bring to a building engineering firm using BIM data. I used the Sci-kit Learn, Tensorflow, Matplotlib and Numpy libraries mostly."
-                    description5='Other tools used include Visual Studio and Git.'
+                    skillsetname='Programmation'
+                    description="D'abord formé en autodidacte, j'ai complété une formation de 1500 heures en développement Web à distance. Ces compétences ont été mises en oeuvre régulièrement dans mes missions professionnelles, mais je ne me considère pas comme un ingénieur informaticien."                    
+                    subtitle2='Développement Web :'
+                    description2=" HTML/CSS/Javascript, les librairies utilisée le plus communément sont React, Node, Express, MongoDB, Redux, Webpack. Ce site internet à été entièrement codé par mes soins."
+                    subtitle3='Développement Revit et Dynamo :'
+                    description3="J'ai créé plusieurs addons greffés sur Revit, ainsi que des briques pour la plateforme de programmation visuelle Dynamo disponibles au public (voir Open source). Les languages Python and C# ont été utilisés pour ces tâches."
+                    subtitle4="Machine learning/intelligence artificielle :"
+                    description4="J'ai appris les bases du machine learning sur plusieurs mois dans le cadre d'une recherche afin de comprendre l'intérêt de cette technologie pour un bureau d'études d'ingéniérie de ces techniques. Je suis capable d'une évaluation de la pertinence du machine learning pour une tâche donnée de la conception d'un bâtiment."                   
+                    description5="Les autre outils maîtrisés incluent Visual Studio et Git."
                     />
 
                     <SkillSet 
-                    skillsetname='Building design coordination' 
-                    description='Being trained as an architect and working in an engineering firm, I have all the basic knowledge to understand the building object as a whole. I was therefore missioned to conduct coordination analyses and meetings, bringing solutions to the discrepancies between the differents stakeholders at the design stage.'
+                    skillsetname='Coordination spatiale' 
+                    description="J'ai pratiqué la présynthèse pour des architectes et des bureaux d'études, et profite de ma double formation pour affiner ma compréhension des besoins de chacun des acteurs d'un projet. Il m'est ainsi possible de proposer des solutions pour les différends qui apparaissent entre les acteurs dans le cadre de la conception d'un bâtiment."                    
                     /> 
 
                     <SkillSet 
                     skillsetname='Languages' 
-                    subtitle = "French : "
-                    description = "Native"
-                    subtitle2 = "English : "
-                    description2  = "Fluent, English parent"
-                    subtitle3 = "German : "
-                    description3 = "Fluent, Austrian parent"
+                    subtitle = "Français : "
+                    description = "Courant"
+                    subtitle2 = "Anglais : "
+                    description2  = "Courant, parent anglais"
+                    subtitle3 = "Allemand : "
+                    description3 = "Quasiment courant, parent autrichien"
                     />
 
                     <SkillSet 
-                    skillsetname='Photography' 
-                    description = 'Starting as a hobby, photography was a way for me to learn to look at buildings in an active manner during my architecture studies. I then went on to photograph other subjects like street photography or portrait. I got comissioned in 2019 for a wedding.'
+                    skillsetname='Photographie' 
+                    description = " Ce qui a commencé comme un hobby est devenu un moyen d'apprendre à observer l'architecture d'une autre manière. Mémoire réalisé sur la photographie dans la réception de la ZAC de Bercy. J'ai été chargé de photographier un mariage en 2019."                    
                     />
                     
                 </div>

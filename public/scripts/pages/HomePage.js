@@ -13,7 +13,7 @@ export default class HomePage extends React.Component {
             </div>  
             <div className='hp-description'>
                 <h3> Bonjour, je suis Jonathan Atger, un architecte et ingénieur <b>spécialisé dans 
-                    les technologies utilisées dans la conception de bâtiments</b>. 
+                    les technologies utilisées dans la conception de bâtiments.</b>     
                 </h3>
                 <h4>
                 Afin de mettre à profit mon expérience, <b>j'enseigne (ESA/ESTP) et interviens auprès d'acteurs 
