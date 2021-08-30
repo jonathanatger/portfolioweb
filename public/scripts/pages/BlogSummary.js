@@ -10,7 +10,7 @@ export default class BlogSummary extends React.Component {
     render(){
         return(
             <div>
-                <h4>Vous pouvez retrouver dans ce blog des réflexions (en anglais) sur des outils et recherches conduites sur le thème des technologies numérique dans la construcion.</h4>
+                <h4>Vous pouvez retrouver dans ce blog des réflexions (en anglais) sur des outils et recherches conduites sur le thème des technologies numériques dans la construction.</h4>
                 <br></br>
                 <h3>Le blog peut être visité ici : <a className='blog-embedded-link' target='_blank' href='https://outputbuilding.wordpress.com/'>output=building</a>.</h3>
                 <div className='blog-img-ctn'>
