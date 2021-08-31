@@ -32,6 +32,10 @@ router.get('/blog', function(req, res){
     res.sendFile(__dirname + '/public/dist/index.html');
 });
 
+router.get('/prestations', function(req, res){
+    res.sendFile(__dirname + '/public/dist/index.html');
+});
+
 router.get('/blog/:title', function(req, res){
     res.sendFile(__dirname + '/public/dist/index.html');    
 });

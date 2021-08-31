@@ -26,7 +26,7 @@ render(
 
                     <Route path ='/blog/:title' component ={BlogPostContainer}/>    
 
-                    <Route exact path = '/prestations'>
+                    <Route path = '/prestations'>
                         <Prestations />
                     </Route>    
                                        
