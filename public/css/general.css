@@ -426,6 +426,7 @@ body {
 
 .prestation-column {
   min-width: 600px;
+  padding-bottom: 50px;
   max-width: 19vw;
 }
 
@@ -464,7 +465,7 @@ body {
 
 .prestation-header {
   text-align: center;
-  padding: 0 0 30px 0;
+  padding: 0 0 60px 0;
 }
 
 .prestation-header a {
@@ -493,5 +494,7 @@ body {
 
 .prestation-title {
   text-align: center;
+  padding: 20px 0 40px 0;
+  min-height: 90px;
 }
 /*# sourceMappingURL=general.css.map */

@@ -23,6 +23,7 @@ export default class Prestations extends React.Component {
                             <h3>Conseil au choix de solutions numériques </h3>
                             <h3>Accompagnement sur projet pilote</h3>
                             <h3>Support technique</h3>
+                            <h3>Développement des standards BIM de votre structure</h3>
                         </div>
 
                         <div className='prestation-divider'></div>
@@ -30,6 +31,9 @@ export default class Prestations extends React.Component {
                         <div className='prestation-column'>
                             <img src={managerimage} className='prestation-img' id='managerimage'></img>
                             <h2 className='prestation-title'>BIM Management</h2>
+                            <h3>Intervention en tant que BIM manager sur projet, ou en interne</h3>
+                            <h3>Rôle de BIM manager : développement d'objectifs BIM projet, audit d'expérience BIM des acteurs, tenue des réunions BIM, rédaction des protocoles, contrôle de modèles </h3>
+                            <h3>Rôle de coordinateur BIM interne : mise en conformité des modèles BIM livrés sur vos projets, créations d'objets dans les modèles selon besoin des projets, support technique</h3>                                                        
                         </div>
 
                         <div className='prestation-divider2'></div>
@@ -37,6 +41,9 @@ export default class Prestations extends React.Component {
                         <div className='prestation-column'>
                             <img src={teachimage} className='prestation-img' id='teachimage'></img>
                             <h2 className='prestation-title'>Formation</h2>
+                            <h3>Formations Revit et Dynamo</h3>
+                            <h3>Programmes personnalisés, profitant de mon expérience de l'enseignement et de formations réalisées auprès d'architectes et d'ingénieurs</h3>
+                            <h3>Sensibilisation aux enjeux du BIM et présentation de technologies émergentes dans la conception</h3>                            
                         </div>
 
                         <div className='prestation-divider'></div>
@@ -44,6 +51,9 @@ export default class Prestations extends React.Component {
                         <div className='prestation-column'>
                             <img src={toolsimage} className='prestation-img' id='toolsimage'></img>
                             <h2 className='prestation-title'>Développement d'outils personnalisés</h2>
+                            <h3>Créations de sites Web pour le compte de votre structure</h3>
+                            <h3>Développement de plugins pour Revit dédiés à la productivité de vos équipes ou de fonctions personnalisées pour des projets spécifiques </h3>
+                            <h3>Développement de fonctions ou de blocs Dynamo </h3>                            
                         </div>
                     </div>
                 
