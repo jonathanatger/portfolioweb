@@ -291,6 +291,10 @@ body{
     
 }
 
+.hp-link{
+    margin-bottom : 50px;
+}
+
 .hp-main-container{
     width:100%;    
     /* background-color: red; */
@@ -385,11 +389,17 @@ body{
     max-width: 19vw;
     
 
-     h3 {
+    h3 {
+        text-align : center;
+        padding-bottom : 20px;
+    }
+
+    h4 {
         text-align : justify;
         padding-bottom : 20px;
     }
 }
+
 
 .prestation-divider, .prestation-divider2{
     width: 2px;    
