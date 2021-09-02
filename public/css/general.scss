@@ -3,6 +3,7 @@ $secondary-font : raleway, sans-serif;
 $font-color:black;
 $font-light-color:#7f7d7d;
 $sec-color:#f5bb50;
+$third-color:#3227A8;
 $--navbar-height:60px;
 $--navbar-height-dim:60px;
 $--homepage-message-width:800px;
@@ -121,9 +122,8 @@ a{
 .blog-img-ctn{
     flex-grow:1;    
     display : flex;
-    justify-content: center;
-    
-    margin:30px;
+    justify-content: center;    
+    margin-top:30px;
     
 }
 
@@ -178,7 +178,7 @@ body{
 
 .contact-welcome-message{
     width: 40%;
-    min-width : 450px;
+    min-width : 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -285,12 +285,40 @@ body{
 }
 
 .hp-img-ctn{
-    flex-grow:1;    
+       
     display : flex;
-    justify-content: center;
-    background-color: $sec-color;
-    margin:30px;
     
+    background-color: $sec-color;
+    margin-bottom : 50px;
+    
+}
+
+.hp-img-ctn-sub1{
+    display :flex;
+    justify-content: center;
+    width:40%;
+
+}
+
+.hp-img-ctn-sub2{    
+    min-height:100%;
+    padding:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    text-justify: center;
+    
+    
+}
+.hp-img-ctn-txt{
+    font-weight: 600; 
+    letter-spacing: 0.3rem;  
+    text-align: center;
+}
+
+.hp-link{
+    margin-bottom : 50px;
 }
 
 .hp-main-container{
@@ -378,5 +406,83 @@ body{
             }
         }
     }
+}
+
+.prestation-column{
+
+    
+    min-width: 600px;
+
+    padding-bottom : 50px;
+
+    @media (min-width:750px){
+        max-width: 19vw;
+    }
+    max-width: 19vw;
+    
+
+    h3 {
+        text-align : center;
+        padding-bottom : 20px;
+    }
+
+    h4 {
+        text-align : justify;
+        padding-bottom : 20px;
+    }
+}
+
+
+.prestation-divider, .prestation-divider2{
+    width: 2px;    
+    margin-top:20px;
+    margin-right:30px;
+    margin-left:30px;
+}
+
+@media (min-width: 955px) and (max-width: 1420px) { 
+    .prestation-divider{
+        background-color: rgb(124, 124, 124); 
+    }        
+}
+
+@media (min-width: 1420px)  { 
+    .prestation-divider{
+        background-color: rgb(124, 124, 124); 
+    }    
+
+    .prestation-divider2{
+        background-color: rgb(124, 124, 124);    
+    }
+}
+
+.prestation-header{
+    text-align : center;
+    padding : 0 0 60px 0;
+    a{
+        text-decoration: underline;
+    }
+
+}
+
+.prestation-img{    
+    max-width: 90%;
+    max-height: 40vh;
+    
+    
+}
+
+.prestation-row{
+    display : flex;
+    flex-direction: row;
+    flex-wrap : wrap;    
+    justify-content: space-between;
+}
+
+.prestation-title{
+    text-align: center;
+    padding : 20px 0 40px 0;
+    min-height: 90px;
+    
 }
 

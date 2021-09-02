@@ -6,6 +6,7 @@ import Cv from './pages/Cv.js'
 import BlogSummary from './pages/BlogSummary.js'
 import ContactSheet from './pages/Contact.js'
 import BlogPostContainer from './pages/BlogPostContainer.js'
+import Prestations from './pages/Prestations'
 import NavigationBar from './pages/NavigationBar.js'
 import '../css/general.css'
 
@@ -22,15 +23,21 @@ render(
                     <Route exact path ='/blog'>
                         <BlogSummary />    
                     </Route>
-                    <Route path ='/blog/:title' component ={BlogPostContainer}/>                       
-                        
+
+                    <Route path ='/blog/:title' component ={BlogPostContainer}/>    
+
+                    <Route path = '/prestations'>
+                        <Prestations />
+                    </Route>    
                                        
                     <Route path ='/cv'>
                         <Cv />    
                     </Route>
+
                     <Route path ='/contact'>
                         <ContactSheet />    
                     </Route>
+
                     <Route path ='/'>
                         <HomePage />    
                     </Route>
