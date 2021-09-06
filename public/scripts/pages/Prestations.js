@@ -16,7 +16,7 @@ export default class Prestations extends React.Component {
                 <h4 className='prestation-header'>Les prestations proposées sont regroupées dans quatre ensembles : <a href='#strategyimage'>stratégie de mise en place des outils numériques de conception,</a> <a href="#managerimage">BIM management,</a> <a href="#teachimage">formations aux outils numériques,</a> et <a href="#toolsimage">développement d'outils numériques personnalisés</a>.</h4>
                 <div className='prestation-row'> 
                         <div className='prestation-column'>
-                            <img src={strategyimage} className='prestation-img' id='strategyimage'></img>
+                            <img src={strategyimage} className='prestation-img' id='strategyimage'></img>                            
                             <h3 className='prestation-title'>Stratégie de mise en place d'outils numériques</h3>
                             <h4>Etat des lieux de l'adoption des outils numériques de conception liés au BIM et aux plateformes de gestion des données de projet dans votre structure</h4>
                             <h4>Aide au recrutement et au développement de fiches de poste </h4>
