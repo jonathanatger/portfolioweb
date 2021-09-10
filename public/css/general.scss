@@ -10,8 +10,6 @@ $--homepage-message-width:800px;
 
 
 //fonts
-
-
     h1 {    
         font-family: $font;
         font-size : 48px;
@@ -67,7 +65,7 @@ $--homepage-message-width:800px;
     }
   
 
-  @media screen and (max-width: 600px) {
+  @media screen and (min-width:450px) and (max-width: 600px) {
     h1 {            
         font-size : 30px;
            }
@@ -93,6 +91,31 @@ $--homepage-message-width:800px;
     }
   }
 
+  @media screen and (max-width: 400px) {
+    h1 {            
+        font-size : 24px;
+           }
+    h2 {    
+       
+        font-size : 18px;
+            }
+    
+    h3{
+         font-size : 16px;
+            }
+    
+    h4{
+       font-size : 14px;
+        }
+    
+    h5{
+        font-size : 12px;
+    }
+    
+    h6 {       
+        font-size : 10px;
+    }
+  }
 
 //Classes
 
@@ -213,9 +236,23 @@ body{
     flex-direction: column;
     align-items: flex-end;    
     min-width: 250px;
+    margin-left:10px;
     & h5 {
         text-align : right;
     }    
+}
+
+@media screen and (max-width:900px) {
+    .cv-date-location{
+        display:flex;
+        flex-direction: column;
+        align-items: flex-end;    
+        min-width: 50px;
+        & h5 {
+            text-align : right;
+        }    
+    }
+    
 }
 
 .cv-divider{
@@ -244,6 +281,17 @@ body{
     padding-right:10px;
     display : flex;
     flex-direction : column;    
+}
+
+@media screen and (max-width:900px) {
+    .cv-second-column{
+        width : 100%;
+        max-width: 800px;
+        padding-right:10px;
+        display : flex;
+        flex-direction : column;    
+    }
+    
 }
 
 .cv-section {
@@ -297,22 +345,35 @@ body{
     display :flex;
     justify-content: center;
     width:40%;
+    padding-right : 40px;
 
+}
+
+@media screen and (max-width: 1500px) {
+    .hp-img-ctn-sub1{
+        display : none;
+    }
 }
 
 .hp-img-ctn-sub2{    
     min-height:100%;
-    padding:50px;
+    padding: 50px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     color:black;
+<<<<<<< HEAD
     text-justify: center;   
     
 }
 
 
 
+=======
+    text-justify: center;     
+}
+
+>>>>>>> e3d878ba86a7a111c2596699046c8a5dce6ab4b9
 .hp-img-ctn-txt{
     font-weight: 600; 
     letter-spacing: 0.3rem;  
@@ -364,30 +425,35 @@ body{
         letter-spacing: 3px;
         margin : 10px 0px;
         }
-     }
+     
 
     .navbar-elt:hover{
         color:$sec-color;
     }
 
-    .navbar-links{
-        & ul {
-            display : flex;
-            flex-direction: row;
-            justify-content: flex-end; 
-            list-style-type: none;
-            padding-left: 0px;
-            margin:1px;
-    
-            & li {
-                font-family: raleway, sans-serif;
-                font-size: 16px;
-                font-weight : 300;
-                padding : 0 30px 0 0;  
-            }
-    }
+}  
 
+
+.navbar-links{
+    & ul {
+        display : flex;
+        flex-direction: row;
+        justify-content: flex-end; 
+        list-style-type: none;
+        padding-left: 0px;
+        margin:1px;
+
+        & li {
+            font-family: raleway, sans-serif;
+            font-size: 16px;
+            font-weight : 300;
+            padding : 0 30px 0 0;  
+        }
+    }
 }
+
+
+
 
 @media screen and (max-width: 600px){
 
@@ -405,6 +471,7 @@ body{
         & ul{
             & li{
                 font-size : 12px;
+                padding : 0 10px 0 0; 
             }
         }
     }
@@ -413,15 +480,17 @@ body{
 .prestation-column{
 
     
-    min-width: 600px;
+    min-width: 350px;
 
     padding-bottom : 50px;
 
-    @media (min-width:750px){
-        max-width: 19vw;
+    @media (max-width:750px){
+        max-width: 100vw;
     }
     max-width: 19vw;
     
+    display: flex;
+    flex-direction: column;
 
     h3 {
         text-align : center;
@@ -432,6 +501,13 @@ body{
         text-align : justify;
         padding-bottom : 20px;
     }
+}
+
+@media screen and (max-width: 900px){
+    .prestation-column{
+        min-width:250px;
+        padding-bottom : 20px;
+    }   
 }
 
 
@@ -464,12 +540,22 @@ body{
     a{
         text-decoration: underline;
     }
+}
 
+@media screen and (max-width: 900px){
+    .prestation-header{
+        text-align : center;
+        padding : 0 0 30px 0;
+        a{
+            text-decoration: underline;
+        }
+    }
 }
 
 .prestation-img{    
     max-width: 90%;
     max-height: 40vh;
+    align-self: center;
     
     
 }
@@ -486,5 +572,14 @@ body{
     padding : 20px 0 40px 0;
     min-height: 90px;
     
+}
+
+@media screen and (max-width: 955px) { 
+    .prestation-title{
+    text-align: center;
+    padding : 20px 0 20px 0;
+    min-height:30px;
+    
+    }        
 }
 

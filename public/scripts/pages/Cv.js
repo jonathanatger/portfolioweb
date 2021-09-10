@@ -17,7 +17,7 @@ export default class Cv extends React.Component {
                     <WorkExperience 
                      jobtitle = 'BIM Manager / Spécialiste technologies de la conception'
                      company = 'Ingérop'
-                     dates = 'july 2018 - juillet 2021'
+                     dates = 'juillet 2018 - juillet 2021'
                      location = 'Paris'
                      description = "Implémentation BIM sur tout types de projets, en conception et réalisation. Conseil et assistance technique auprès de clients et partenaires. Définition des procédures en interne pour le BIM et les nouveaux outils numériques affiliés. Programmation d'outils logiciels dédiés."
                      description2 = "Exemple de missions :"
@@ -140,7 +140,7 @@ export default class Cv extends React.Component {
             {/* Education */}
             <div className = 'cv-section'>
                 <div className ='cv-first-column'>
-                    <h3>ÉDUCATION</h3>                    
+                    <h3>FORMATION</h3>                    
                 </div>
                 <div className='cv-second-column'>  
                     <EducationExperience
