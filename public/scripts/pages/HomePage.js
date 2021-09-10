@@ -1,6 +1,6 @@
 import React from 'react'
 import Photo from '../../content/Photositedetouree.png' 
-import '../../css/'
+import '../../css/general.css'
 
 
 export default class HomePage extends React.Component {
