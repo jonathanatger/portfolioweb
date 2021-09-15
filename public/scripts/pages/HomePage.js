@@ -78,12 +78,13 @@ export default class HomePage extends React.Component {
                     <a target='_blank' href="mailto:contact@jonathanatger.com"> <h3><i class="far fa-arrow-alt-circle-right"></i> <u>Cliquez-ici pour un email</u> </h3> </a>         
 
                     <h3><a href='/contact'><i class="far fa-arrow-alt-circle-right"></i><u> Mes autres coordonnées </u></a></h3>  
+                    
                     </div>
                 </div>
 
             </div>  
             <div className='hp-bottom'>
-
+                
             </div>
         </div>
 
