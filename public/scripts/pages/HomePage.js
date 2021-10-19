@@ -1,5 +1,5 @@
 import React from 'react'
-import Photo from '../../content/Photositedetouree.png' 
+import Photo from '../../content/Corporateimage.png' 
 import '../../css/general.css'
 import toolsimage from '../../content/tools-color.png' 
 import managerimage from '../../content/manager-vcolor.png' 
