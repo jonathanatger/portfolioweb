@@ -1,52 +1,57 @@
 import React from 'react';
-import { render } from 'react-dom';
-import { BrowserRouter, Link, Route, Switch} from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
+import {
+    BrowserRouter,
+    Route,
+    Link, 
+    Routes
+} from 'react-router-dom';
+
 import HomePage from './pages/HomePage.js'
 import Cv from './pages/Cv.js'
 import BlogSummary from './pages/BlogSummary.js'
 import ContactSheet from './pages/Contact.js'
 import BlogPostContainer from './pages/BlogPostContainer.js'
-import Prestations from './pages/Prestations'
+import Prestations from './pages/Prestations.js'
 import NavigationBar from './pages/NavigationBar.js'
 import '../css/general.css'
 
 
 //Render App : higher order component is the browser router
 //Create a Router in React to handle changes
-render(
+
+const domNode = document.getElementById('#root');
+
+const root = createRoot(domNode);
+
+root.render(
     <div className = 'body-frame'>
         <BrowserRouter>
             <NavigationBar/>
 
             <div className='body-content'>
-                <Switch> 
-                    <Route exact path ='/blog'>
-                        <BlogSummary />    
-                    </Route>
+                <Routes>
+                    <Route exact path='/blog' element={<BlogSummary/>} />
+                        
+                    <Route path='/blog/:title' element={<BlogPostContainer />} />
+                    
 
-                    <Route path ='/blog/:title' component ={BlogPostContainer}/>    
+                    <Route path='/prestations' element={<Prestations />} />
+                        
 
-                    <Route path = '/prestations'>
-                        <Prestations />
-                    </Route>    
-                                       
-                    <Route path ='/cv'>
-                        <Cv />    
-                    </Route>
+                    <Route path='/cv' element={<Cv />} />
+                        
 
-                    <Route path ='/contact'>
-                        <ContactSheet />    
-                    </Route>
+                    <Route path='/contact'element={<ContactSheet />} />
+                          
 
-                    <Route path ='/'>
-                        <HomePage />    
-                    </Route>
-                </Switch>
+                    <Route path ='/' element={<HomePage/>} />
+                        
+                </Routes>
             </div>
         </BrowserRouter>
-    </div>
-    ,
-    document.getElementById('#root')
+    </div>    
+    
   );  
 
 

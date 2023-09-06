@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import '../../css/general.css' 
 import toolsimage from '../../content/tools-color.png' 
 import managerimage from '../../content/manager-vcolor.png' 
@@ -9,7 +8,7 @@ import teachimage from '../../content/teach-color.png'
 
 
 
-export default class Prestations extends React.Component {
+class Prestations extends React.Component {
     render(){
         return(
             <div>
@@ -61,3 +60,5 @@ export default class Prestations extends React.Component {
         )
     }
 }
+
+export default Prestations;

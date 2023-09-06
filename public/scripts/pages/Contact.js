@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../css/general.css'
 
-export default class ContactSheet extends React.Component {
+class ContactSheet extends React.Component {
     
     render(){
         return(
@@ -11,11 +11,11 @@ export default class ContactSheet extends React.Component {
                 <h1 className='navbar-active'>simplement envoyer un mot !</h1>
             </div>
             <div className='contact-links'>
-                <a target='_blank' href="mailto:contact@jonathanatger.com"><i class="fa fa-envelope"></i>  contact@jonathanatger.com</a>
-                <a target='_blank'><i class="fa fa-phone"></i>  06.28.32.58.19</a>
+                <a target='_blank' href="mailto:contact@jonathanatger.com"><i className="fa fa-envelope"></i>  contact@jonathanatger.com</a>
+                <a target='_blank'><i className="fa fa-phone"></i>  06.28.32.58.19</a>
                 <a target='_blank' href="https://www.linkedin.com/in/jonathan-atger-5020aa118/"><i className="fab fa-linkedin" ></i>  https://www.linkedin.com/in/jonathan-atger</a>
-                <a target='_blank' href="https://github.com/jonathanatger"><i class="fab fa-github"></i>  https://github.com/jonathanatger</a>       
-                <a target='_blank' href="https://twitter.com/jonathanatger"><i class="fab fa-twitter"></i>  https://twitter.com/jonathanatger</a>  
+                    <a target='_blank' href="https://github.com/jonathanatger"><i className="fab fa-github"></i>  https://github.com/jonathanatger</a>       
+                    <a target='_blank' href="https://twitter.com/jonathanatger"><i className="fab fa-twitter"></i>  https://twitter.com/jonathanatger</a>  
 
                 </div>
 
@@ -24,3 +24,4 @@ export default class ContactSheet extends React.Component {
     }
 }
 
+export default ContactSheet;

@@ -2,7 +2,7 @@ import React from 'react'
 import '../../css/general.css'
 import {Link} from 'react-router-dom'
 
-export default class Cv extends React.Component {
+class Cv extends React.Component {
     
     render(){
         return(
@@ -263,3 +263,5 @@ class SkillSet extends React.Component {
       }
 
 }
+
+export default Cv;

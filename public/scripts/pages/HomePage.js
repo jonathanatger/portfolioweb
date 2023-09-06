@@ -7,7 +7,7 @@ import strategyimage from '../../content/strategy-color.png'
 import teachimage from '../../content/teach-color.png' 
 
 
-export default class HomePage extends React.Component {
+class HomePage extends React.Component {
     
     render(){
         return(
@@ -58,7 +58,7 @@ export default class HomePage extends React.Component {
                 </h3>
                
 
-                <h3 className='hp-link'><a href='/prestations'><i class="far fa-arrow-alt-circle-right"></i><u> Passer à la page des prestations </u></a></h3>             
+                <h3 className='hp-link'><a href='/prestations'><i className="far fa-arrow-alt-circle-right"></i><u> Passer à la page des prestations </u></a></h3>             
 
                 {//<i class="far fa-arrow-alt-circle-right"></i>
                 }  
@@ -70,16 +70,16 @@ export default class HomePage extends React.Component {
                     </h3>
                     <b/>
 
-                    <h3 className='hp-link'><a href='/cv'><i class="far fa-arrow-alt-circle-right"></i><u> Passer au détail de mon parcours </u></a></h3>  
+                    <h3 className='hp-link'><a href='/cv'><i className="far fa-arrow-alt-circle-right"></i><u> Passer au détail de mon parcours </u></a></h3>  
                 </div>
 
                 <div className='hp-contact'>
                     <h3><b>Mes coordonnées</b></h3>
 
                     <div className='hp-contact-sub'>
-                    <a target='_blank' href="mailto:contact@jonathanatger.com"> <h3><i class="far fa-arrow-alt-circle-right"></i> <u>Cliquez-ici pour un email</u> </h3> </a>         
+                    <a target='_blank' href="mailto:contact@jonathanatger.com"> <h3><i className="far fa-arrow-alt-circle-right"></i> <u>Cliquez-ici pour un email</u> </h3> </a>         
 
-                    <h3><a href='/contact'><i class="far fa-arrow-alt-circle-right"></i><u> Mes autres coordonnées </u></a></h3>  
+                    <h3><a href='/contact'><i className="far fa-arrow-alt-circle-right"></i><u> Mes autres coordonnées </u></a></h3>  
                     
                     </div>
                 </div>
@@ -95,3 +95,5 @@ export default class HomePage extends React.Component {
     }
 }
 
+
+export default HomePage;
