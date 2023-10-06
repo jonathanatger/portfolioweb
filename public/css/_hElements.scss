@@ -1,7 +1,18 @@
+    
+    $font: raleway, sans-serif;
+    $secondary-font : raleway, sans-serif;
+    $font-color:black;
+    $font-light-color:#7f7d7d;
+    $sec-color:#f5bb50;
+    $third-color:#3227A8;
+    $--navbar-height:60px;
+    $--navbar-height-dim:60px;
+    $--homepage-message-width:800px;
+    
     h1 {    
         font-family: $font;
-        font-size : 48px;
-        font-weight : 400;
+        font-size : 72px;
+        font-weight : 600;
         padding-bottom :20px;
         margin-bottom : 0px;
         margin-top : 0px;

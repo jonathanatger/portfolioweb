@@ -6,7 +6,7 @@ import {
     Routes
 } from 'react-router-dom';
 
-import Cv from './page/Cv.js'
+import Cv from './pages/Cv.js'
 import HomePage from './pages/HomePage.js'
 import NavigationBar from './pages/NavigationBar.js'
 import '../css/general.css'
@@ -22,8 +22,6 @@ const root = createRoot(domNode);
 root.render(
     <div >
         <BrowserRouter>
-            <NavigationBar/>
-
             <div >
                 <Routes>
                     <Route exact path='/cv' element={<Cv/>} />
