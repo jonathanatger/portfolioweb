@@ -12,8 +12,10 @@ class HomePage extends React.Component {
     render(){
         return(
         <div>
-            <h1>Let's go portfolio</h1>
         
+            <h1>Let's go portfolio</h1>
+
+            
         </div>
 
 
