@@ -51,4 +51,23 @@ h6 {
   font-weight: 400;
   margin-top: 0px;
   text-align: justify;
+}
+
+.mainTitle {
+  text-align: center;
+  color: red;
+}
+
+.mainBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.subHeader {
+  color: blue;
 }/*# sourceMappingURL=general.css.map */

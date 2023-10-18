@@ -11,10 +11,18 @@ class HomePage extends React.Component {
     
     render(){
         return(
-        <div>
-        
-            <h1>Let's go portfolio</h1>
+        <div className='mainBox' height="500">
 
+
+            <h1>Ok we got this !</h1>
+
+            <h2 className='subHeader'>On my way to greatness</h2>
+
+            <h1 className='mainTitle'>Let's go portfolio !!</h1>
+
+            <h1> Hey hey</h1>
+            
+            
             
         </div>
 
