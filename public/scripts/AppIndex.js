@@ -24,7 +24,7 @@ root.render(
         <BrowserRouter>
             <div >
                 <Routes>
-                    <Route exact path='/cv' element={<Cv/>} />
+                    <Route exact path='/cv' element={<Cv/>}/>   
                     
                     <Route path ='/' element={<HomePage/>} />
                         
