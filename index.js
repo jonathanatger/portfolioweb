@@ -20,6 +20,8 @@ var PORT = process.env.PORT || 3000;
 
 //files to send
 app.use(express.static(path.join(__dirname, '/public/dist')));
+// this is a useless comment
+
 
 //get the ability to parse http requests
 app.use(bodyParser.json());
