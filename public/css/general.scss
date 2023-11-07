@@ -1,22 +1,41 @@
-@import 'hElements.scss';
+@import "hElements.scss";
 
 .mainTitle {
-    text-align: center;
-    color:red;
-    text-shadow:10px;
+  text-align: center;
+  color: red;
+  text-shadow: 10px;
 }
 
-.mainBox{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 50px;
-    background: #e0e0e0;
-    box-shadow:  20px 20px 60px #bebebe,
-                -20px -20px 60px #ffffff;
+.mainBox {
+  display: flex;
+  margin: 0 100px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 }
 
-.subHeader{
-    color:red;
+.navbar-elt {
+  color: blue;
+}
+
+.navbar-active {
+  color: yellow;
+}
+
+.navbar-default {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-family: $font;
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.subHeader {
+  color: blue;
 }
