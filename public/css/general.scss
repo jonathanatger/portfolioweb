@@ -34,6 +34,11 @@
 
 .navbar-links {
   display: flex;
+  li {
+    width: max-content;
+    margin: 0 30px;
+    list-style-type:none;
+  }
 }
 
 .subHeader {

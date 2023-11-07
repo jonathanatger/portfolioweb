@@ -11,8 +11,8 @@ class NavigationBar extends React.Component {
             JONATHAN ATGER
           </Link>
 
-          <div className="navbar-links">
-            <ul>
+          <div>
+            <ul className="navbar-links">
               <li>
                 <NavLink
                   to="/"

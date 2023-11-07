@@ -80,6 +80,7 @@ h6 {
 
 .navbar-default {
   display: flex;
+  align-items: center;
   flex-direction: row;
   font-family: raleway, sans-serif;
 }
@@ -87,7 +88,13 @@ h6 {
 .navbar-links {
   display: flex;
 }
+.navbar-links li {
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 30px;
+  list-style-type: none;
+}
 
 .subHeader {
-  color: red;
+  color: blue;
 }/*# sourceMappingURL=general.css.map */
