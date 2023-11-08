@@ -8,6 +8,11 @@ $--navbar-height: 60px;
 $--navbar-height-dim: 60px;
 $--homepage-message-width: 800px;
 
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
 h1 {
   font-family: $font;
   font-size: 72px;

@@ -1,4 +1,5 @@
 @import "hElements.scss";
+@import "navbar.scss";
 
 .mainTitle {
   text-align: center;
@@ -15,30 +16,6 @@
   border-radius: 30px;
   background: #e0e0e0;
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-}
-
-.navbar-elt {
-  color: blue;
-}
-
-.navbar-active {
-  color: yellow;
-}
-
-.navbar-default {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  font-family: $font;
-}
-
-.navbar-links {
-  display: flex;
-  li {
-    width: max-content;
-    margin: 0 30px;
-    list-style-type:none;
-  }
 }
 
 .subHeader {

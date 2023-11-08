@@ -1,0 +1,54 @@
+@import "hElements.scss";
+
+.hamburger {
+  border: solid brown;
+  div {
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    background-color: $sec-color;
+  }
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  border: solid red;
+}
+
+.navbar-links-inactive {
+  color: $font-light-color;
+}
+
+.navbar-links-active {
+  color: $sec-color;
+}
+.navbar-menu {
+  bottom: 0;
+  background-color: yellow;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: $font;
+  margin: 40px;
+  ul {
+    border: solid brown;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    li {
+      width: max-content;
+      margin: 0 30px;
+      list-style-type: none;
+      border: solid;
+    }
+  }
+}

@@ -5,75 +5,51 @@ import { Link, NavLink } from "react-router-dom";
 class NavigationBar extends React.Component {
   render() {
     return (
-      <div>
-        <nav className="navbar-default">
-          <Link to="" className="navbar-main-title">
-            JONATHAN ATGER
-          </Link>
+      <nav className="navbar-container">
+        <div className="navbar-menu">
+          <ul>
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "navbar-links-active" : "navbar-links-inactive"
+                }
+              >
+                À PROPOS
+              </NavLink>
+            </li>
 
-          <div>
-            <ul className="navbar-links">
-              <li>
-                <NavLink
-                  to="/"
-                  className={({ isActive }) =>
-                    isActive ? "navbar-active" : "navbar-elt"
-                  }
-                >
-                  À PROPOS
-                </NavLink>
-              </li>
+            <li>
+              <NavLink
+                to="/cv"
+                className={({ isActive }) =>
+                  isActive ? "navbar-links-active" : "navbar-links-inactive"
+                }
+                exact="true"
+              >
+                C.V.
+              </NavLink>
+            </li>
 
-              <li>
-                <NavLink
-                  to="prestations"
-                  className={({ isActive }) =>
-                    isActive ? "navbar-active" : "navbar-elt"
-                  }
-                >
-                  PRESTATIONS
-                </NavLink>
-              </li>
-
-              <li>
-                <NavLink
-                  to="/cv"
-                  className={({ isActive }) =>
-                    isActive ? "navbar-active" : "navbar-elt"
-                  }
-                  exact="true"
-                >
-                  C.V.
-                </NavLink>
-              </li>
-
-              <li>
-                <NavLink
-                  to="/blog"
-                  className={({ isActive }) =>
-                    isActive ? "navbar-active" : "navbar-elt"
-                  }
-                  exact="true"
-                >
-                  BLOG
-                </NavLink>
-              </li>
-
-              <li>
-                <NavLink
-                  to="/contact"
-                  className={({ isActive }) =>
-                    isActive ? "navbar-active" : "navbar-elt"
-                  }
-                  exact="true"
-                >
-                  CONTACT
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+            <li>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? "navbar-links-active" : "navbar-links-inactive"
+                }
+                exact="true"
+              >
+                CONTACT
+              </NavLink>
+            </li>
+          </ul>
+          <a className="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </a>
+        </div>
+      </nav>
     );
   }
 }

@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
 h1 {
   font-family: raleway, sans-serif;
   font-size: 72px;
@@ -53,6 +58,120 @@ h6 {
   text-align: justify;
 }
 
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: raleway, sans-serif;
+  font-size: 72px;
+  font-weight: 600;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+h2 {
+  font-family: raleway, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
+  margin-top: 0px;
+  text-align: justify;
+}
+
+h3 {
+  font-family: raleway, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+h4 {
+  font-family: raleway, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  text-align: justify;
+}
+
+h5 {
+  font-family: raleway, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+h6 {
+  font-family: raleway, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0px;
+  text-align: justify;
+}
+
+.hamburger {
+  border: solid brown;
+}
+.hamburger div {
+  width: 35px;
+  height: 5px;
+  margin: 6px 0;
+  background-color: #f5bb50;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  border: solid red;
+}
+
+.navbar-links-inactive {
+  color: #7f7d7d;
+}
+
+.navbar-links-active {
+  color: #f5bb50;
+}
+
+.navbar-menu {
+  bottom: 0;
+  background-color: yellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: raleway, sans-serif;
+  margin: 40px;
+}
+.navbar-menu ul {
+  border: solid brown;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.navbar-menu ul li {
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 30px;
+  list-style-type: none;
+  border: solid;
+}
+
 .mainTitle {
   text-align: center;
   color: red;
@@ -68,31 +187,6 @@ h6 {
   border-radius: 30px;
   background: #e0e0e0;
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-}
-
-.navbar-elt {
-  color: blue;
-}
-
-.navbar-active {
-  color: yellow;
-}
-
-.navbar-default {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  font-family: raleway, sans-serif;
-}
-
-.navbar-links {
-  display: flex;
-}
-.navbar-links li {
-  width: -moz-max-content;
-  width: max-content;
-  margin: 0 30px;
-  list-style-type: none;
 }
 
 .subHeader {
