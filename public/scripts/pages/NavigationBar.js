@@ -10,24 +10,23 @@ class NavigationBar extends React.Component {
           <ul>
             <li>
               <NavLink
-                to="/"
+                to="/projets"
                 className={({ isActive }) =>
                   isActive ? "navbar-links-active" : "navbar-links-inactive"
                 }
               >
-                À PROPOS
+                PROJETS
               </NavLink>
             </li>
 
             <li>
               <NavLink
-                to="/cv"
+                to="/info"
                 className={({ isActive }) =>
                   isActive ? "navbar-links-active" : "navbar-links-inactive"
                 }
-                exact="true"
               >
-                C.V.
+                À PROPOS
               </NavLink>
             </li>
 
@@ -40,6 +39,18 @@ class NavigationBar extends React.Component {
                 exact="true"
               >
                 CONTACT
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                to="/cv"
+                className={({ isActive }) =>
+                  isActive ? "navbar-links-active" : "navbar-links-inactive"
+                }
+                exact="true"
+              >
+                C.V.
               </NavLink>
             </li>
           </ul>

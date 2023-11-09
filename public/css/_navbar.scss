@@ -6,7 +6,7 @@
     width: 35px;
     height: 5px;
     margin: 6px 0;
-    background-color: $sec-color;
+    background-color: $accent-color;
   }
 }
 
@@ -14,7 +14,6 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
-  box-sizing: border-box;
   width: 100vw;
   height: 100%;
   position: fixed;
@@ -23,32 +22,34 @@
 }
 
 .navbar-links-inactive {
-  color: $font-light-color;
+  color: $font-color;
 }
 
 .navbar-links-active {
-  color: $sec-color;
+  color: $accent-color;
 }
+
 .navbar-menu {
   bottom: 0;
-  background-color: yellow;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-family: $font;
-  margin: 40px;
+  margin: $overall-margins;
+
   ul {
-    border: solid brown;
-    width: 100%;
+    width: $left-side-proportion;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
     li {
-      width: max-content;
-      margin: 0 30px;
-      list-style-type: none;
-      border: solid;
+      margin: 0;
+      @include menu-links;
+      a {
+        text-decoration: none;
+      }
     }
   }
 }

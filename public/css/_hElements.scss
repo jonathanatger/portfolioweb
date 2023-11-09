@@ -1,15 +1,27 @@
-$font: raleway, sans-serif;
-$secondary-font: raleway, sans-serif;
-$font-color: black;
-$font-light-color: #7f7d7d;
-$sec-color: #f5bb50;
-$third-color: #3227a8;
-$--navbar-height: 60px;
-$--navbar-height-dim: 60px;
-$--homepage-message-width: 800px;
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@100;200;400&display=swap");
+
+$font: "DM Mono", monospace;
+$secondary-font: "DM Sans", sans-serif;
+$tertiary-font: "Montserrat", sans-serif;
+$font-color: #fff8eb;
+$background-color: #918f8f;
+$accent-color: #f5bb50;
+$overall-margins: 40px;
+$left-side-proportion: 66%;
+
+@mixin menu-links {
+  font-family: $tertiary-font;
+  color: $font-color;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 7px;
+  font-size: 14px;
+}
 
 body {
   margin: 0;
+  background-color: $background-color;
   overflow: hidden;
 }
 
