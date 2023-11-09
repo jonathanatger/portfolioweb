@@ -1,15 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@100;200;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@100;200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
+:root {
+  scrollbar-width: none;
+}
+
 body {
   margin: 0;
   background-color: #918f8f;
-  overflow: hidden;
+  scrollbar-width: none;
+  color: #fff8eb;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1 {
   font-family: "DM Mono", monospace;
   font-size: 72px;
-  font-weight: 600;
+  font-weight: 400;
   padding-bottom: 20px;
   margin-bottom: 0px;
   margin-top: 0px;
@@ -61,16 +71,25 @@ h6 {
   text-align: justify;
 }
 
+:root {
+  scrollbar-width: none;
+}
+
 body {
   margin: 0;
   background-color: #918f8f;
-  overflow: hidden;
+  scrollbar-width: none;
+  color: #fff8eb;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1 {
   font-family: "DM Mono", monospace;
   font-size: 72px;
-  font-weight: 600;
+  font-weight: 400;
   padding-bottom: 20px;
   margin-bottom: 0px;
   margin-top: 0px;
@@ -120,10 +139,18 @@ h6 {
   font-weight: 400;
   margin-top: 0px;
   text-align: justify;
+}
+
+.disappear {
+  transition: opacity 0.3s ease;
+  opacity: 0%;
 }
 
 .hamburger {
-  border: solid brown;
+  z-index: 99;
+}
+.hamburger:hover {
+  transform: scale(1.2, 1.2);
 }
 .hamburger div {
   width: 35px;
@@ -135,20 +162,21 @@ h6 {
 .navbar-container {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: space-between;
   width: 100vw;
   height: 100%;
   position: fixed;
   bottom: 0;
-  border: solid red;
 }
 
 .navbar-links-inactive {
   color: #fff8eb;
+  text-decoration: none;
 }
 
 .navbar-links-active {
-  color: #f5bb50;
+  text-decoration: underline;
+  color: #fff8eb;
 }
 
 .navbar-menu {
@@ -171,33 +199,162 @@ h6 {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   color: #fff8eb;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   line-height: normal;
   letter-spacing: 7px;
   font-size: 14px;
+  position: relative;
 }
-.navbar-menu ul li a {
-  text-decoration: none;
+.navbar-menu ul li a:hover {
+  text-decoration: underline;
+  font-weight: 600;
+}
+.navbar-menu ul li::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+.navbar-menu ul li:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.navbar-menu ul li::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  margin: -5px;
+  border-radius: 5px;
+  inset: 0 0 0 0;
+  background: #f5bb50;
+  z-index: -1;
+  transition: transform 0.3s ease;
 }
 
-.mainTitle {
-  text-align: center;
-  color: red;
-  text-shadow: 10px;
+.navbar-side-info {
+  font-family: "Montserrat", sans-serif;
+  color: #fff8eb;
+  font-weight: 300;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 7px;
+  font-size: 14px;
+  writing-mode: vertical-lr;
+  transform: scale(-1, -1);
+  right: 0;
+  margin: 40px;
 }
 
-.mainBox {
+.navbar-visible {
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+
+:root {
+  scrollbar-width: none;
+}
+
+body {
+  margin: 0;
+  background-color: #918f8f;
+  scrollbar-width: none;
+  color: #fff8eb;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  font-family: "DM Mono", monospace;
+  font-size: 72px;
+  font-weight: 400;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+h2 {
+  font-family: "DM Mono", monospace;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
+  margin-top: 0px;
+  text-align: justify;
+}
+
+h3 {
+  font-family: "DM Mono", monospace;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+h4 {
+  font-family: "DM Mono", monospace;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  text-align: justify;
+}
+
+h5 {
+  font-family: "DM Mono", monospace;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+h6 {
+  font-family: "DM Mono", monospace;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0px;
+  text-align: justify;
+}
+
+.hero-section {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
   display: flex;
-  margin: 0 100px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 30px;
-  background: #e0e0e0;
-  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  flex-direction: row;
+  align-items: end;
 }
 
-.subHeader {
-  color: blue;
+.hero-section-image {
+  height: 100%;
+  z-index: -1;
+}
+
+.hero-section-message-container {
+  width: 66%;
+  margin-bottom: 20vh;
+}
+
+.hero-section-picture {
+  flex: 1;
+  height: 70vh;
+  opacity: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.homepage-main-grid {
+  top: 0;
+  height: 300vh;
+  margin: 0 40px;
+  display: grid;
+  grid-template-columns: 66% auto;
+  grid-template-rows: 100vh 100vh 100vh;
+  pointer-events: none;
+  z-index: -1;
 }/*# sourceMappingURL=general.css.map */

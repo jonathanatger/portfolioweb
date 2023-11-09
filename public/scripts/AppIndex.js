@@ -18,7 +18,7 @@ root.render(
   <div>
     <BrowserRouter>
       <NavigationBar />
-      <div>
+      <div style={{ top: 0 }}>
         <Routes>
           <Route exact path="/cv" element={<Cv />} />
           <Route path="/" element={<HomePage />} />

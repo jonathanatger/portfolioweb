@@ -1,11 +1,11 @@
 import React from "react";
+import HeroSection from "./homepageSections/HeroSection.js";
 
 class HomePage extends React.Component {
   render() {
     return (
-      <div className="mainBox" height="500">
-        <h1 className="subHeader">Let's try this out</h1>
-        <h2 className="subHeader">Ok this is great</h2>
+      <div className="homepage-main-grid">
+        <HeroSection />
       </div>
     );
   }
