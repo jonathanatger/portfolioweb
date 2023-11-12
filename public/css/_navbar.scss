@@ -1,4 +1,5 @@
 @import "hElements.scss";
+@import "mixins.scss";
 
 .disappear {
   transition: opacity 0.3s ease;
@@ -85,12 +86,25 @@
   }
 }
 
-.navbar-side-info {
-  @include menu-links;
+.navbar-side-info-top {
+  display: flex;
+  @include hero-section;
+  font-size: 40px;
+  padding-right: 30px;
+}
+.navbar-side-info-side {
+  display: flex;
   writing-mode: vertical-lr;
   transform: scale(-1, -1);
   right: 0;
+  @include menu-links;
+}
+
+.navbar-side-info {
   margin: $overall-margins;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }
 
 .navbar-visible {

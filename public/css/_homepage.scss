@@ -1,5 +1,4 @@
 @import "hElements.scss";
-
 .hero-section {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -17,7 +16,28 @@
 
 .hero-section-message-container {
   width: $left-side-proportion;
-  margin-bottom: 20vh;
+  margin: 10vw 0 10vw 0;
+}
+
+.hero-section-message-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  text-wrap: wrap;
+  flex-direction: row;
+
+  h1 {
+    padding-right: 1em;
+  }
+}
+.hero-section-message-accent {
+  @include hero-section;
+  color: $accent-color;
+  font-weight: 500;
+}
+.hero-section-message-italic {
+  @include hero-section;
+  font-style: italic;
+  font-weight: 300;
 }
 
 .hero-section-picture {

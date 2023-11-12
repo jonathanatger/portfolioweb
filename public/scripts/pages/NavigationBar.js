@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
-const menu_styling = ({ isActive }) =>
+const menuStyling = ({ isActive }) =>
   isActive ? "navbar-links-active" : "navbar-links-inactive";
 
 const onHamburgerClick = function () {
@@ -13,35 +13,42 @@ const onHamburgerClick = function () {
   });
 };
 
+const sectionSign = "=> PARIS";
+
 class NavigationBar extends React.Component {
+  // const [section, setSection] = useState("=> PARIS");
+
   render() {
     return (
       <nav className="navbar-container">
         <div className="navbar-side-info navbar-visible">
-          CODE + DESIGN JONATHAN ATGER - 2023
+          <div className="navbar-side-info-top">{sectionSign}</div>
+          <div className="navbar-side-info-side">
+            CODE + DESIGN JONATHAN ATGER - 2023
+          </div>
         </div>
         <div className="navbar-menu">
           <ul className="navbar-visible">
             <li>
-              <NavLink to="/" className={menu_styling}>
+              <NavLink to="/" className={menuStyling}>
                 PROJETS
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/info" className={menu_styling}>
+              <NavLink to="/info" className={menuStyling}>
                 À PROPOS
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/contact" className={menu_styling} exact="true">
+              <NavLink to="/contact" className={menuStyling} exact="true">
                 CONTACT
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/cv" className={menu_styling} exact="true">
+              <NavLink to="/cv" className={menuStyling} exact="true">
                 C.V.
               </NavLink>
             </li>

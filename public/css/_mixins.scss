@@ -1,0 +1,16 @@
+@import "hElements.scss";
+
+@mixin menu-links {
+  font-family: $tertiary-font;
+  color: $font-color;
+  font-weight: 300;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 7px;
+  font-size: 14px;
+}
+
+@mixin hero-section {
+  font-family: $font;
+  font-size: 60px;
+}

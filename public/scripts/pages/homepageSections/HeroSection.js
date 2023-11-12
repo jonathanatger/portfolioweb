@@ -2,10 +2,24 @@ import React from "react";
 import Corporateimage from "../../../content/Corporateimage.png";
 
 const HeroSectionMessage = () => {
-  const heroSectionStringMessage =
-    "DÉVELOPPEUR PAR PASSION <JE SUIS À LA RECHERCHE D'UN EMPLOI> DANS LE DÉVELOPPEMENT WEB";
+  const heroSectionStringMessage = "";
+  const heroSString1 = "DÉVELOPPEUR";
+  const heroSString1_5 = "PAR PASSION ";
+  const heroSString2 = " <JE SUIS À LA";
+  const heroSString2_5 = "RECHERCHE D'UN EMPLOI>";
+  const heroSString3 = "DANS LE DÉVELOPPEMENT WEB";
 
-  return <h1>{heroSectionStringMessage}</h1>;
+  return (
+    <div>
+      <h1 className="hero-section-message-accent">{heroSString1}</h1>
+      <div className="hero-section-message-wrap">
+        <h1 className="hero-section-message-accent">{heroSString1_5}</h1>
+        <h1 className="hero-section-message-italic">{heroSString2}</h1>
+        <h1 className="hero-section-message-italic">{heroSString2_5}</h1>
+      </div>
+      <h1 className="hero-section-message-accent">{heroSString3}</h1>
+    </div>
+  );
 };
 
 const HeroSectionImage = () => {
