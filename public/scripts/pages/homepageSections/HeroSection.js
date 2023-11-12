@@ -1,12 +1,11 @@
 import React from "react";
 import Corporateimage from "../../../content/Corporateimage.png";
-
 const HeroSectionMessage = () => {
   const heroSectionStringMessage = "";
   const heroSString1 = "DÉVELOPPEUR";
   const heroSString1_5 = "PAR PASSION ";
   const heroSString2 = " <JE SUIS À LA";
-  const heroSString2_5 = "RECHERCHE D'UN EMPLOI>";
+  const heroSString2_5 = "RECHERCHE D'UNE POSITION>";
   const heroSString3 = "DANS LE DÉVELOPPEMENT WEB";
 
   return (
