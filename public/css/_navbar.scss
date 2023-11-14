@@ -98,7 +98,7 @@
   display: flex;
   @include hero-section;
   font-size: 40px;
-  padding-right: 30px;
+  padding-right: $secondary-margins;
 }
 
 .navbar-side-info-side {

@@ -13,19 +13,23 @@ const ProjectImage = function (props) {
   );
 };
 
+const ProjectTitle = function (props) {
+  return (
+    <div className="projects-title-container">
+      <h1>{props.title}</h1>
+    </div>
+  );
+};
 const Projects = function () {
   return (
     <div className="projects-main-container">
       <div className="projects-pictures-container">
         <ProjectImage source={BlogImage} />
-        <img
-          src={BlogImage}
-          className="projects-image"
-          alt="Picture of a project"
-        ></img>
+        <ProjectImage source={BlogImage} />
+        <ProjectImage source={BlogImage} />
       </div>
       <div className="projects-info-container">
-        <h1>This is a title</h1>
+        <ProjectTitle title="Trier locaux avec le machine learning" />
       </div>
     </div>
   );

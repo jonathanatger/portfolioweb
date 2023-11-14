@@ -57,7 +57,7 @@
   display: grid;
 
   grid-template-columns: $left-side-proportion auto;
-  grid-template-rows: 100vh 100vh 100vh;
+  grid-template-rows: 100vh 1 100vh;
 
   pointer-events: none;
   z-index: -1;
