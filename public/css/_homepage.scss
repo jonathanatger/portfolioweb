@@ -52,13 +52,11 @@
 
 .homepage-main-grid {
   top: 0;
-  height: 300vh;
   margin: 0 $overall-margins;
   display: grid;
 
   grid-template-columns: $left-side-proportion auto;
   grid-template-rows: 100vh 1 100vh;
 
-  pointer-events: none;
   z-index: -1;
 }

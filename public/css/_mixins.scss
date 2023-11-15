@@ -14,3 +14,13 @@
   font-family: $font;
   font-size: 60px;
 }
+@mixin paragraph {
+  color: var(--Off-White, #fff8eb);
+  /* Contact paragraph */
+  font-family: $tertiary-font;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 1.4em;
+  letter-spacing: 2px;
+}

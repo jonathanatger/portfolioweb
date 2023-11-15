@@ -8,6 +8,7 @@
 
 .hamburger {
   z-index: 99;
+  pointer-events: all;
   &:hover {
     transform: scale(1.2, 1.2);
   }
@@ -27,6 +28,7 @@
   height: 100%;
   position: fixed;
   bottom: 0;
+  pointer-events: none;
 }
 
 .navbar-links-inactive {
@@ -36,6 +38,7 @@
   &:hover {
     font-weight: 600;
   }
+  pointer-events: all;
 }
 
 .navbar-links-active {
@@ -46,6 +49,7 @@
   a {
     text-decoration: underline;
   }
+  pointer-events: all;
 }
 
 .navbar-menu {
