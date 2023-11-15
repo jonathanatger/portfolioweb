@@ -4,7 +4,7 @@ import TwitterImage from "../../../content/ico-twitter-250.png";
 import WebImage from "../../../content/ico-web-100.png";
 import GithubImage from "../../../content/ico-github-96.png";
 
-const Curtain = function () {
+export const Curtain = function () {
   const pointRows = 10;
   const pointColumns = 10;
 
@@ -46,10 +46,10 @@ const ButtonMailto = ({ mailto, label }) => {
     </Link>
   );
 };
-const cvLinkText = "EN SAVOIR PLUS >";
-const mailLinkText = "ENVOYER UN MAIL >";
 
-const ContactInfo = function () {
+const cvLinkText = "EN SAVOIR PLUS >";
+
+export const ContactInfo = function () {
   return (
     <div className="contact-info">
       <div className="contact-info-intro">
@@ -81,14 +81,3 @@ const ContactInfo = function () {
     </div>
   );
 };
-
-const Contact = function () {
-  return (
-    <div className="contact-main-container">
-      <Curtain />
-      <ContactInfo />
-    </div>
-  );
-};
-
-export default Contact;

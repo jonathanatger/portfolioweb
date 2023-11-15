@@ -21,7 +21,8 @@ root.render(
       <div style={{ top: 0 }}>
         <Routes>
           <Route exact path="/cv" element={<Cv />} />
-          <Route path="/" element={<HomePage />} />
+          <Route exact path="/st" element={<HomePage st="13241" />} />
+          <Route path="/" element={<HomePage st="1" />} />
         </Routes>
       </div>
     </BrowserRouter>

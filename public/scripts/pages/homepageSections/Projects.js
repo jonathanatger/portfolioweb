@@ -1,7 +1,6 @@
 import React from "react";
-import BlogImage from "../../../content/CaptureOB.png";
 
-const ProjectImage = function (props) {
+export const ProjectImage = function (props) {
   return (
     <div>
       <img
@@ -13,26 +12,10 @@ const ProjectImage = function (props) {
   );
 };
 
-const ProjectTitle = function (props) {
+export const ProjectTitle = function (props) {
   return (
     <div className="projects-title-container">
       <h1>{props.title}</h1>
     </div>
   );
 };
-const Projects = function () {
-  return (
-    <div className="projects-main-container">
-      <div className="projects-pictures-container">
-        <ProjectImage source={BlogImage} />
-        <ProjectImage source={BlogImage} />
-        <ProjectImage source={BlogImage} />
-      </div>
-      <div className="projects-info-container">
-        <ProjectTitle title="Trier locaux avec le machine learning" />
-      </div>
-    </div>
-  );
-};
-
-export default Projects;

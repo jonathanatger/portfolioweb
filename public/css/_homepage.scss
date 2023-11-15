@@ -1,4 +1,5 @@
 @import "hElements.scss";
+
 .hero-section {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -7,6 +8,7 @@
   display: flex;
   flex-direction: row;
   align-items: end;
+  height: 100vh;
 }
 
 .hero-section-image {

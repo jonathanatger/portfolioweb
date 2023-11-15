@@ -1,6 +1,7 @@
 import React from "react";
 import Corporateimage from "../../../content/Corporateimage.png";
-const HeroSectionMessage = () => {
+
+export const HeroSectionMessage = () => {
   const heroSectionStringMessage = "";
   const heroSString1 = "DÉVELOPPEUR";
   const heroSString1_5 = "PAR PASSION ";
@@ -21,7 +22,7 @@ const HeroSectionMessage = () => {
   );
 };
 
-const HeroSectionImage = () => {
+export const HeroSectionImage = () => {
   return (
     <div className="hero-section-picture">
       <img
@@ -32,16 +33,3 @@ const HeroSectionImage = () => {
     </div>
   );
 };
-
-const HeroSection = () => {
-  return (
-    <div className="hero-section">
-      <div className="hero-section-message-container">
-        <HeroSectionMessage />
-      </div>
-      <HeroSectionImage />
-    </div>
-  );
-};
-
-export default HeroSection;
