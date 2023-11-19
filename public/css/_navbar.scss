@@ -35,9 +35,6 @@
   color: $font-color;
   text-decoration: none;
   @include menu-links;
-  &:hover {
-    font-weight: 600;
-  }
   pointer-events: all;
 }
 
@@ -45,11 +42,10 @@
   color: $font-color;
   padding-right: -7px;
   @include menu-links;
-  font-weight: 600;
-  a {
-    text-decoration: underline;
-  }
   pointer-events: all;
+  &:hover {
+    font-weight: 600;
+  }
 }
 
 .navbar-menu {
@@ -67,6 +63,7 @@
     justify-content: space-between;
     list-style-type: none;
     padding: 0;
+    pointer-events: all;
 
     li {
       margin: 0;

@@ -61,6 +61,7 @@
   margin: 0 $overall-margins;
   display: grid;
 
+  pointer-events: none;
   grid-template-columns: $left-side-proportion auto;
   grid-template-rows: 100vh 20vh 100% 20vh 100vh;
 

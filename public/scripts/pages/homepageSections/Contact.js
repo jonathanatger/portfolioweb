@@ -34,8 +34,8 @@ export const Curtain = function () {
 
 const ButtonMailto = ({ mailto, label }) => {
   return (
-    <Link
-      to="#"
+    <a
+      href="#"
       onClick={(e) => {
         window.location.href = mailto;
         e.preventDefault();
@@ -43,7 +43,7 @@ const ButtonMailto = ({ mailto, label }) => {
       className="contact-info-mail"
     >
       {label}
-    </Link>
+    </a>
   );
 };
 
@@ -62,9 +62,9 @@ export const ContactInfo = function () {
         <h3 className="contact-info-text">
           Précédemment chef de projet architecte et ingénieur .
         </h3>
-        <Link to="/cv" className="contact-info-cv">
+        <a href="/" className="contact-info-cv">
           {cvLinkText}
-        </Link>
+        </a>
       </div>
       <div className="contact-info-links">
         <h2>Jonathan ATGER</h2>

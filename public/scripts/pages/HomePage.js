@@ -8,14 +8,8 @@ import { Curtain, ContactInfo } from "./homepageSections/Contact.js";
 import BlogImage from "../../content/CaptureOB.png";
 
 const Homepage = function (props) {
-  const [scrollPosition, setScrollPosition] = useState();
-
-  useEffect(() => {
-    if (scrollPosition > 300) console.log("lol");
-  }, [scrollPosition]);
-
   return (
-    <div className="homepage-main-grid">
+    <div id="main-grid" className="homepage-main-grid">
       <div className="hero-section">
         <div className="hero-section-message-container">
           <HeroSectionMessage />

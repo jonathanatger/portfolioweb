@@ -4,20 +4,29 @@ import { Link, NavLink } from "react-router-dom";
 const menuStyling = ({ isActive }) =>
   isActive ? "navbar-links-active" : "navbar-links-inactive";
 
-const onHamburgerClick = function () {
-  const navElements = document.querySelectorAll(".navbar-visible");
-  navElements.forEach((navElement) => {
-    navElement.classList.contains("disappear")
-      ? navElement.classList.remove("disappear")
-      : navElement.classList.add("disappear");
-  });
-};
-
 const sectionSign = "=> PARIS";
 
-import React, { useState, useEffect } from "react";
+const NavigationBar = function ({ scrollDirection, scrollPosition }) {
+  let visibility = 1;
 
-const NavigationBar = function () {
+  const changeNavbarVisibility = function (controller) {
+    const navElements = document.querySelectorAll(".navbar-visible");
+    navElements.forEach((navElement) => {
+      if (controller === 1) {
+        navElement.classList.remove("disappear");
+        visibility = 1;
+      } else {
+        navElement.classList.add("disappear");
+        visibility = 0;
+      }
+    });
+  };
+
+  useEffect(() => {
+    if (scrollDirection == "DOWN") changeNavbarVisibility(0);
+    else changeNavbarVisibility(1);
+  }, [scrollDirection]);
+
   return (
     <nav className="navbar-container">
       <div className="navbar-side-info navbar-visible">
@@ -29,30 +38,26 @@ const NavigationBar = function () {
       <div className="navbar-menu">
         <ul className="navbar-visible">
           <li>
-            <NavLink to="/" className={menuStyling}>
-              PROJETS
-            </NavLink>
+            <a className="navbar-links-active">PROJETS</a>
           </li>
 
           <li>
-            <NavLink to="/info" className={menuStyling}>
-              À PROPOS
-            </NavLink>
+            <a className="navbar-links-active">À PROPOS</a>
           </li>
 
           <li>
-            <NavLink to="/contact" className={menuStyling} exact="true">
-              CONTACT
-            </NavLink>
+            <a className="navbar-links-active">CONTACT</a>
           </li>
 
           <li>
-            <NavLink to="/cv" className={menuStyling} exact="true">
-              C.V.
-            </NavLink>
+            <a className="navbar-links-active">C.V.</a>
           </li>
         </ul>
-        <a id="hamburger" className="hamburger" onClick={onHamburgerClick}>
+        <a
+          id="hamburger"
+          className="hamburger"
+          onClick={changeNavbarVisibility(visibility === 0 ? 1 : 0)}
+        >
           <div></div>
           <div></div>
           <div></div>
