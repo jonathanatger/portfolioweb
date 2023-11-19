@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
 :root {
   scrollbar-width: none;
 }
@@ -38,7 +37,7 @@ h2 {
 }
 
 h3 {
-  font-family: "DM Mono", monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: 400;
   margin-top: 0px;
@@ -47,7 +46,7 @@ h3 {
 }
 
 h4 {
-  font-family: "DM Mono", monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 400;
   margin-top: 0px;
@@ -56,19 +55,28 @@ h4 {
 }
 
 h5 {
-  font-family: "DM Mono", monospace;
+  color: var(--Off-White, #fff8eb);
+  /* Contact paragraph */
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 1.4em;
+  letter-spacing: 2px;
   margin-top: 0px;
   margin-bottom: 3px;
   text-align: justify;
-  line-height: 1.5;
 }
 
 h6 {
-  font-family: "DM Mono", monospace;
-  font-size: 16px;
-  font-weight: 400;
+  color: var(--Off-White, #fff8eb);
+  /* Contact paragraph */
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 1.4em;
+  letter-spacing: 2px;
   margin-top: 0px;
   text-align: justify;
 }
@@ -112,7 +120,7 @@ h2 {
 }
 
 h3 {
-  font-family: "DM Mono", monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: 400;
   margin-top: 0px;
@@ -121,7 +129,7 @@ h3 {
 }
 
 h4 {
-  font-family: "DM Mono", monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 400;
   margin-top: 0px;
@@ -130,93 +138,28 @@ h4 {
 }
 
 h5 {
-  font-family: "DM Mono", monospace;
+  color: var(--Off-White, #fff8eb);
+  /* Contact paragraph */
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 1.4em;
+  letter-spacing: 2px;
   margin-top: 0px;
   margin-bottom: 3px;
   text-align: justify;
-  line-height: 1.5;
 }
 
 h6 {
-  font-family: "DM Mono", monospace;
-  font-size: 16px;
-  font-weight: 400;
-  margin-top: 0px;
-  text-align: justify;
-}
-
-.italic {
-  font-style: italic;
-}
-
-:root {
-  scrollbar-width: none;
-}
-
-body {
-  margin: 0;
-  background-color: #918f8f;
-  scrollbar-width: none;
-  color: #fff8eb;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}
-
-h1 {
-  font-family: "DM Mono", monospace;
-  font-size: 60px;
-  font-weight: 400;
-  padding-bottom: 20px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-}
-
-h2 {
-  font-family: "DM Mono", monospace;
-  font-size: 36px;
-  font-weight: 400;
-  margin-bottom: 0px;
-  padding-bottom: 20px;
-  margin-top: 0px;
-  text-align: justify;
-}
-
-h3 {
-  font-family: "DM Mono", monospace;
-  font-size: 30px;
-  font-weight: 400;
-  margin-top: 0px;
-  margin-bottom: 5px;
-  text-align: justify;
-}
-
-h4 {
-  font-family: "DM Mono", monospace;
-  font-size: 24px;
-  font-weight: 400;
-  margin-top: 0px;
-  margin-bottom: 3px;
-  text-align: justify;
-}
-
-h5 {
-  font-family: "DM Mono", monospace;
+  color: var(--Off-White, #fff8eb);
+  /* Contact paragraph */
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  font-weight: 400;
-  margin-top: 0px;
-  margin-bottom: 3px;
-  text-align: justify;
-  line-height: 1.5;
-}
-
-h6 {
-  font-family: "DM Mono", monospace;
-  font-size: 16px;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 1.4em;
+  letter-spacing: 2px;
   margin-top: 0px;
   text-align: justify;
 }
@@ -400,7 +343,7 @@ h2 {
 }
 
 h3 {
-  font-family: "DM Mono", monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: 400;
   margin-top: 0px;
@@ -409,7 +352,7 @@ h3 {
 }
 
 h4 {
-  font-family: "DM Mono", monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 400;
   margin-top: 0px;
@@ -418,25 +361,38 @@ h4 {
 }
 
 h5 {
-  font-family: "DM Mono", monospace;
+  color: var(--Off-White, #fff8eb);
+  /* Contact paragraph */
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 1.4em;
+  letter-spacing: 2px;
   margin-top: 0px;
   margin-bottom: 3px;
   text-align: justify;
-  line-height: 1.5;
 }
 
 h6 {
-  font-family: "DM Mono", monospace;
-  font-size: 16px;
-  font-weight: 400;
+  color: var(--Off-White, #fff8eb);
+  /* Contact paragraph */
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 1.4em;
+  letter-spacing: 2px;
   margin-top: 0px;
   text-align: justify;
 }
 
 .italic {
   font-style: italic;
+}
+
+.grid-filler {
+  height: 20vh;
 }
 
 .hero-section {
@@ -498,7 +454,7 @@ h6 {
   margin: 0 40px;
   display: grid;
   grid-template-columns: 66% auto;
-  grid-template-rows: 100vh 1 100vh;
+  grid-template-rows: 100vh 20vh 100% 20vh 100vh;
   z-index: -1;
 }
 
@@ -537,7 +493,7 @@ h2 {
 }
 
 h3 {
-  font-family: "DM Mono", monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: 400;
   margin-top: 0px;
@@ -546,7 +502,7 @@ h3 {
 }
 
 h4 {
-  font-family: "DM Mono", monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 400;
   margin-top: 0px;
@@ -555,19 +511,28 @@ h4 {
 }
 
 h5 {
-  font-family: "DM Mono", monospace;
+  color: var(--Off-White, #fff8eb);
+  /* Contact paragraph */
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 1.4em;
+  letter-spacing: 2px;
   margin-top: 0px;
   margin-bottom: 3px;
   text-align: justify;
-  line-height: 1.5;
 }
 
 h6 {
-  font-family: "DM Mono", monospace;
-  font-size: 16px;
-  font-weight: 400;
+  color: var(--Off-White, #fff8eb);
+  /* Contact paragraph */
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 1.4em;
+  letter-spacing: 2px;
   margin-top: 0px;
   text-align: justify;
 }
@@ -583,6 +548,7 @@ h6 {
 
 .projects-main-container {
   grid-column: 1/3;
+  grid-row: 3/4;
   display: grid;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
@@ -608,7 +574,7 @@ h6 {
 
 .contact-main-container {
   grid-column: 1/3;
-  grid-row: 3;
+  grid-row: 5/6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -709,4 +675,99 @@ h6 {
   font-weight: 200;
   line-height: 1.4em;
   letter-spacing: 2px;
+}
+
+.cv-ed-exp-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cv-ed-exp-location {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.cv-date-location {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 250px;
+  margin-left: 10px;
+}
+.cv-date-location h5 {
+  text-align: right;
+}
+
+@media screen and (max-width: 900px) {
+  .cv-date-location {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 50px;
+  }
+  .cv-date-location h5 {
+    text-align: right;
+  }
+}
+.cv-divider {
+  height: 2px;
+  background-color: rgb(124, 124, 124);
+  margin-left: px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  max-width: 88%;
+}
+
+.cv-first-column {
+  width: 550px;
+  padding-bottom: 20px;
+}
+
+.cv-global-container {
+  width: 100%;
+  padding: 40px;
+  margin-top: 50px;
+}
+
+.cv-second-column {
+  width: 88%;
+  max-width: 800px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 900px) {
+  .cv-second-column {
+    width: 100%;
+    max-width: 800px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.cv-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 0px;
+}
+
+.cv-work-xp-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cv-work-xp-paragraph {
+  margin: 0px 0px 35px 0px;
+}
+
+.hp-cv {
+  background-color: #f5bb50;
+  padding: 50px 20px 0 20px;
 }/*# sourceMappingURL=general.css.map */

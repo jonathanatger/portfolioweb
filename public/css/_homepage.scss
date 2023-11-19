@@ -1,5 +1,9 @@
 @import "hElements.scss";
 
+.grid-filler {
+  height: 20vh;
+}
+
 .hero-section {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -58,7 +62,7 @@
   display: grid;
 
   grid-template-columns: $left-side-proportion auto;
-  grid-template-rows: 100vh 1 100vh;
+  grid-template-rows: 100vh 20vh 100% 20vh 100vh;
 
   z-index: -1;
 }

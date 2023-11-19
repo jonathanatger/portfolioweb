@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
-
+@import "mixins.scss";
 $font: "DM Mono", monospace;
 $secondary-font: "DM Sans", sans-serif;
 $tertiary-font: "Montserrat", sans-serif;
@@ -46,7 +46,7 @@ h2 {
 }
 
 h3 {
-  font-family: $font;
+  font-family: $tertiary-font;
   font-size: 30px;
   font-weight: 400;
   margin-top: 0px;
@@ -55,7 +55,7 @@ h3 {
 }
 
 h4 {
-  font-family: $font;
+  font-family: $tertiary-font;
   font-size: 24px;
   font-weight: 400;
   margin-top: 0px;
@@ -64,19 +64,14 @@ h4 {
 }
 
 h5 {
-  font-family: $font;
-  font-size: 18px;
-  font-weight: 400;
+  @include paragraph;
   margin-top: 0px;
   margin-bottom: 3px;
   text-align: justify;
-  line-height: 1.5;
 }
 
 h6 {
-  font-family: $font;
-  font-size: 16px;
-  font-weight: 400;
+  @include paragraph;
   margin-top: 0px;
   text-align: justify;
 }

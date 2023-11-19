@@ -2,7 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Cv from "./pages/Cv.js";
+import { Cv } from "./pages/Cv.js";
 import HomePage from "./pages/HomePage.js";
 import NavigationBar from "./pages/NavigationBar.js";
 import "../css/general.css";
@@ -20,9 +20,8 @@ root.render(
       <NavigationBar />
       <div style={{ top: 0 }}>
         <Routes>
-          <Route exact path="/cv" element={<Cv />} />
-          <Route exact path="/st" element={<HomePage st="13241" />} />
-          <Route path="/" element={<HomePage st="1" />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/cv" element={<Cv />} />
         </Routes>
       </div>
     </BrowserRouter>

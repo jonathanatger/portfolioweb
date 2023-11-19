@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   HeroSectionMessage,
   HeroSectionImage,
@@ -8,15 +8,22 @@ import { Curtain, ContactInfo } from "./homepageSections/Contact.js";
 import BlogImage from "../../content/CaptureOB.png";
 
 const Homepage = function (props) {
+  const [scrollPosition, setScrollPosition] = useState();
+
+  useEffect(() => {
+    if (scrollPosition > 300) console.log("lol");
+  }, [scrollPosition]);
+
   return (
     <div className="homepage-main-grid">
       <div className="hero-section">
         <div className="hero-section-message-container">
           <HeroSectionMessage />
-          <h1>{props.st}</h1>
         </div>
         <HeroSectionImage />
       </div>
+
+      <div className="grid-filler"></div>
 
       <div className="projects-main-container">
         <div className="projects-pictures-container">
@@ -28,6 +35,8 @@ const Homepage = function (props) {
           <ProjectTitle title="Trier locaux avec le machine learning" />
         </div>
       </div>
+
+      <div className="grid-filler"></div>
 
       <div className="contact-main-container">
         <Curtain />
