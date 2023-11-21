@@ -1,36 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import TwitterImage from "../../../content/ico-twitter-250.png";
 import WebImage from "../../../content/ico-web-100.png";
 import GithubImage from "../../../content/ico-github-96.png";
-
-export const Curtain = function () {
-  const pointRows = 10;
-  const pointColumns = 10;
-
-  const points = [];
-
-  for (let i = 1; i < pointRows; i++) {
-    for (let j = 1; j < pointColumns; j++) {
-      let cssGridR = i.toString();
-      let cssGridC = j.toString();
-
-      points.push(
-        <h3
-          key={i.toString() + j.toString()}
-          style={{
-            gridRow: cssGridR,
-            gridColumn: cssGridC,
-          }}
-        >
-          .
-        </h3>
-      );
-    }
-  }
-
-  return <div className="contact-points">{points}</div>;
-};
 
 const ButtonMailto = ({ mailto, label }) => {
   return (
@@ -66,6 +37,7 @@ export const ContactInfo = function () {
           {cvLinkText}
         </a>
       </div>
+
       <div className="contact-info-links">
         <h2>Jonathan ATGER</h2>
         <div className="contact-info-logos">
@@ -80,4 +52,32 @@ export const ContactInfo = function () {
       </div>
     </div>
   );
+};
+
+export const Curtain = function () {
+  const pointRows = 10;
+  const pointColumns = 10;
+
+  const points = [];
+
+  for (let i = 1; i < pointRows; i++) {
+    for (let j = 1; j < pointColumns; j++) {
+      let cssGridR = i.toString();
+      let cssGridC = j.toString();
+
+      points.push(
+        <h3
+          key={i.toString() + j.toString()}
+          style={{
+            gridRow: cssGridR,
+            gridColumn: cssGridC,
+          }}
+        >
+          .
+        </h3>
+      );
+    }
+  }
+
+  return <div className="contact-points">{points}</div>;
 };

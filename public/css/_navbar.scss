@@ -9,6 +9,7 @@
 .hamburger {
   z-index: 99;
   pointer-events: all;
+  margin-right: $overall-margins;
   &:hover {
     transform: scale(1.2, 1.2);
   }
@@ -49,20 +50,32 @@
 }
 
 .navbar-menu {
-  bottom: 0;
+  margin: 0;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   font-family: $font;
-  margin: $overall-margins;
+  background-color: $background-color;
+  z-index: 99;
 
   ul {
+    border-top: solid $font-color 1px;
+
+    padding: 20px 0 20px 0;
+    margin: 0 $overall-margins 0 $overall-margins;
+    // padding: 20 0 20 0;
+
     width: $left-side-proportion;
+    height: fit-content;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+
     list-style-type: none;
-    padding: 0;
     pointer-events: all;
 
     li {
@@ -70,7 +83,9 @@
       position: relative;
       display: flex;
       flex-direction: row;
+      align-items: center;
       flex-wrap: nowrap;
+      height: fit-content;
     }
 
     li::before {
@@ -95,6 +110,13 @@
   }
 }
 
+.navbar-side-info {
+  margin: $overall-margins;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
 .navbar-side-info-top {
   display: flex;
   @include hero-section;
@@ -108,13 +130,6 @@
   transform: scale(-1, -1);
   right: 0;
   @include menu-links;
-}
-
-.navbar-side-info {
-  margin: $overall-margins;
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
 }
 
 .navbar-visible {

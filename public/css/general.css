@@ -176,6 +176,7 @@ h6 {
 .hamburger {
   z-index: 99;
   pointer-events: all;
+  margin-right: 40px;
 }
 .hamburger:hover {
   transform: scale(1.2, 1.2);
@@ -228,20 +229,29 @@ h6 {
 }
 
 .navbar-menu {
-  bottom: 0;
+  margin: 0;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   font-family: "DM Mono", monospace;
-  margin: 40px;
+  background-color: #918f8f;
+  z-index: 99;
 }
 .navbar-menu ul {
+  border-top: solid #fff8eb 1px;
+  padding: 20px 0 20px 0;
+  margin: 0 40px 0 40px;
   width: 66%;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   list-style-type: none;
-  padding: 0;
   pointer-events: all;
 }
 .navbar-menu ul li {
@@ -249,7 +259,10 @@ h6 {
   position: relative;
   display: flex;
   flex-direction: row;
+  align-items: center;
   flex-wrap: nowrap;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .navbar-menu ul li::before {
   transform: scaleX(0);
@@ -269,6 +282,13 @@ h6 {
   background: #f5bb50;
   z-index: -1;
   transition: transform 0.3s ease;
+}
+
+.navbar-side-info {
+  margin: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }
 
 .navbar-side-info-top {
@@ -291,13 +311,6 @@ h6 {
   line-height: normal;
   letter-spacing: 7px;
   font-size: 14px;
-}
-
-.navbar-side-info {
-  margin: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
 }
 
 .navbar-visible {
@@ -617,7 +630,6 @@ h6 {
   color: #f5bb50;
   letter-spacing: 5px;
   pointer-events: all;
-  z-index: 98;
   width: -moz-fit-content;
   width: fit-content;
 }

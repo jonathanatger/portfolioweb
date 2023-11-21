@@ -1,39 +1,28 @@
 import { createRoot } from "react-dom/client";
 import React, { useState, useEffect } from "react";
-
 import HomePage from "./pages/HomePage.js";
 import NavigationBar from "./pages/NavigationBar.js";
 import "../css/general.css";
 
-let timeoutId;
-let scrollPosition;
-
 const App = () => {
-  const [scrollDirection, setScrollDirection] = useState();
+  const [scrollDirection, setScrollDirection] = useState("none");
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScrollDirection = () => {
-    if (timeoutId) clearTimeout(timeoutId);
-
-    scrollPosition && window.scrollY >= scrollPosition
+    window.scrollY > scrollPosition
       ? setScrollDirection("DOWN")
       : setScrollDirection("UP");
 
-    timeoutId = setTimeout(() => {
-      scrollPosition = window.scrollY;
-    }, 100);
+    setScrollPosition(window.scrollY);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      handleScrollDirection();
-    });
+    window.addEventListener("scroll", handleScrollDirection);
 
     return () => {
-      window.removeEventListener("scroll", () => {
-        handleScrollDirection();
-      });
+      window.removeEventListener("scroll", handleScrollDirection);
     };
-  }, []);
+  }, [scrollPosition]);
 
   return (
     <div>
@@ -41,6 +30,7 @@ const App = () => {
         scrollDirection={scrollDirection}
         scrollPosition={scrollPosition}
       />
+
       <div style={{ top: 0 }}>
         <HomePage
           scrollDirection={scrollDirection}

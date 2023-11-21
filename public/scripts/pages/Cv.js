@@ -1,6 +1,4 @@
 import React from "react";
-import "../../css/general.css";
-import { Link } from "react-router-dom";
 
 export const Cv = function () {
   return (
@@ -182,7 +180,6 @@ class WorkExperience extends React.Component {
           {this.props.description}
           <i>
             <u>
-              <Link to={this.props.linkroute}>{this.props.link}</Link>
               <a target="_blank" href={this.props.externallinkroute}>
                 {this.props.externallink}
               </a>
@@ -224,7 +221,6 @@ class EducationExperience extends React.Component {
           {this.props.description}
           <u>
             <i>
-              <Link to={this.props.linkroute}>{this.props.link}</Link>
               <a target="_blank" href={this.props.externallinkroute}>
                 {this.props.externallink}
               </a>
@@ -259,7 +255,6 @@ class SkillSet extends React.Component {
           <i>{this.props.subtitle}</i> {this.props.description}
           <i>
             <u>
-              <Link to={this.props.linkroute}>{this.props.link}</Link>
               <a target="_blank" href={this.props.externallinkroute}>
                 {this.props.externallink}
               </a>
@@ -269,7 +264,6 @@ class SkillSet extends React.Component {
         <h5 className="bottom-spacing">
           <i>{this.props.subtitle2}</i> {this.props.description2}
           <i>
-            <Link to={this.props.linkroute2}>{this.props.link2}</Link>
             <a target="_blank" href={this.props.externallinkroute2}>
               {this.props.externallink2}
             </a>
@@ -278,7 +272,6 @@ class SkillSet extends React.Component {
         <h5 className="bottom-spacing">
           <i>{this.props.subtitle3}</i> {this.props.description3}
           <i>
-            <Link to={this.props.linkroute3}>{this.props.link3}</Link>
             <a target="_blank" href={this.props.externallinkroute3}>
               {this.props.externallink3}
             </a>
@@ -287,7 +280,6 @@ class SkillSet extends React.Component {
         <h5 className="bottom-spacing">
           <i>{this.props.subtitle4}</i> {this.props.description4}
           <i>
-            <Link to={this.props.linkroute3}>{this.props.link4}</Link>
             <a target="_blank" href={this.props.externallinkroute4}>
               {this.props.externallink4}
             </a>
@@ -296,7 +288,6 @@ class SkillSet extends React.Component {
         <h5 className="bottom-spacing">
           <i>{this.props.subtitle5}</i> {this.props.description5}
           <i>
-            <Link to={this.props.linkroute5}>{this.props.link5}</Link>
             <a target="_blank" href={this.props.externallinkroute5}>
               {this.props.externallink5}
             </a>

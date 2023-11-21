@@ -1,30 +1,29 @@
-import React, { useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
-
-const menuStyling = ({ isActive }) =>
-  isActive ? "navbar-links-active" : "navbar-links-inactive";
+import React, { useEffect, useState } from "react";
 
 const sectionSign = "=> PARIS";
 
 const NavigationBar = function ({ scrollDirection, scrollPosition }) {
-  let visibility = 1;
+  const [visibility, setVisibility] = useState(true);
 
-  const changeNavbarVisibility = function (controller) {
+  const changeNavbarVisibility = () => {
     const navElements = document.querySelectorAll(".navbar-visible");
+
     navElements.forEach((navElement) => {
-      if (controller === 1) {
+      if (visibility === false) {
         navElement.classList.remove("disappear");
-        visibility = 1;
+        setVisibility(true);
       } else {
         navElement.classList.add("disappear");
-        visibility = 0;
+        setVisibility(false);
       }
     });
   };
 
   useEffect(() => {
-    if (scrollDirection == "DOWN") changeNavbarVisibility(0);
-    else changeNavbarVisibility(1);
+    if (scrollDirection == "DOWN" && visibility === true)
+      changeNavbarVisibility();
+    if (scrollDirection == "UP" && visibility === false)
+      changeNavbarVisibility();
   }, [scrollDirection]);
 
   return (
@@ -35,7 +34,7 @@ const NavigationBar = function ({ scrollDirection, scrollPosition }) {
           CODE + DESIGN JONATHAN ATGER - 2023
         </div>
       </div>
-      <div className="navbar-menu">
+      <div className="navbar-menu navbar-visible">
         <ul className="navbar-visible">
           <li>
             <a className="navbar-links-active">PROJETS</a>
@@ -56,7 +55,9 @@ const NavigationBar = function ({ scrollDirection, scrollPosition }) {
         <a
           id="hamburger"
           className="hamburger"
-          onClick={changeNavbarVisibility(visibility === 0 ? 1 : 0)}
+          onClick={() => {
+            changeNavbarVisibility();
+          }}
         >
           <div></div>
           <div></div>
