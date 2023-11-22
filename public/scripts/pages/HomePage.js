@@ -5,9 +5,20 @@ import {
 } from "./homepageSections/HeroSection.js";
 import { ProjectImage, ProjectTitle } from "./homepageSections/Projects.js";
 import { Curtain, ContactInfo } from "./homepageSections/Contact.js";
-import BlogImage from "../../content/CaptureOB.png";
+import projectsRaw from "./homepageSections/project.json";
+
+const projects = Object.entries(projectsRaw);
+const [HOMEPAGE, PROJECT, CV] = ["home", "project", "cv"];
 
 const Homepage = function (props) {
+  const [informationDisplayed, setInformationDisplayed] = useState(HOMEPAGE);
+
+  const handleProjectClick = () => {
+    let mainGrid = document.querySelector(".homepage-main-grid");
+    mainGrid.classList.add("disappeared");
+    console.log("clicked");
+  };
+
   return (
     <div id="main-grid" className="homepage-main-grid">
       <div className="hero-section">
@@ -21,9 +32,18 @@ const Homepage = function (props) {
 
       <div className="projects-main-container">
         <div className="projects-pictures-container">
-          <ProjectImage source={BlogImage} />
-          <ProjectImage source={BlogImage} />
-          <ProjectImage source={BlogImage} />
+          {
+            // RERENDERING EVERY TIME I MOVE
+            projects.map((element, i) => {
+              return (
+                <ProjectImage
+                  key={i.toString()}
+                  source={element[1].srcImage}
+                  onClick={handleProjectClick}
+                />
+              );
+            })
+          }
         </div>
         <div className="projects-info-container">
           <ProjectTitle title="Trier locaux avec le machine learning" />

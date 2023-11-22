@@ -59,11 +59,19 @@
 .homepage-main-grid {
   top: 0;
   margin: 0 $overall-margins;
+  position: absolute;
   display: grid;
 
   pointer-events: none;
   grid-template-columns: $left-side-proportion auto;
   grid-template-rows: 100vh 20vh 100% 20vh 100vh;
 
+  transition: left 0.3s ease;
+  transition: right 0.3s ease;
   z-index: -1;
+
+  &.disappeared {
+    transition: transform 0.3s ease;
+    transform: translateX(-500px);
+  }
 }

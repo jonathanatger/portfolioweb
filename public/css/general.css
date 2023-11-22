@@ -169,7 +169,8 @@ h6 {
 }
 
 .disappear {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
+  transition: background-color 0.2s ease;
   opacity: 0%;
 }
 
@@ -177,8 +178,10 @@ h6 {
   z-index: 99;
   pointer-events: all;
   margin-right: 40px;
+  opacity: 100%;
 }
 .hamburger:hover {
+  transition: transform 0.1s ease;
   transform: scale(1.2, 1.2);
 }
 .hamburger div {
@@ -197,6 +200,7 @@ h6 {
   position: fixed;
   bottom: 0;
   pointer-events: none;
+  z-index: 99;
 }
 
 .navbar-links-inactive {
@@ -237,11 +241,20 @@ h6 {
   justify-content: space-between;
   align-items: center;
   font-family: "DM Mono", monospace;
-  background-color: #918f8f;
+  background-color: rgba(143, 143, 143, 0.9);
   z-index: 99;
+  border-top: 1px #fff8eb solid;
+  box-shadow: -5px -5px 60px #918f8f, 5px 5px 10px #918f8f;
 }
-.navbar-menu ul {
-  border-top: solid #fff8eb 1px;
+.navbar-menu.disappear {
+  transition: background-color 0.2s ease;
+  opacity: 100%;
+  background-color: rgba(100, 100, 100, 0);
+  border-top: none;
+  box-shadow: none;
+}
+
+.navbar-menu > ul {
   padding: 20px 0 20px 0;
   margin: 0 40px 0 40px;
   width: 66%;
@@ -254,7 +267,7 @@ h6 {
   list-style-type: none;
   pointer-events: all;
 }
-.navbar-menu ul li {
+.navbar-menu > ul li {
   margin: 0;
   position: relative;
   display: flex;
@@ -264,15 +277,15 @@ h6 {
   height: -moz-fit-content;
   height: fit-content;
 }
-.navbar-menu ul li::before {
+.navbar-menu > ul li::before {
   transform: scaleX(0);
   transform-origin: bottom right;
 }
-.navbar-menu ul li:hover::before {
+.navbar-menu > ul li:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-.navbar-menu ul li::before {
+.navbar-menu > ul li::before {
   content: " ";
   display: block;
   position: absolute;
@@ -314,7 +327,7 @@ h6 {
 }
 
 .navbar-visible {
-  z-index: 10;
+  z-index: 90;
   transition: opacity 0.3s ease;
 }
 
@@ -462,11 +475,18 @@ h6 {
 .homepage-main-grid {
   top: 0;
   margin: 0 40px;
+  position: absolute;
   display: grid;
   pointer-events: none;
   grid-template-columns: 66% auto;
   grid-template-rows: 100vh 20vh 100% 20vh 100vh;
+  transition: left 0.3s ease;
+  transition: right 0.3s ease;
   z-index: -1;
+}
+.homepage-main-grid.disappeared {
+  transition: transform 0.3s ease;
+  transform: translateX(-500px);
 }
 
 :root {
@@ -555,6 +575,7 @@ h6 {
 .projects-image {
   width: 100%;
   padding: 40px 0 0 0;
+  pointer-events: all;
 }
 
 .projects-main-container {

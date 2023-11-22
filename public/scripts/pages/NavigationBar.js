@@ -4,33 +4,32 @@ const sectionSign = "=> PARIS";
 
 const NavigationBar = function ({ scrollDirection, scrollPosition }) {
   const [visibility, setVisibility] = useState(true);
-
-  const changeNavbarVisibility = () => {
-    const navElements = document.querySelectorAll(".navbar-visible");
-
-    navElements.forEach((navElement) => {
-      if (visibility === false) {
-        navElement.classList.remove("disappear");
-        setVisibility(true);
-      } else {
-        navElement.classList.add("disappear");
-        setVisibility(false);
-      }
-    });
-  };
+  const [isMoving, setIsMoving] = useState(false);
 
   useEffect(() => {
-    if (scrollDirection == "DOWN" && visibility === true)
-      changeNavbarVisibility();
-    if (scrollDirection == "UP" && visibility === false)
-      changeNavbarVisibility();
-  }, [scrollDirection]);
+    if (isMoving == false) {
+      setIsMoving(true);
+    }
+  }, [scrollPosition]);
+
+  if (scrollDirection == "DOWN" && visibility && isMoving) setVisibility(false);
+  if (scrollDirection == "UP" && !visibility && isMoving) setVisibility(true);
+
+  const navElements = document.querySelectorAll(".navbar-visible");
+
+  navElements.forEach((navElement) => {
+    if (visibility) {
+      navElement.classList.remove("disappear");
+    } else {
+      navElement.classList.add("disappear");
+    }
+  });
 
   return (
     <nav className="navbar-container">
-      <div className="navbar-side-info navbar-visible">
-        <div className="navbar-side-info-top">{sectionSign}</div>
-        <div className="navbar-side-info-side">
+      <div className="navbar-side-info ">
+        <div className="navbar-side-info-top navbar-visible">{sectionSign}</div>
+        <div className="navbar-side-info-side navbar-visible">
           CODE + DESIGN JONATHAN ATGER - 2023
         </div>
       </div>
@@ -56,7 +55,11 @@ const NavigationBar = function ({ scrollDirection, scrollPosition }) {
           id="hamburger"
           className="hamburger"
           onClick={() => {
-            changeNavbarVisibility();
+            setVisibility((prevVisibility) => {
+              setIsMoving(false);
+
+              return !prevVisibility;
+            });
           }}
         >
           <div></div>

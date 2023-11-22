@@ -2,27 +2,33 @@ import { createRoot } from "react-dom/client";
 import React, { useState, useEffect } from "react";
 import HomePage from "./pages/HomePage.js";
 import NavigationBar from "./pages/NavigationBar.js";
+import _debounce from "lodash/debounce";
 import "../css/general.css";
 
 const App = () => {
-  const [scrollDirection, setScrollDirection] = useState("none");
+  const [scrollDirection, setScrollDirection] = useState("UP");
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScrollDirection = () => {
-    window.scrollY > scrollPosition
-      ? setScrollDirection("DOWN")
-      : setScrollDirection("UP");
-
-    setScrollPosition(window.scrollY);
+    setScrollPosition((prevScrollPosition) => {
+      if (window.scrollY > prevScrollPosition) {
+        setScrollDirection("DOWN");
+      } else {
+        setScrollDirection("UP");
+      }
+      return window.scrollY;
+    });
   };
 
+  const debounceHandleScrollDirection = _debounce(handleScrollDirection, 50);
+
   useEffect(() => {
-    window.addEventListener("scroll", handleScrollDirection);
+    window.addEventListener("scroll", debounceHandleScrollDirection);
 
     return () => {
-      window.removeEventListener("scroll", handleScrollDirection);
+      window.removeEventListener("scroll", debounceHandleScrollDirection);
     };
-  }, [scrollPosition]);
+  }, []);
 
   return (
     <div>

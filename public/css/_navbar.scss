@@ -2,7 +2,8 @@
 @import "mixins.scss";
 
 .disappear {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
+  transition: background-color 0.2s ease;
   opacity: 0%;
 }
 
@@ -11,6 +12,7 @@
   pointer-events: all;
   margin-right: $overall-margins;
   &:hover {
+    transition: transform 0.1s ease;
     transform: scale(1.2, 1.2);
   }
   div {
@@ -19,6 +21,8 @@
     margin: 6px 0;
     background-color: $accent-color;
   }
+
+  opacity: 100%;
 }
 
 .navbar-container {
@@ -30,6 +34,7 @@
   position: fixed;
   bottom: 0;
   pointer-events: none;
+  z-index: 99;
 }
 
 .navbar-links-inactive {
@@ -57,56 +62,63 @@
   justify-content: space-between;
   align-items: center;
   font-family: $font;
-  background-color: $background-color;
+  background-color: $background-color-transparent;
   z-index: 99;
+  border-top: 1px $font-color solid;
+  box-shadow: -5px -5px 60px $background-color, 5px 5px 10px $background-color;
 
-  ul {
-    border-top: solid $font-color 1px;
+  &.disappear {
+    transition: background-color 0.2s ease;
+    opacity: 100%;
+    background-color: rgba(100, 100, 100, 0);
+    border-top: none;
+    box-shadow: none;
+  }
+}
 
-    padding: 20px 0 20px 0;
-    margin: 0 $overall-margins 0 $overall-margins;
-    // padding: 20 0 20 0;
+.navbar-menu > ul {
+  padding: 20px 0 20px 0;
+  margin: 0 $overall-margins 0 $overall-margins;
 
-    width: $left-side-proportion;
-    height: fit-content;
+  width: $left-side-proportion;
+  height: fit-content;
 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  list-style-type: none;
+  pointer-events: all;
+
+  li {
+    margin: 0;
+    position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
+    height: fit-content;
+  }
 
-    list-style-type: none;
-    pointer-events: all;
-
-    li {
-      margin: 0;
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      flex-wrap: nowrap;
-      height: fit-content;
-    }
-
-    li::before {
-      transform: scaleX(0);
-      transform-origin: bottom right;
-    }
-    li:hover::before {
-      transform: scaleX(1);
-      transform-origin: bottom left;
-    }
-    li::before {
-      content: " ";
-      display: block;
-      position: absolute;
-      margin: -5px;
-      border-radius: 5px;
-      inset: 0 0 0 0;
-      background: $accent-color;
-      z-index: -1;
-      transition: transform 0.3s ease;
-    }
+  li::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  li:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  li::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    margin: -5px;
+    border-radius: 5px;
+    inset: 0 0 0 0;
+    background: $accent-color;
+    z-index: -1;
+    transition: transform 0.3s ease;
   }
 }
 
@@ -133,6 +145,6 @@
 }
 
 .navbar-visible {
-  z-index: 10;
+  z-index: 90;
   transition: opacity 0.3s ease;
 }
