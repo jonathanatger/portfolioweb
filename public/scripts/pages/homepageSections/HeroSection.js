@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Corporateimage from "../../../content/Corporateimage.png";
 
 export const HeroSectionMessage = () => {
@@ -22,12 +22,22 @@ export const HeroSectionMessage = () => {
   );
 };
 
-export const HeroSectionImage = () => {
+export const HeroSectionImage = ({ fadeAway }) => {
+  const [fadeImage, setFadeImage] = useState(false);
+
+  useEffect(() => {
+    if (fadeAway && !fadeImage) setFadeImage(true);
+    if (!fadeAway && fadeImage) setFadeImage(false);
+  }, [fadeAway]);
+
+  const styling = fadeImage
+    ? "hero-section-image fade-away"
+    : "hero-section-image";
   return (
     <div className="hero-section-picture">
       <img
         src={Corporateimage}
-        className="hero-section-image"
+        className={styling}
         alt="Picture of Jonathan"
       ></img>
     </div>

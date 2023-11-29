@@ -1,8 +1,6 @@
 import React from "react";
-import BlogImage from "../../../content/CaptureOB.png";
 
 export const ProjectImage = function (props) {
-  console.log(props.source);
   return (
     <div>
       <img

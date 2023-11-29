@@ -15,13 +15,11 @@ const NavigationBar = function ({ scrollDirection, scrollPosition }) {
   if (scrollDirection == "DOWN" && visibility && isMoving) setVisibility(false);
   if (scrollDirection == "UP" && !visibility && isMoving) setVisibility(true);
 
-  const navElements = document.querySelectorAll(".navbar-visible");
-
-  navElements.forEach((navElement) => {
+  document.querySelectorAll(".navbar-visible").forEach((element) => {
     if (visibility) {
-      navElement.classList.remove("disappear");
+      element.classList.remove("disappear");
     } else {
-      navElement.classList.add("disappear");
+      element.classList.add("disappear");
     }
   });
 
@@ -51,6 +49,7 @@ const NavigationBar = function ({ scrollDirection, scrollPosition }) {
             <a className="navbar-links-active">C.V.</a>
           </li>
         </ul>
+
         <a
           id="hamburger"
           className="hamburger"

@@ -5,18 +5,24 @@ import {
 } from "./homepageSections/HeroSection.js";
 import { ProjectImage, ProjectTitle } from "./homepageSections/Projects.js";
 import { Curtain, ContactInfo } from "./homepageSections/Contact.js";
-import projectsRaw from "./homepageSections/project.json";
+import { projects } from "./homepageSections/ProjectsInfo.js";
 
-const projects = Object.entries(projectsRaw);
 const [HOMEPAGE, PROJECT, CV] = ["home", "project", "cv"];
 
-const Homepage = function (props) {
+const Homepage = function ({ scrollPosition, scrollDirection }) {
   const [informationDisplayed, setInformationDisplayed] = useState(HOMEPAGE);
+
+  let fadeAway = scrollPosition > 300 ? true : false;
 
   const handleProjectClick = () => {
     let mainGrid = document.querySelector(".homepage-main-grid");
-    mainGrid.classList.add("disappeared");
-    console.log("clicked");
+    if (informationDisplayed == HOMEPAGE) {
+      mainGrid.classList.add("disappeared");
+      setInformationDisplayed(PROJECT);
+    } else if (informationDisplayed == PROJECT) {
+      mainGrid.classList.remove("disappeared");
+      setInformationDisplayed(HOMEPAGE);
+    }
   };
 
   return (
@@ -25,25 +31,22 @@ const Homepage = function (props) {
         <div className="hero-section-message-container">
           <HeroSectionMessage />
         </div>
-        <HeroSectionImage />
+        <HeroSectionImage fadeAway={fadeAway} />
       </div>
 
       <div className="grid-filler"></div>
 
       <div className="projects-main-container">
         <div className="projects-pictures-container">
-          {
-            // RERENDERING EVERY TIME I MOVE
-            projects.map((element, i) => {
-              return (
-                <ProjectImage
-                  key={i.toString()}
-                  source={element[1].srcImage}
-                  onClick={handleProjectClick}
-                />
-              );
-            })
-          }
+          {projects.map((project, i) => {
+            return (
+              <ProjectImage
+                // key={project.key}
+                source={project.srcImage}
+                onClick={handleProjectClick}
+              />
+            );
+          })}
         </div>
         <div className="projects-info-container">
           <ProjectTitle title="Trier locaux avec le machine learning" />

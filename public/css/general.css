@@ -414,6 +414,10 @@ h6 {
   font-style: italic;
 }
 
+.fade-away {
+  opacity: 0;
+}
+
 .grid-filler {
   height: 20vh;
 }
@@ -432,6 +436,7 @@ h6 {
 .hero-section-image {
   height: 100%;
   z-index: -1;
+  transition: opacity 0.1s ease;
 }
 
 .hero-section-message-container {
@@ -480,12 +485,10 @@ h6 {
   pointer-events: none;
   grid-template-columns: 66% auto;
   grid-template-rows: 100vh 20vh 100% 20vh 100vh;
-  transition: left 0.3s ease;
-  transition: right 0.3s ease;
   z-index: -1;
+  transition: transform 0.3s ease;
 }
 .homepage-main-grid.disappeared {
-  transition: transform 0.3s ease;
   transform: translateX(-500px);
 }
 
