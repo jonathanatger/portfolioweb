@@ -1,22 +1,24 @@
 import React from "react";
 
-export const ProjectImage = function (props) {
+export const ProjectDisplay = function (props) {
   return (
-    <div>
+    <div
+      id={props.id}
+      className={"projects-individual-project" + props.additionalCss}
+    >
       <img
         src={props.source}
         className="projects-image"
         alt="Picture of a project"
-        onClick={props.onClick}
+        onClick={() => {
+          props.onClick(props.id);
+        }}
       ></img>
-    </div>
-  );
-};
 
-export const ProjectTitle = function (props) {
-  return (
-    <div className="projects-title-container">
-      <h1>{props.title}</h1>
+      <div className="projects-info">
+        <h1 className="projects-title">{props.title}</h1>
+        <h2>{props.description}</h2>
+      </div>
     </div>
   );
 };

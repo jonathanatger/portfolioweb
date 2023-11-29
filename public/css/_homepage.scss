@@ -1,8 +1,22 @@
 @import "hElements.scss";
 
-.fade-away {
-  opacity: 0;
+@keyframes disappearAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100vw);
+  }
 }
+.disappear {
+  transition: transform 0.3s ease;
+  transform: translateX(-100vw);
+}
+.disappear-transition {
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
 .grid-filler {
   height: 20vh;
 }
@@ -21,7 +35,7 @@
 .hero-section-image {
   height: 100%;
   z-index: -1;
-  transition: opacity 0.1s ease;
+  transition: opacity 0.5s ease;
 }
 
 .hero-section-message-container {
@@ -72,8 +86,5 @@
 
   z-index: -1;
   transition: transform 0.3s ease;
-
-  &.disappeared {
-    transform: translateX(-500px);
-  }
+  transition: opacity 0.3s ease;
 }

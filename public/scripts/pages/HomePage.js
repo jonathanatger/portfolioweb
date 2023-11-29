@@ -3,7 +3,7 @@ import {
   HeroSectionMessage,
   HeroSectionImage,
 } from "./homepageSections/HeroSection.js";
-import { ProjectImage, ProjectTitle } from "./homepageSections/Projects.js";
+import { ProjectDisplay } from "./homepageSections/Projects.js";
 import { Curtain, ContactInfo } from "./homepageSections/Contact.js";
 import { projects } from "./homepageSections/ProjectsInfo.js";
 
@@ -11,51 +11,57 @@ const [HOMEPAGE, PROJECT, CV] = ["home", "project", "cv"];
 
 const Homepage = function ({ scrollPosition, scrollDirection }) {
   const [informationDisplayed, setInformationDisplayed] = useState(HOMEPAGE);
+  const [displayedProjectId, setDisplayedProjectId] = useState(null);
 
-  let fadeAway = scrollPosition > 300 ? true : false;
+  const disappearingElementsStyling = function () {
+    if (informationDisplayed === HOMEPAGE) return " disappear-transition";
+    if (informationDisplayed === PROJECT) return " disappear";
+  };
 
-  const handleProjectClick = () => {
-    let mainGrid = document.querySelector(".homepage-main-grid");
-    if (informationDisplayed == HOMEPAGE) {
-      mainGrid.classList.add("disappeared");
-      setInformationDisplayed(PROJECT);
-    } else if (informationDisplayed == PROJECT) {
-      mainGrid.classList.remove("disappeared");
+  const handleProjectClick = (id) => {
+    if (informationDisplayed === HOMEPAGE) {
+      setInformationDisplayed(() => {
+        setDisplayedProjectId(id);
+        return PROJECT;
+      });
+    } else if (informationDisplayed === PROJECT) {
       setInformationDisplayed(HOMEPAGE);
     }
   };
 
   return (
     <div id="main-grid" className="homepage-main-grid">
-      <div className="hero-section">
+      {" "}
+      <div className={"hero-section" + disappearingElementsStyling()}>
         <div className="hero-section-message-container">
           <HeroSectionMessage />
         </div>
-        <HeroSectionImage fadeAway={fadeAway} />
+        <HeroSectionImage scrollPosition={scrollPosition} />
       </div>
-
       <div className="grid-filler"></div>
-
       <div className="projects-main-container">
-        <div className="projects-pictures-container">
-          {projects.map((project, i) => {
-            return (
-              <ProjectImage
-                // key={project.key}
-                source={project.srcImage}
-                onClick={handleProjectClick}
-              />
-            );
-          })}
-        </div>
-        <div className="projects-info-container">
-          <ProjectTitle title="Trier locaux avec le machine learning" />
-        </div>
+        {projects.map((project, i) => {
+          return (
+            <ProjectDisplay
+              key={project.key}
+              id={project.key}
+              source={project.srcImage}
+              onClick={(e) => {
+                handleProjectClick(e);
+              }}
+              title={project.title}
+              description={project.description}
+              additionalCss={
+                project.key === displayedProjectId
+                  ? " disappear-transition"
+                  : disappearingElementsStyling()
+              }
+            />
+          );
+        })}
       </div>
-
       <div className="grid-filler"></div>
-
-      <div className="contact-main-container">
+      <div className={"contact-main-container" + disappearingElementsStyling()}>
         <Curtain />
         <ContactInfo />
       </div>

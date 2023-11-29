@@ -11,24 +11,25 @@ export const HeroSectionMessage = () => {
 
   return (
     <div>
-      {/* <h1 className="hero-section-message-accent">{heroSString1}</h1>
+      <h1 className="hero-section-message-accent">{heroSString1}</h1>
       <div className="hero-section-message-wrap">
         <h1 className="hero-section-message-accent">{heroSString1_5}</h1>
         <h1 className="hero-section-message-italic">{heroSString2}</h1>
         <h1 className="hero-section-message-italic">{heroSString2_5}</h1>
       </div>
-      <h1 className="hero-section-message-accent">{heroSString3}</h1> */}
+      <h1 className="hero-section-message-accent">{heroSString3}</h1>
     </div>
   );
 };
 
-export const HeroSectionImage = ({ fadeAway }) => {
+export const HeroSectionImage = ({ scrollPosition }) => {
   const [fadeImage, setFadeImage] = useState(false);
 
   useEffect(() => {
+    let fadeAway = scrollPosition > 50 ? true : false;
     if (fadeAway && !fadeImage) setFadeImage(true);
     if (!fadeAway && fadeImage) setFadeImage(false);
-  }, [fadeAway]);
+  }, [scrollPosition]);
 
   const styling = fadeImage
     ? "hero-section-image fade-away"
