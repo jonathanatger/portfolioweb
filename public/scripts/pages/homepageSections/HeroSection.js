@@ -1,8 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Corporateimage from "../../../content/Corporateimage.png";
 
-export const HeroSectionMessage = () => {
-  const heroSectionStringMessage = "";
+export const HeroSectionMessage = ({ fadeHeroSection }) => {
+  const [fadeImage, setFadeImage] = useState(false);
+
+  useEffect(() => {
+    if (fadeHeroSection) setFadeImage(true);
+    else setFadeImage(false);
+  }, [fadeHeroSection]);
+
+  const styling = fadeImage
+    ? "hero-section-image-fade"
+    : "hero-section-recover-fade";
+
   const heroSString1 = "DÉVELOPPEUR";
   const heroSString1_5 = "PAR PASSION ";
   const heroSString2 = " <JE SUIS À LA";
@@ -10,7 +20,7 @@ export const HeroSectionMessage = () => {
   const heroSString3 = "DANS LE DÉVELOPPEMENT WEB";
 
   return (
-    <div>
+    <div className={styling}>
       <h1 className="hero-section-message-accent">{heroSString1}</h1>
       <div className="hero-section-message-wrap">
         <h1 className="hero-section-message-accent">{heroSString1_5}</h1>
@@ -22,18 +32,18 @@ export const HeroSectionMessage = () => {
   );
 };
 
-export const HeroSectionImage = ({ scrollPosition }) => {
-  const [fadeImage, setFadeImage] = useState(false);
+export const HeroSectionImage = ({ fadeHeroSection }) => {
+  const [fadeImage, setFadeImage] = useState(true);
 
   useEffect(() => {
-    let fadeAway = scrollPosition > 50 ? true : false;
-    if (fadeAway && !fadeImage) setFadeImage(true);
-    if (!fadeAway && fadeImage) setFadeImage(false);
-  }, [scrollPosition]);
+    if (fadeHeroSection) setFadeImage(true);
+    else setFadeImage(false);
+  }, [fadeHeroSection]);
 
   const styling = fadeImage
     ? "hero-section-image hero-section-image-fade"
     : "hero-section-image";
+
   return (
     <div className="hero-section-picture">
       <img

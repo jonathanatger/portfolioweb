@@ -4,10 +4,13 @@ import HomePage from "./pages/HomePage.js";
 import NavigationBar from "./pages/NavigationBar.js";
 import _debounce from "lodash/debounce";
 import "../css/general.css";
+import Lenis from "@studio-freight/lenis";
 
 const App = () => {
   const [scrollDirection, setScrollDirection] = useState("UP");
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(
+    localStorage.getItem("scrollpos") ? localStorage.getItem("scrollpos") : 0
+  );
 
   const handleScrollDirection = (prevScrollPosition, newScrollPosition) => {
     if (newScrollPosition > prevScrollPosition && scrollDirection == "UP") {
@@ -28,7 +31,6 @@ const App = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScrollPosition);
-
     return () => {
       window.removeEventListener("scroll", handleScrollPosition);
     };
@@ -50,6 +52,21 @@ const App = () => {
     </div>
   );
 };
+
+// store windowPosition to prevent the behavior of window.scrollY === 0 on reload
+window.onbeforeunload = function (e) {
+  localStorage.setItem("scrollpos", window.scrollY);
+};
+
+//smooth scroll behavior library
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
 
 const domNode = document.getElementById("#root");
 

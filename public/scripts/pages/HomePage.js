@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   HeroSectionMessage,
   HeroSectionImage,
@@ -12,6 +12,7 @@ const [HOMEPAGE, PROJECT, CV] = ["home", "project", "cv"];
 const Homepage = function ({ scrollPosition, scrollDirection }) {
   const [informationDisplayed, setInformationDisplayed] = useState(HOMEPAGE);
   const [displayedProjectId, setDisplayedProjectId] = useState(null);
+  const [fadeHeroSection, setFadeHeroSection] = useState(true);
 
   const disappearingElementsStyling = function () {
     if (informationDisplayed === HOMEPAGE)
@@ -30,16 +31,24 @@ const Homepage = function ({ scrollPosition, scrollDirection }) {
     }
   };
 
+  useEffect(() => {
+    let fadeAway = scrollPosition > 250 ? true : false;
+    if (fadeAway && !fadeHeroSection) setFadeHeroSection(true);
+    if (!fadeAway && fadeHeroSection) setFadeHeroSection(false);
+  }, [scrollPosition]);
+
   return (
     <div id="main-grid" className="homepage-main-grid">
       <div className={"hero-section" + disappearingElementsStyling()}>
         <div className="hero-section-message-container bg-white">
-          <HeroSectionMessage />
+          <HeroSectionMessage fadeHeroSection={fadeHeroSection} />
         </div>
-        <HeroSectionImage scrollPosition={scrollPosition} />
+        <HeroSectionImage fadeHeroSection={fadeHeroSection} />
       </div>
       <div className="grid-filler"></div>
       <div className="projects-main-container">
+        <h1 className="projects-main-title">./PROJECTS</h1>
+        {/* iterate over projects  */}
         {projects.map((project, i) => {
           return (
             <ProjectDisplay

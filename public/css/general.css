@@ -6,6 +6,10 @@
   scrollbar-width: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: #918f8f;
@@ -89,6 +93,10 @@ h6 {
   scrollbar-width: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: #918f8f;
@@ -169,8 +177,8 @@ h6 {
 }
 
 .disappear {
-  transition: opacity 0.2s ease;
-  transition: background-color 0.2s ease;
+  transition: opacity 0.5s ease;
+  transition: background-color 0.5s ease;
   opacity: 0%;
 }
 
@@ -335,6 +343,10 @@ h6 {
   scrollbar-width: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: #918f8f;
@@ -419,6 +431,7 @@ h6 {
 }
 
 .hero-section {
+  position: fixed;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -437,6 +450,11 @@ h6 {
 
 .hero-section-image-fade {
   opacity: 0%;
+  transition: opacity 0.5s ease;
+}
+
+.hero-section-recover-fade {
+  transition: opacity 0.5s ease;
 }
 
 .hero-section-message-container {
@@ -502,6 +520,10 @@ h6 {
 
 :root {
   scrollbar-width: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -635,6 +657,12 @@ h6 {
   flex-direction: column;
   margin: 0;
   padding: 0;
+}
+
+.projects-main-title {
+  color: #f5bb50;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 .contact-main-container {

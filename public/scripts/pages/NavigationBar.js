@@ -12,7 +12,13 @@ const NavigationBar = function ({ scrollDirection, scrollPosition }) {
     }
   }, [scrollPosition]);
 
-  if (scrollDirection == "DOWN" && visibility && isMoving) setVisibility(false);
+  if (
+    scrollDirection == "DOWN" &&
+    visibility &&
+    isMoving &&
+    scrollPosition > 250
+  )
+    setVisibility(false);
   if (scrollDirection == "UP" && !visibility && isMoving) setVisibility(true);
 
   document.querySelectorAll(".navbar-visible").forEach((element) => {

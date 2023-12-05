@@ -1,11 +1,25 @@
 import React, { useState, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 
+let lastSavedCoordinates = 0;
+
 export const ProjectDisplay = function (props) {
   const [fullDisplay, setFullDisplay] = useState(false);
 
   const nodeRef = useRef(null);
   const secondNodeRef = useRef(null);
+
+  const onClick = function () {
+    props.onClickUpdateState(props.id);
+    if (!fullDisplay) {
+      lastSavedCoordinates = window.scrollY;
+      window.scrollTo(0, document.getElementById(props.id).offsetTop);
+    } else {
+      window.scrollTo(0, lastSavedCoordinates);
+    }
+    setFullDisplay(!fullDisplay);
+    // console.log(document.getElementById(props.id).offsetTop);
+  };
 
   return (
     <div
@@ -16,10 +30,7 @@ export const ProjectDisplay = function (props) {
         src={props.source}
         className="projects-image"
         alt="Picture of a project"
-        onClick={() => {
-          props.onClickUpdateState(props.id);
-          setFullDisplay(!fullDisplay);
-        }}
+        onClick={onClick}
       ></img>
 
       <div className="projects-info">

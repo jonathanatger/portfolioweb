@@ -14,10 +14,15 @@ $bottom-margins: 120px;
 $left-side-proportion: 66%;
 $right-side-proportion: 34%;
 
+$fade-time: 0.5s;
+
 :root {
   scrollbar-width: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   background-color: $background-color;

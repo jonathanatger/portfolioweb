@@ -26,6 +26,7 @@
   margin: 0;
   pointer-events: all;
 }
+
 .projects-info {
   width: $right-side-proportion;
   display: flex;
@@ -52,6 +53,10 @@
   margin: 0;
   padding: 0;
 }
-
+.projects-main-title {
+  color: $accent-color;
+  font-weight: 600;
+  text-decoration: underline;
+}
 .projects-title {
 }

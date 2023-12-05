@@ -5,6 +5,7 @@
 }
 
 .hero-section {
+  position: fixed;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -23,6 +24,10 @@
 
 .hero-section-image-fade {
   opacity: 0%;
+  transition: opacity $fade-time ease;
+}
+.hero-section-recover-fade {
+  transition: opacity $fade-time ease;
 }
 
 .hero-section-message-container {
