@@ -2,6 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
+.disable-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 :root {
   scrollbar-width: none;
 }
@@ -87,6 +92,11 @@ h6 {
 
 .italic {
   font-style: italic;
+}
+
+.disable-scroll {
+  overflow: hidden;
+  height: 100%;
 }
 
 :root {
@@ -339,6 +349,11 @@ h6 {
   transition: opacity 0.3s ease;
 }
 
+.disable-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 :root {
   scrollbar-width: none;
 }
@@ -509,13 +524,19 @@ h6 {
   top: 0;
   margin: 0 40px;
   position: absolute;
+  overflow: hidden;
   display: grid;
   pointer-events: none;
   grid-template-columns: 66% auto;
   grid-template-rows: 100vh 20vh 100% 20vh 100vh;
   z-index: -1;
-  transition: transform 0.3s ease;
-  transition: opacity 0.3s ease;
+  transition: transform 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.disable-scroll {
+  overflow: hidden;
+  height: 100%;
 }
 
 :root {
@@ -655,6 +676,7 @@ h6 {
   grid-column: 1/3;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   margin: 0;
   padding: 0;
 }

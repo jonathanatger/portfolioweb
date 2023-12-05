@@ -16,6 +16,10 @@ $right-side-proportion: 34%;
 
 $fade-time: 0.5s;
 
+.disable-scroll {
+  overflow: hidden;
+  height: 100%;
+}
 :root {
   scrollbar-width: none;
 }

@@ -59,7 +59,7 @@ window.onbeforeunload = function (e) {
 };
 
 //smooth scroll behavior library
-const lenis = new Lenis();
+export const lenis = new Lenis();
 
 function raf(time) {
   lenis.raf(time);

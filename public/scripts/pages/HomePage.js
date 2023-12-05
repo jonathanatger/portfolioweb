@@ -27,7 +27,10 @@ const Homepage = function ({ scrollPosition, scrollDirection }) {
         return PROJECT;
       });
     } else if (informationDisplayed === PROJECT) {
-      setInformationDisplayed(HOMEPAGE);
+      setInformationDisplayed(() => {
+        setDisplayedProjectId(null);
+        return HOMEPAGE;
+      });
     }
   };
 
@@ -38,7 +41,7 @@ const Homepage = function ({ scrollPosition, scrollDirection }) {
   }, [scrollPosition]);
 
   return (
-    <div id="main-grid" className="homepage-main-grid">
+    <div id="main-grid" className="homepage-main-grid disable-scroll-2">
       <div className={"hero-section" + disappearingElementsStyling()}>
         <div className="hero-section-message-container bg-white">
           <HeroSectionMessage fadeHeroSection={fadeHeroSection} />
@@ -46,8 +49,10 @@ const Homepage = function ({ scrollPosition, scrollDirection }) {
         <HeroSectionImage fadeHeroSection={fadeHeroSection} />
       </div>
       <div className="grid-filler"></div>
-      <div className="projects-main-container">
-        <h1 className="projects-main-title">./PROJECTS</h1>
+      <div className="projects-main-container disable-scroll-2">
+        <h1 className={"projects-main-title" + disappearingElementsStyling()}>
+          ./PROJECTS
+        </h1>
         {/* iterate over projects  */}
         {projects.map((project, i) => {
           return (
@@ -55,7 +60,7 @@ const Homepage = function ({ scrollPosition, scrollDirection }) {
               key={project.key}
               id={project.key}
               source={project.srcImage}
-              onClickUpdateState={(e) => {
+              onClickSetHomepageDisplay={(e) => {
                 handleProjectClick(e);
               }}
               title={project.title}

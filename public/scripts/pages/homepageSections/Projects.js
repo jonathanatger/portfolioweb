@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
+import { lenis } from "../../AppIndex";
 
 let lastSavedCoordinates = 0;
 
@@ -10,14 +11,22 @@ export const ProjectDisplay = function (props) {
   const secondNodeRef = useRef(null);
 
   const onClick = function () {
-    props.onClickUpdateState(props.id);
+    props.onClickSetHomepageDisplay(props.id);
+
     if (!fullDisplay) {
       lastSavedCoordinates = window.scrollY;
       window.scrollTo(0, document.getElementById(props.id).offsetTop);
+      lenis.stop();
     } else {
       window.scrollTo(0, lastSavedCoordinates);
+      lenis.start();
     }
+    // document.body.classList.add("disable-scroll");
+    // document.documentElement.classList.add("disable-scroll");
+    // document.getElementById("main-grid").classList.add("disable-scroll");
+
     setFullDisplay(!fullDisplay);
+
     // console.log(document.getElementById(props.id).offsetTop);
   };
 
