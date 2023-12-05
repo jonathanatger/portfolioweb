@@ -1,4 +1,24 @@
 @import "hElements.scss";
+.project-description-container {
+  display: flex;
+}
+.project-description-enter {
+  opacity: 0;
+}
+
+.project-description-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.project-description-exit {
+  opacity: 1;
+}
+
+.project-description-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
 
 .projects-image {
   width: $left-side-proportion;
@@ -12,6 +32,7 @@
   flex-direction: column;
   margin-right: (2 * $secondary-margins);
   margin-left: $secondary-margins;
+  pointer-events: all;
 }
 
 .projects-individual-project {
@@ -20,11 +41,6 @@
 
   align-items: center;
   justify-content: space-between;
-}
-.projects-highlight {
-  transition: opacity 0.3s ease;
-
-  transform: opacity(100);
 }
 
 .projects-main-container {

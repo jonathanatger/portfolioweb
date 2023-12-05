@@ -32,7 +32,7 @@ export const HeroSectionImage = ({ scrollPosition }) => {
   }, [scrollPosition]);
 
   const styling = fadeImage
-    ? "hero-section-image fade-away"
+    ? "hero-section-image hero-section-image-fade"
     : "hero-section-image";
   return (
     <div className="hero-section-picture">

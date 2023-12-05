@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   HeroSectionMessage,
   HeroSectionImage,
@@ -14,8 +14,9 @@ const Homepage = function ({ scrollPosition, scrollDirection }) {
   const [displayedProjectId, setDisplayedProjectId] = useState(null);
 
   const disappearingElementsStyling = function () {
-    if (informationDisplayed === HOMEPAGE) return " disappear-transition";
-    if (informationDisplayed === PROJECT) return " disappear";
+    if (informationDisplayed === HOMEPAGE)
+      return " homepage-disappear-transition";
+    if (informationDisplayed === PROJECT) return " homepage-disappear";
   };
 
   const handleProjectClick = (id) => {
@@ -31,9 +32,8 @@ const Homepage = function ({ scrollPosition, scrollDirection }) {
 
   return (
     <div id="main-grid" className="homepage-main-grid">
-      {" "}
       <div className={"hero-section" + disappearingElementsStyling()}>
-        <div className="hero-section-message-container">
+        <div className="hero-section-message-container bg-white">
           <HeroSectionMessage />
         </div>
         <HeroSectionImage scrollPosition={scrollPosition} />
@@ -46,7 +46,7 @@ const Homepage = function ({ scrollPosition, scrollDirection }) {
               key={project.key}
               id={project.key}
               source={project.srcImage}
-              onClick={(e) => {
+              onClickUpdateState={(e) => {
                 handleProjectClick(e);
               }}
               title={project.title}
