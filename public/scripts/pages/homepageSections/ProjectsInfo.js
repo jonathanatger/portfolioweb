@@ -9,6 +9,8 @@ export const projects = [
     title: "A great art piece",
     description:
       "This piece is a great example of code, AI and network used together to create an emotinal artpiece.",
+
+    otherImages: [BlogImage, BlogImage, BlogImage],
   },
   {
     key: "revit",

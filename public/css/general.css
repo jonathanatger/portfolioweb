@@ -2,11 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
-.disable-scroll {
-  overflow: hidden;
-  height: 100%;
-}
-
 :root {
   scrollbar-width: none;
 }
@@ -92,11 +87,6 @@ h6 {
 
 .italic {
   font-style: italic;
-}
-
-.disable-scroll {
-  overflow: hidden;
-  height: 100%;
 }
 
 :root {
@@ -349,11 +339,6 @@ h6 {
   transition: opacity 0.3s ease;
 }
 
-.disable-scroll {
-  overflow: hidden;
-  height: 100%;
-}
-
 :root {
   scrollbar-width: none;
 }
@@ -523,8 +508,7 @@ h6 {
 .homepage-main-grid {
   top: 0;
   margin: 0 40px;
-  position: absolute;
-  overflow: hidden;
+  overflow: auto;
   display: grid;
   pointer-events: none;
   grid-template-columns: 66% auto;
@@ -532,11 +516,6 @@ h6 {
   z-index: -1;
   transition: transform 0.5s ease;
   transition: opacity 0.5s ease;
-}
-
-.disable-scroll {
-  overflow: hidden;
-  height: 100%;
 }
 
 :root {
@@ -626,49 +605,116 @@ h6 {
   font-style: italic;
 }
 
-.project-description-container {
+.projects-additional-images-base {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.projects-additional-images-container {
+  width: 100%;
+}
+
+.projects-additional-images-enter,
+.projects-additional-images-appear {
+  transform: translateY(100vh);
+  transform-origin: bottom right;
+  opacity: 0;
+}
+
+.projects-additional-images-enter-active,
+.projects-additional-images-appear-active {
+  transform: translateY(0);
+  transform-origin: bottom right;
+  opacity: 1;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.projects-additional-images-exit {
+  opacity: 1;
+}
+
+.projects-additional-images-exit-active {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.projects-description-container {
   display: flex;
 }
 
-.project-description-enter {
+.projects-description-appear,
+.projects-description-enter {
   opacity: 0;
+  transform: scaleY(0);
+  transform-origin: bottom right;
 }
 
-.project-description-enter-active {
+.projects-description-appear-active,
+.projects-description-enter-active {
   opacity: 1;
-  transition: opacity 300ms;
+  transform: scaleY(1);
+  transform-origin: top right;
+  transition: transform 0.5s ease, opacity 0.5s;
 }
 
-.project-description-exit {
+.projects-description-enter-done {
   opacity: 1;
+  transform: scaleY(1);
 }
 
-.project-description-exit-active {
+.projects-description-exit {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.projects-description-exit-active {
   opacity: 0;
-  transition: opacity 300ms;
+  transform: scaleY(0);
+  transform-origin: top right;
+  transition: transform 0.5s ease, opacity 0.5s;
 }
 
-.projects-image {
-  width: 66%;
+.projects-description-exit-done {
+  opacity: 0;
+  transform: scaleY(0);
+  height: 0;
+}
+
+.projects-image-container {
   padding: 40px 0 0 0;
   margin: 0;
   pointer-events: all;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 66%;
+  z-index: 1;
 }
 
 .projects-info {
   width: 34%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  padding-top: 40px;
   margin-right: 60px;
   margin-left: 30px;
   pointer-events: all;
 }
 
 .projects-individual-project {
+  width: 100%;
   display: flex;
+  flex: 2 1 auto;
   flex-direction: row;
-  align-items: center;
+  background-color: khaki;
+  align-items: top;
   justify-content: space-between;
+  pointer-events: all;
+}
+.projects-individual-project.overscroll {
+  overscroll-behavior: contain;
 }
 
 .projects-main-container {
@@ -676,9 +722,13 @@ h6 {
   grid-column: 1/3;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   margin: 0;
   padding: 0;
+}
+
+.projects-main-image {
+  width: 100%;
+  z-index: 10;
 }
 
 .projects-main-title {

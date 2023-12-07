@@ -1,47 +1,109 @@
 @import "hElements.scss";
-.project-description-container {
+
+//Additional images----------------------
+.projects-additional-images-base {
+  width: 100%;
+  margin-top: $overall-margins;
+}
+.projects-additional-images-container {
+  width: 100%;
+}
+.projects-additional-images-enter,
+.projects-additional-images-appear {
+  transform: translateY(100vh);
+  transform-origin: bottom right;
+  opacity: 0;
+}
+.projects-additional-images-enter-active,
+.projects-additional-images-appear-active {
+  transform: translateY(0);
+  transform-origin: bottom right;
+  opacity: 1;
+  transition: transform $fade-time ease, opacity $fade-time ease;
+}
+.projects-additional-images-exit {
+  opacity: 1;
+}
+.projects-additional-images-exit-active {
+  transition: opacity $fade-time ease;
+  opacity: 0;
+}
+
+//Project description ----------------------
+.projects-description-container {
   display: flex;
 }
-.project-description-enter {
+.projects-description-appear,
+.projects-description-enter {
   opacity: 0;
+  transform: scaleY(0);
+  transform-origin: bottom right;
 }
-
-.project-description-enter-active {
+.projects-description-appear-active,
+.projects-description-enter-active {
   opacity: 1;
-  transition: opacity 300ms;
+  transform: scaleY(1);
+  transform-origin: top right;
+  transition: transform $fade-time ease, opacity $fade-time;
 }
 
-.project-description-exit {
+.projects-description-enter-done {
   opacity: 1;
+  transform: scaleY(1);
 }
 
-.project-description-exit-active {
+.projects-description-exit {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.projects-description-exit-active {
   opacity: 0;
-  transition: opacity 300ms;
+  transform: scaleY(0);
+  transform-origin: top right;
+  transition: transform $fade-time ease, opacity $fade-time;
 }
 
-.projects-image {
-  width: $left-side-proportion;
-  padding: 40px 0 0 0;
+.projects-description-exit-done {
+  opacity: 0;
+  transform: scaleY(0);
+  height: 0;
+}
+.projects-image-container {
+  padding: $overall-margins 0 0 0;
   margin: 0;
   pointer-events: all;
-}
-
-.projects-info {
-  width: $right-side-proportion;
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  width: $left-side-proportion;
+  z-index: 1;
+}
+.projects-info {
+  width: $right-side-proportion;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-top: $overall-margins;
   margin-right: (2 * $secondary-margins);
   margin-left: $secondary-margins;
   pointer-events: all;
 }
 
 .projects-individual-project {
+  width: 100%;
   display: flex;
+  flex: 2 1 auto;
   flex-direction: row;
 
-  align-items: center;
+  background-color: khaki;
+  align-items: top;
   justify-content: space-between;
+  pointer-events: all;
+  &.overscroll {
+    overscroll-behavior: contain;
+  }
 }
 
 .projects-main-container {
@@ -49,15 +111,17 @@
   grid-column: 1/3;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 
   margin: 0;
   padding: 0;
 }
+.projects-main-image {
+  width: 100%;
+  z-index: 10;
+}
+
 .projects-main-title {
   color: $accent-color;
   font-weight: 600;
   text-decoration: underline;
-}
-.projects-title {
 }

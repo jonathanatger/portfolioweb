@@ -43,7 +43,7 @@ const App = () => {
         scrollPosition={scrollPosition}
       />
 
-      <div style={{ top: 0 }}>
+      <div>
         <HomePage
           scrollDirection={scrollDirection}
           scrollPosition={scrollPosition}
@@ -59,14 +59,14 @@ window.onbeforeunload = function (e) {
 };
 
 //smooth scroll behavior library
-export const lenis = new Lenis();
+// export const lenis = new Lenis();
 
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
+// function raf(time) {
+//   lenis.raf(time);
+//   requestAnimationFrame(raf);
+// }
 
-requestAnimationFrame(raf);
+// requestAnimationFrame(raf);
 
 const domNode = document.getElementById("#root");
 

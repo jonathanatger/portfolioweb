@@ -79,8 +79,8 @@
 .homepage-main-grid {
   top: 0;
   margin: 0 $overall-margins;
-  position: absolute;
-  overflow: hidden;
+  // position: absolute;
+  overflow: auto;
   display: grid;
 
   pointer-events: none;
