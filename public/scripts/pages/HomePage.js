@@ -6,7 +6,6 @@ import {
 import { ProjectDisplay } from "./homepageSections/Projects.js";
 import { Curtain, ContactInfo } from "./homepageSections/Contact.js";
 import { projects } from "./homepageSections/ProjectsInfo.js";
-import { lenis } from "../AppIndex.js";
 
 const [HOMEPAGE, PROJECT, CV] = ["home", "project", "cv"];
 

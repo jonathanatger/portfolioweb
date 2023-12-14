@@ -58,15 +58,15 @@ window.onbeforeunload = function (e) {
   localStorage.setItem("scrollpos", window.scrollY);
 };
 
-//smooth scroll behavior library
-// export const lenis = new Lenis();
+// smooth scroll behavior library
+export const lenis = new Lenis();
 
-// function raf(time) {
-//   lenis.raf(time);
-//   requestAnimationFrame(raf);
-// }
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
 
-// requestAnimationFrame(raf);
+requestAnimationFrame(raf);
 
 const domNode = document.getElementById("#root");
 

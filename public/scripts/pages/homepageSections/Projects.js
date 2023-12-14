@@ -26,6 +26,7 @@ export const ProjectDisplay = function (props) {
       // lenis.start();
       // lenis.destroy();
       setTimeout(() => {
+        // OK there is some work here to be done ----------------------------------------------------------
         document.getElementById(props.id).classList.add("overscroll");
       }, 400);
     } else {
