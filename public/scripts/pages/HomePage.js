@@ -7,7 +7,6 @@ import { ProjectDisplay } from "./homepageSections/Projects.js";
 import { Curtain, ContactInfo } from "./homepageSections/Contact.js";
 import { projects } from "./homepageSections/ProjectsInfo.js";
 
-//constants for page display status
 const [HOMEPAGE, PROJECT, CV] = ["home", "project", "cv"];
 
 const Homepage = function ({ scrollPosition, scrollDirection }) {
