@@ -1,5 +1,7 @@
 import React from "react";
 import GithubImage from "../../../content/ico-github-96.png";
+import TwitterImage from "../../../content/ico-twitter-250.png";
+import WebImage from "../../../content/ico-web-100.png";
 
 const ButtonMailto = ({ mailto, label }) => {
   return (

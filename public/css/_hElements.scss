@@ -15,7 +15,9 @@ $left-side-proportion: 66%;
 $right-side-proportion: 34%;
 
 $fade-time: 0.5s;
-
+* {
+  box-sizing: border-box;
+}
 :root {
   scrollbar-width: none;
 }
@@ -24,6 +26,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  scroll-behavior: smooth;
   margin: 0;
   background-color: $background-color;
   scrollbar-width: none;

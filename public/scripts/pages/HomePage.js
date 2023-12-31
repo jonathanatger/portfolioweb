@@ -7,9 +7,9 @@ import { ProjectDisplay } from "./homepageSections/Projects.js";
 import { Curtain, ContactInfo } from "./homepageSections/Contact.js";
 import { projects } from "./homepageSections/ProjectsInfo.js";
 
-const [HOMEPAGE, PROJECT, CV] = ["home", "project", "cv"];
+export const [HOMEPAGE, PROJECT, CV] = ["home", "project", "cv"];
 
-const Homepage = function ({ scrollPosition, scrollDirection }) {
+export const Homepage = function ({ scrollPosition, scrollDirection }) {
   const [informationDisplayed, setInformationDisplayed] = useState(HOMEPAGE);
   const [displayedProjectId, setDisplayedProjectId] = useState(null);
   const [fadeHeroSection, setFadeHeroSection] = useState(true);
@@ -18,7 +18,14 @@ const Homepage = function ({ scrollPosition, scrollDirection }) {
     if (informationDisplayed === HOMEPAGE)
       return " homepage-disappear-transition";
     if (informationDisplayed === PROJECT) return " homepage-disappear";
+    return "";
   };
+
+  if (informationDisplayed === HOMEPAGE) {
+    document.body.style.overflow = "auto";
+  } else if (informationDisplayed === PROJECT) {
+    document.body.style.overflow = "hidden";
+  }
 
   const handleProjectClick = (id) => {
     if (informationDisplayed === HOMEPAGE) {
@@ -51,7 +58,7 @@ const Homepage = function ({ scrollPosition, scrollDirection }) {
       <div className="grid-filler"></div>
       <div id="projects-main-container" className="projects-main-container">
         <h1 className={"projects-main-title" + disappearingElementsStyling()}>
-          ./PROJECTS
+          ./PROJETS
         </h1>
         {projects.map((project, i) => {
           return (
@@ -70,6 +77,8 @@ const Homepage = function ({ scrollPosition, scrollDirection }) {
                   : disappearingElementsStyling()
               }
               scrollPosition={scrollPosition}
+              informationDisplayed={informationDisplayed}
+              displayedProjectId={displayedProjectId}
             />
           );
         })}
@@ -82,5 +91,3 @@ const Homepage = function ({ scrollPosition, scrollDirection }) {
     </div>
   );
 };
-
-export default Homepage;

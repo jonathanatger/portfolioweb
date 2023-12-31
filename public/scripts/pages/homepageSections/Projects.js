@@ -1,41 +1,42 @@
 import React, { useState, useRef, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
-import { lenis } from "../../AppIndex";
+import { lenis } from "../../AppIndex.js";
+import { HOMEPAGE, PROJECT, CV } from "../HomePage.js";
 
 let lastSavedCoordinates = 0;
 
 export const ProjectDisplay = function (props) {
   const [fullDisplay, setFullDisplay] = useState(false);
-  const [scrollingLimits, setScrollingLimits] = useState({
-    top: 0,
-    bottom: 3000,
-  });
 
   const cssTransitionRef = useRef(null);
   const cssTransitionRef2 = useRef(null);
   const cssTransitionRef3 = useRef(null);
 
-  const onClick = function () {
-    props.onClickSetHomepageDisplay(props.id);
+  const projectOverflowStyling = function () {
+    if (
+      props.informationDisplayed === PROJECT &&
+      props.displayedProjectId === props.id
+    )
+      return " projects-main-scrollbehavior";
+    return "";
+  };
 
+  const onClick = function () {
     if (!fullDisplay) {
       lastSavedCoordinates = window.scrollY;
-      // lenis.stop();
+      // setTimeout(() => {
       window.scrollTo(0, document.getElementById(props.id).offsetTop);
-
-      // lenis.start();
-      // lenis.destroy();
-      setTimeout(() => {
-        // OK there is some work here to be done ----------------------------------------------------------
-        document.getElementById(props.id).classList.add("overscroll");
-      }, 400);
+      // }, 50);
     } else {
-      document.getElementById(props.id).classList.remove("overscroll");
-      // lenis.stop();
+      // setTimeout(() => {
       window.scrollTo(0, lastSavedCoordinates);
-      // lenis.start();
+      // }, 50);
     }
+
     setFullDisplay(!fullDisplay);
+    setTimeout(() => {
+      props.onClickSetHomepageDisplay(props.id);
+    }, 500);
   };
 
   return (
@@ -43,7 +44,7 @@ export const ProjectDisplay = function (props) {
       id={props.id}
       className={"projects-individual-project" + props.additionalCss}
     >
-      <div className="projects-image-container">
+      <div className={"projects-image-container" + projectOverflowStyling()}>
         <img
           src={props.source}
           className="projects-main-image"

@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@200;400;700&family=Montserrat:wght@200;300;400;600;&display=swap");
+* {
+  box-sizing: border-box;
+}
+
 :root {
   scrollbar-width: none;
 }
@@ -11,6 +15,7 @@ html {
 }
 
 body {
+  scroll-behavior: smooth;
   margin: 0;
   background-color: #918f8f;
   scrollbar-width: none;
@@ -89,6 +94,10 @@ h6 {
   font-style: italic;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   scrollbar-width: none;
 }
@@ -98,6 +107,7 @@ html {
 }
 
 body {
+  scroll-behavior: smooth;
   margin: 0;
   background-color: #918f8f;
   scrollbar-width: none;
@@ -339,6 +349,10 @@ h6 {
   transition: opacity 0.3s ease;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   scrollbar-width: none;
 }
@@ -348,6 +362,7 @@ html {
 }
 
 body {
+  scroll-behavior: smooth;
   margin: 0;
   background-color: #918f8f;
   scrollbar-width: none;
@@ -518,6 +533,10 @@ h6 {
   transition: opacity 0.5s ease;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   scrollbar-width: none;
 }
@@ -527,6 +546,7 @@ html {
 }
 
 body {
+  scroll-behavior: smooth;
   margin: 0;
   background-color: #918f8f;
   scrollbar-width: none;
@@ -708,13 +728,10 @@ h6 {
   display: flex;
   flex: 2 1 auto;
   flex-direction: row;
-  background-color: khaki;
+  height: 100%;
   align-items: top;
   justify-content: space-between;
   pointer-events: all;
-}
-.projects-individual-project.overscroll {
-  overscroll-behavior: contain;
 }
 
 .projects-main-container {
@@ -729,6 +746,17 @@ h6 {
 .projects-main-image {
   width: 100%;
   z-index: 10;
+}
+
+.projects-main-scrollbehavior {
+  overflow: auto;
+  overscroll-behavior-block: contain;
+  height: 100vh;
+  scrollbar-width: none;
+}
+
+.projects-main-scrollbehavior::-webkit-scrollbar {
+  display: none;
 }
 
 .projects-main-title {

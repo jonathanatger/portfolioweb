@@ -1,10 +1,9 @@
 import { createRoot } from "react-dom/client";
-import React, { useState, useEffect, createContext, useContext } from "react";
-import HomePage from "./pages/HomePage.js";
+import React, { useState, useEffect } from "react";
+import { Homepage } from "./pages/HomePage.js";
 import NavigationBar from "./pages/NavigationBar.js";
 import _debounce from "lodash/debounce";
 import "../css/general.css";
-import Lenis from "@studio-freight/lenis";
 
 const App = () => {
   const [scrollDirection, setScrollDirection] = useState("UP");
@@ -44,7 +43,7 @@ const App = () => {
       />
 
       <div>
-        <HomePage
+        <Homepage
           scrollDirection={scrollDirection}
           scrollPosition={scrollPosition}
         />
@@ -57,16 +56,6 @@ const App = () => {
 window.onbeforeunload = function (e) {
   localStorage.setItem("scrollpos", window.scrollY);
 };
-
-// smooth scroll behavior library
-export const lenis = new Lenis();
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
 
 const domNode = document.getElementById("#root");
 

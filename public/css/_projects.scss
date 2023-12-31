@@ -96,14 +96,12 @@
   display: flex;
   flex: 2 1 auto;
   flex-direction: row;
+  height: 100%;
 
-  background-color: khaki;
+  // background-color: khaki;
   align-items: top;
   justify-content: space-between;
   pointer-events: all;
-  &.overscroll {
-    overscroll-behavior: contain;
-  }
 }
 
 .projects-main-container {
@@ -119,7 +117,15 @@
   width: 100%;
   z-index: 10;
 }
-
+.projects-main-scrollbehavior {
+  overflow: auto;
+  overscroll-behavior-block: contain;
+  height: 100vh;
+  scrollbar-width: none;
+}
+.projects-main-scrollbehavior::-webkit-scrollbar {
+  display: none;
+}
 .projects-main-title {
   color: $accent-color;
   font-weight: 600;
