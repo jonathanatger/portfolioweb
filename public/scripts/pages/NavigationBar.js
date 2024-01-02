@@ -1,10 +1,57 @@
 import React, { useEffect, useState } from "react";
+import { HOMEPAGE, PROJECT, CONTACT, CV } from "../AppIndex";
 
-const sectionSign = "=> PARIS";
+const MenuItem = function ({ linkName, target, setInformationDisplayed }) {
+  let informationDisplayed;
+  let elementToScrollTo;
 
-const NavigationBar = function ({ scrollDirection, scrollPosition }) {
+  switch (target) {
+    case PROJECT:
+      informationDisplayed = HOMEPAGE;
+      elementToScrollTo = "#projects-main-title";
+      break;
+    case CONTACT:
+      informationDisplayed = HOMEPAGE;
+      elementToScrollTo = "#contact-main-container";
+      break;
+    case CV:
+      informationDisplayed = CV;
+      elementToScrollTo = "#cv-main-container";
+      break;
+  }
+
+  const onMenuClick = function () {
+    setInformationDisplayed(informationDisplayed);
+    setTimeout(() => {
+      window.scrollTo(0, document.querySelector(elementToScrollTo).offsetTop);
+    }, 100);
+  };
+
+  return (
+    <li>
+      <a onClick={onMenuClick} className="navbar-links-active">
+        {linkName}
+      </a>
+    </li>
+  );
+};
+
+const NavigationBar = function ({
+  scrollDirection,
+  scrollPosition,
+  fadeHeroSection,
+  setInformationDisplayed,
+}) {
   const [visibility, setVisibility] = useState(true);
   const [isMoving, setIsMoving] = useState(false);
+  const [fadeSectionSign, setFadeSectionSign] = useState(false);
+
+  useEffect(() => {
+    if (fadeHeroSection) setFadeSectionSign(true);
+    else setFadeSectionSign(false);
+  }, [fadeHeroSection]);
+
+  const sectionSign = "=> PARIS";
 
   useEffect(() => {
     if (isMoving == false) {
@@ -29,31 +76,42 @@ const NavigationBar = function ({ scrollDirection, scrollPosition }) {
     }
   });
 
+  const sectionSignStyling = function () {
+    if (fadeSectionSign) return " hero-section-image-fade";
+    return " hero-section-recover-fade";
+  };
+
   return (
     <nav id="navbar-container" className="navbar-container">
       <div className="navbar-side-info ">
-        <div className="navbar-side-info-top navbar-visible">{sectionSign}</div>
+        <div
+          className={
+            "navbar-side-info-top navbar-visible" + sectionSignStyling()
+          }
+        >
+          {sectionSign}
+        </div>
         <div className="navbar-side-info-side navbar-visible">
           CODE + DESIGN JONATHAN ATGER - 2023
         </div>
       </div>
       <div className="navbar-menu navbar-visible">
         <ul className="navbar-visible">
-          <li>
-            <a className="navbar-links-active">PROJETS</a>
-          </li>
-
-          <li>
-            <a className="navbar-links-active">À PROPOS</a>
-          </li>
-
-          <li>
-            <a className="navbar-links-active">CONTACT</a>
-          </li>
-
-          <li>
-            <a className="navbar-links-active">C.V.</a>
-          </li>
+          <MenuItem
+            linkName="PROJETS"
+            target={PROJECT}
+            setInformationDisplayed={setInformationDisplayed}
+          />
+          <MenuItem
+            linkName="CONTACT"
+            target={CONTACT}
+            setInformationDisplayed={setInformationDisplayed}
+          />
+          <MenuItem
+            linkName="C.V."
+            target={CV}
+            setInformationDisplayed={setInformationDisplayed}
+          />
         </ul>
 
         <a

@@ -2,7 +2,7 @@ import React from "react";
 
 export const Cv = function () {
   return (
-    <div className="cv-global-container">
+    <div id="cv-main-container" className="cv-global-container">
       <div className="cv-section">
         <div className="cv-first-column">
           <h3>EXPERIENCE PROFESSIONNELLE</h3>

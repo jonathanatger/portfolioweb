@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import { lenis } from "../../AppIndex.js";
-import { HOMEPAGE, PROJECT, CV } from "../HomePage.js";
+import { HOMEPAGE, PROJECT, CV } from "../../AppIndex.js";
 
 let lastSavedCoordinates = 0;
 
@@ -31,7 +31,7 @@ export const ProjectDisplay = function (props) {
 
     setFullDisplay(!fullDisplay);
     setTimeout(() => {
-      props.onClickSetHomepageDisplay(props.id);
+      props.handleProjectClick(props.id);
     }, 500);
   };
 
@@ -78,7 +78,11 @@ export const ProjectDisplay = function (props) {
       </div>
 
       <div className="projects-info">
-        <h1 ref={cssTransitionRef2} className="projects-title">
+        <h1
+          onClick={onClick}
+          ref={cssTransitionRef2}
+          className="projects-title"
+        >
           {props.title}
         </h1>
 
@@ -86,7 +90,7 @@ export const ProjectDisplay = function (props) {
           nodeRef={cssTransitionRef}
           in={fullDisplay}
           timeout={500}
-          classNames="projects-description"
+          className="projects-description"
           unmountOnExit
         >
           <div ref={cssTransitionRef}>

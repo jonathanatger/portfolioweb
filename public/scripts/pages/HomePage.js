@@ -7,17 +7,18 @@ import { ProjectDisplay } from "./homepageSections/Projects.js";
 import { Curtain, ContactInfo } from "./homepageSections/Contact.js";
 import { projects } from "./homepageSections/ProjectsInfo.js";
 
-export const [HOMEPAGE, PROJECT, CV] = ["home", "project", "cv"];
+import { HOMEPAGE, PROJECT, CONTACT, CV } from "../AppIndex.js";
 
 export const Homepage = function ({
   scrollPosition,
   scrollDirection,
   setScrollDirection,
+  fadeHeroSection,
+  informationDisplayed,
+  setInformationDisplayed,
+  displayedProjectId,
+  setDisplayedProjectId,
 }) {
-  const [informationDisplayed, setInformationDisplayed] = useState(HOMEPAGE);
-  const [displayedProjectId, setDisplayedProjectId] = useState(null);
-  const [fadeHeroSection, setFadeHeroSection] = useState(true);
-
   const disappearingElementsStyling = function () {
     if (informationDisplayed === HOMEPAGE)
       return " homepage-disappear-transition";
@@ -26,7 +27,7 @@ export const Homepage = function ({
     return "";
   };
 
-  if (informationDisplayed === HOMEPAGE) {
+  if (informationDisplayed === (HOMEPAGE || CV)) {
     document.body.style.overflow = "auto";
   } else if (informationDisplayed === PROJECT) {
     document.body.style.overflow = "hidden";
@@ -50,12 +51,6 @@ export const Homepage = function ({
     }
   };
 
-  useEffect(() => {
-    let fadeAway = scrollPosition > 250 ? true : false;
-    if (fadeAway && !fadeHeroSection) setFadeHeroSection(true);
-    if (!fadeAway && fadeHeroSection) setFadeHeroSection(false);
-  }, [scrollPosition]);
-
   return (
     <div id="main-grid" className="homepage-main-grid">
       <div className={"hero-section" + disappearingElementsStyling()}>
@@ -66,7 +61,10 @@ export const Homepage = function ({
       </div>
       <div className="grid-filler"></div>
       <div id="projects-main-container" className="projects-main-container">
-        <h1 className={"projects-main-title" + disappearingElementsStyling()}>
+        <h1
+          id="projects-main-title"
+          className={"projects-main-title" + disappearingElementsStyling()}
+        >
           ./PROJETS
         </h1>
         {projects.map((project, i) => {
@@ -75,7 +73,7 @@ export const Homepage = function ({
               key={project.key}
               id={project.key}
               source={project.srcImage}
-              onClickSetHomepageDisplay={(e) => {
+              handleProjectClick={(e) => {
                 handleProjectClick(e);
               }}
               title={project.title}
@@ -93,7 +91,10 @@ export const Homepage = function ({
         })}
       </div>
       <div className="grid-filler"></div>
-      <div className={"contact-main-container" + disappearingElementsStyling()}>
+      <div
+        id="contact-main-container"
+        className={"contact-main-container" + disappearingElementsStyling()}
+      >
         <Curtain />
         <ContactInfo />
       </div>
