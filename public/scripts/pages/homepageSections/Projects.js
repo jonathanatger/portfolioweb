@@ -24,13 +24,9 @@ export const ProjectDisplay = function (props) {
   const onClick = function () {
     if (!fullDisplay) {
       lastSavedCoordinates = window.scrollY;
-      // setTimeout(() => {
       window.scrollTo(0, document.getElementById(props.id).offsetTop);
-      // }, 50);
     } else {
-      // setTimeout(() => {
       window.scrollTo(0, lastSavedCoordinates);
-      // }, 50);
     }
 
     setFullDisplay(!fullDisplay);

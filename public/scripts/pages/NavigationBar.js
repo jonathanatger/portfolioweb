@@ -30,7 +30,7 @@ const NavigationBar = function ({ scrollDirection, scrollPosition }) {
   });
 
   return (
-    <nav className="navbar-container">
+    <nav id="navbar-container" className="navbar-container">
       <div className="navbar-side-info ">
         <div className="navbar-side-info-top navbar-visible">{sectionSign}</div>
         <div className="navbar-side-info-side navbar-visible">

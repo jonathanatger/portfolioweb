@@ -9,7 +9,11 @@ import { projects } from "./homepageSections/ProjectsInfo.js";
 
 export const [HOMEPAGE, PROJECT, CV] = ["home", "project", "cv"];
 
-export const Homepage = function ({ scrollPosition, scrollDirection }) {
+export const Homepage = function ({
+  scrollPosition,
+  scrollDirection,
+  setScrollDirection,
+}) {
   const [informationDisplayed, setInformationDisplayed] = useState(HOMEPAGE);
   const [displayedProjectId, setDisplayedProjectId] = useState(null);
   const [fadeHeroSection, setFadeHeroSection] = useState(true);
@@ -17,7 +21,8 @@ export const Homepage = function ({ scrollPosition, scrollDirection }) {
   const disappearingElementsStyling = function () {
     if (informationDisplayed === HOMEPAGE)
       return " homepage-disappear-transition";
-    if (informationDisplayed === PROJECT) return " homepage-disappear";
+    if (informationDisplayed === PROJECT || informationDisplayed === CV)
+      return " homepage-disappear";
     return "";
   };
 
@@ -33,6 +38,10 @@ export const Homepage = function ({ scrollPosition, scrollDirection }) {
         setDisplayedProjectId(id);
         return PROJECT;
       });
+
+      setTimeout(() => {
+        setScrollDirection("DOWN");
+      }, 100);
     } else if (informationDisplayed === PROJECT) {
       setInformationDisplayed(() => {
         setDisplayedProjectId(null);

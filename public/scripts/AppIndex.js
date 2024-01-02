@@ -46,6 +46,7 @@ const App = () => {
         <Homepage
           scrollDirection={scrollDirection}
           scrollPosition={scrollPosition}
+          setScrollDirection={setScrollDirection}
         />
       </div>
     </div>
