@@ -11,8 +11,7 @@ const ButtonMailto = ({ mailto, label }) => {
         window.location.href = mailto;
         e.preventDefault();
       }}
-      className="contact-info-mail"
-    >
+      className="contact-info-mail">
       {label}
     </a>
   );
@@ -55,7 +54,7 @@ export const ContactInfo = function () {
 };
 
 export const Curtain = function () {
-  const pointRows = 10;
+  const pointRows = window.screen.width > 600 ? 10 : 4;
   const pointColumns = 10;
 
   const points = [];
@@ -71,8 +70,7 @@ export const Curtain = function () {
           style={{
             gridRow: cssGridR,
             gridColumn: cssGridC,
-          }}
-        >
+          }}>
           .
         </h3>
       );

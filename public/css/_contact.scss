@@ -8,6 +8,9 @@ $vertical-spacing: 30px;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  @media (max-width: $media-breaking-point) {
+    height: 100%;
+  }
 }
 .contact-points {
   padding: 0;
@@ -16,6 +19,12 @@ $vertical-spacing: 30px;
   display: grid;
   grid-template-columns: repeat(10, 1);
   grid-template-rows: repeat(10, 1);
+  @media (max-width: $media-breaking-point) {
+    height: 15vh;
+    width: 100%;
+    grid-template-rows: repeat(3, 1);
+    padding-top: 5vh;
+  }
 }
 .contact-image {
   height: 10vh;
@@ -29,6 +38,10 @@ $vertical-spacing: 30px;
   flex-direction: row;
   pointer-events: visible;
   margin-bottom: $bottom-margins;
+  @media (max-width: $media-breaking-point) {
+    height: 100%;
+    flex-direction: column;
+  }
 }
 .contact-info-cv {
   margin-top: $vertical-spacing;
@@ -42,12 +55,18 @@ $vertical-spacing: 30px;
   &:hover {
     text-decoration: underline;
   }
+  @media (max-width: $media-breaking-point) {
+    font-size: 14px;
+  }
 }
 .contact-info-intro {
   display: flex;
   flex-direction: column;
   justify-content: end;
   width: 50vw;
+  @media (max-width: $media-breaking-point) {
+    width: 90%;
+  }
 }
 .contact-info-links {
   top: 0;
@@ -60,6 +79,13 @@ $vertical-spacing: 30px;
     line-height: 0.73em;
     color: $accent-color;
   }
+  @media (max-width: $media-breaking-point) {
+    padding-top: 10vh;
+    h2 {
+      font-size: 30px;
+      color: $font-color;
+    }
+  }
 }
 
 .contact-info-logos {
@@ -67,6 +93,10 @@ $vertical-spacing: 30px;
   flex-direction: row;
   gap: $overall-margins;
   margin-top: $vertical-spacing;
+  @media (max-width: $media-breaking-point) {
+    font-size: 24px;
+    gap: 20px;
+  }
 }
 
 .contact-info-mail {
@@ -80,6 +110,10 @@ $vertical-spacing: 30px;
   &:hover {
     text-decoration: underline;
   }
+  @media (max-width: $media-breaking-point) {
+    letter-spacing: 5px;
+    font-size: 14px;
+  }
 }
 .contact-info-text {
   padding-right: 30px;
@@ -87,4 +121,7 @@ $vertical-spacing: 30px;
   margin-top: $vertical-spacing;
   text-align: left;
   @include paragraph;
+  @media (max-width: $media-breaking-point) {
+    padding: 0;
+  }
 }

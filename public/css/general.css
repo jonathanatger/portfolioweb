@@ -281,6 +281,12 @@ h6 {
   font-size: 14px;
   pointer-events: all;
 }
+@media (max-width: 600px) {
+  .navbar-links-inactive {
+    letter-spacing: 5px;
+    font-size: 8px;
+  }
+}
 
 .navbar-links-active {
   color: #fff8eb;
@@ -297,6 +303,12 @@ h6 {
 .navbar-links-active:hover {
   font-weight: 600;
   cursor: pointer;
+}
+@media (max-width: 600px) {
+  .navbar-links-active {
+    letter-spacing: 5px;
+    font-size: 10px;
+  }
 }
 
 .navbar-menu {
@@ -855,6 +867,14 @@ h6 {
   width: 66%;
   z-index: 1;
 }
+@media (max-width: 600px) {
+  .projects-image-container {
+    padding: 0;
+    padding-bottom: 5px;
+    margin: 0;
+    width: 90%;
+  }
+}
 
 .projects-info {
   width: 34%;
@@ -866,6 +886,14 @@ h6 {
   margin-right: 60px;
   margin-left: 30px;
   pointer-events: all;
+}
+@media (max-width: 600px) {
+  .projects-info {
+    padding: 0;
+    padding-top: 15px;
+    margin: 0;
+    width: 90%;
+  }
 }
 
 .projects-links {
@@ -911,6 +939,11 @@ h6 {
   justify-content: space-between;
   pointer-events: all;
 }
+@media (max-width: 600px) {
+  .projects-individual-project {
+    flex-direction: column-reverse;
+  }
+}
 
 .projects-main-container {
   padding: 100vh 0 0 0;
@@ -930,6 +963,11 @@ h6 {
   transition: transform 0.1s ease;
   transform: scale(1, 1);
   transform-origin: center center;
+}
+@media (max-width: 600px) {
+  .projects-main-image {
+    transform: scale(1, 1);
+  }
 }
 
 .projects-main-scrollbehavior {
@@ -1005,6 +1043,12 @@ h6 {
   text-decoration: underline;
   cursor: pointer;
 }
+@media (max-width: 600px) {
+  .projects-title {
+    width: 100%;
+    font-size: 30px;
+  }
+}
 
 .contact-main-container {
   grid-column: 1/3;
@@ -1015,6 +1059,11 @@ h6 {
   justify-content: center;
   height: 100vh;
 }
+@media (max-width: 600px) {
+  .contact-main-container {
+    height: 100%;
+  }
+}
 
 .contact-points {
   padding: 0;
@@ -1023,6 +1072,14 @@ h6 {
   display: grid;
   grid-template-columns: repeat(10, 1);
   grid-template-rows: repeat(10, 1);
+}
+@media (max-width: 600px) {
+  .contact-points {
+    height: 15vh;
+    width: 100%;
+    grid-template-rows: repeat(3, 1);
+    padding-top: 5vh;
+  }
 }
 
 .contact-image {
@@ -1037,6 +1094,12 @@ h6 {
   flex-direction: row;
   pointer-events: visible;
   margin-bottom: 120px;
+}
+@media (max-width: 600px) {
+  .contact-info {
+    height: 100%;
+    flex-direction: column;
+  }
 }
 
 .contact-info-cv {
@@ -1057,12 +1120,22 @@ h6 {
 .contact-info-cv:hover {
   text-decoration: underline;
 }
+@media (max-width: 600px) {
+  .contact-info-cv {
+    font-size: 14px;
+  }
+}
 
 .contact-info-intro {
   display: flex;
   flex-direction: column;
   justify-content: end;
   width: 50vw;
+}
+@media (max-width: 600px) {
+  .contact-info-intro {
+    width: 90%;
+  }
 }
 
 .contact-info-links {
@@ -1077,12 +1150,27 @@ h6 {
   line-height: 0.73em;
   color: #f5bb50;
 }
+@media (max-width: 600px) {
+  .contact-info-links {
+    padding-top: 10vh;
+  }
+  .contact-info-links h2 {
+    font-size: 30px;
+    color: #fff8eb;
+  }
+}
 
 .contact-info-logos {
   display: flex;
   flex-direction: row;
   gap: 40px;
   margin-top: 30px;
+}
+@media (max-width: 600px) {
+  .contact-info-logos {
+    font-size: 24px;
+    gap: 20px;
+  }
 }
 
 .contact-info-mail {
@@ -1102,6 +1190,12 @@ h6 {
 .contact-info-mail:hover {
   text-decoration: underline;
 }
+@media (max-width: 600px) {
+  .contact-info-mail {
+    letter-spacing: 5px;
+    font-size: 14px;
+  }
+}
 
 .contact-info-text {
   padding-right: 30px;
@@ -1116,6 +1210,11 @@ h6 {
   font-weight: 200;
   line-height: 1.4em;
   letter-spacing: 2px;
+}
+@media (max-width: 600px) {
+  .contact-info-text {
+    padding: 0;
+  }
 }
 
 .cv-ed-exp-header {

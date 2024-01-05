@@ -55,6 +55,10 @@
   letter-spacing: 7px;
   font-size: 14px;
   pointer-events: all;
+  @media (max-width: $media-breaking-point) {
+    letter-spacing: 5px;
+    font-size: 8px;
+  }
 }
 
 .navbar-links-active {
@@ -67,6 +71,10 @@
   &:hover {
     font-weight: 600;
     cursor: pointer;
+  }
+  @media (max-width: $media-breaking-point) {
+    letter-spacing: 5px;
+    font-size: 10px;
   }
 }
 
