@@ -45,12 +45,11 @@ export const HeroSectionImage = ({ fadeHeroSection }) => {
     : "hero-section-image";
 
   return (
-    <div className="hero-section-picture">
+    <div className="hero-section-image-container">
       <img
         src={Corporateimage}
         className={styling}
-        alt="Picture of Jonathan"
-      ></img>
+        alt="Picture of Jonathan"></img>
     </div>
   );
 };

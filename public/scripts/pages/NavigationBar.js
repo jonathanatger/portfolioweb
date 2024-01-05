@@ -84,16 +84,15 @@ const NavigationBar = function ({
   return (
     <nav id="navbar-container" className="navbar-container">
       <div className="navbar-side-info ">
-        <div
+        <h3
           className={
             "navbar-side-info-top navbar-visible" + sectionSignStyling()
-          }
-        >
+          }>
           {sectionSign}
-        </div>
-        <div className="navbar-side-info-side navbar-visible">
+        </h3>
+        <h3 className="navbar-side-info-side navbar-visible">
           CODE + DESIGN JONATHAN ATGER - 2023
-        </div>
+        </h3>
       </div>
       <div className="navbar-menu navbar-visible">
         <ul className="navbar-visible">
@@ -123,8 +122,7 @@ const NavigationBar = function ({
 
               return !prevVisibility;
             });
-          }}
-        >
+          }}>
           <div></div>
           <div></div>
           <div></div>

@@ -1,18 +1,15 @@
 @import "hElements.scss";
 
-.grid-filler {
-  height: 20vh;
-}
-
 .hero-section {
   position: fixed;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
   display: flex;
   flex-direction: row;
   align-items: end;
+  @media (max-width: $media-breaking-point) {
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+  }
   height: 100vh;
 }
 
@@ -20,6 +17,12 @@
   height: 100%;
   z-index: -1;
   transition: opacity 0.5s ease;
+  padding-right: $overall-margins;
+  @media (max-width: $media-breaking-point) {
+    padding-right: 0;
+    height: 35vh;
+    transform: scale(-1, 1);
+  }
 }
 
 .hero-section-image-fade {
@@ -46,24 +49,32 @@
   }
 }
 .hero-section-message-accent {
-  @include hero-section;
   color: $accent-color;
   font-weight: 500;
 }
 .hero-section-message-italic {
-  @include hero-section;
   font-style: italic;
   font-weight: 300;
 }
 
-.hero-section-picture {
-  flex: 1;
+.hero-section-image-container {
   height: 70vh;
+
+  padding-right: $overall-margins;
 
   opacity: 50%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  @media (max-width: $media-breaking-point) {
+    padding-right: 0;
+    flex-direction: column;
+
+    justify-content: end;
+    align-items: center;
+    height: 35vh;
+  }
 }
 
 .homepage-disappear {
@@ -79,9 +90,13 @@
 .homepage-main-grid {
   top: 0;
   margin: 0 $overall-margins;
-  // position: absolute;
-  overflow: auto;
-  display: grid;
+  @media (max-width: $media-breaking-point) {
+    margin: 0 20px;
+  }
+
+  // display: grid;
+  display: flex;
+  flex-direction: column;
 
   pointer-events: none;
   grid-template-columns: $left-side-proportion auto;

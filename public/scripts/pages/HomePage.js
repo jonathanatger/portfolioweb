@@ -59,12 +59,10 @@ export const Homepage = function ({
         </div>
         <HeroSectionImage fadeHeroSection={fadeHeroSection} />
       </div>
-      <div className="grid-filler"></div>
       <div id="projects-main-container" className="projects-main-container">
         <h1
           id="projects-main-title"
-          className={"projects-main-title" + disappearingElementsStyling()}
-        >
+          className={"projects-main-title" + disappearingElementsStyling()}>
           ./PROJETS
         </h1>
         {projects.map((project, i) => {
@@ -86,15 +84,16 @@ export const Homepage = function ({
               scrollPosition={scrollPosition}
               informationDisplayed={informationDisplayed}
               displayedProjectId={displayedProjectId}
+              github={project.github}
+              webpage={project.webpage}
+              twitter={project.twitter}
             />
           );
         })}
       </div>
-      <div className="grid-filler"></div>
       <div
         id="contact-main-container"
-        className={"contact-main-container" + disappearingElementsStyling()}
-      >
+        className={"contact-main-container" + disappearingElementsStyling()}>
         <Curtain />
         <ContactInfo />
       </div>

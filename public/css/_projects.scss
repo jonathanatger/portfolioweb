@@ -1,5 +1,18 @@
 @import "hElements.scss";
 
+.link-image {
+  height: 100%;
+  width: 100px;
+  transition: transform 0.1s ease;
+  transform-origin: center center;
+  transform: scale(0.95, 0.95);
+  &:hover {
+    transition: transform 0.1s ease;
+    transform: scale(1, 1);
+    transform-origin: center center;
+  }
+}
+
 //Additional images----------------------
 .projects-additional-images-base {
   width: 100%;
@@ -80,7 +93,6 @@
 }
 .projects-image-container {
   padding: $overall-margins 0 0 0;
-  margin: 0;
   pointer-events: all;
   display: flex;
   flex-direction: column;
@@ -99,11 +111,45 @@
   margin-left: $secondary-margins;
   pointer-events: all;
 }
+.projects-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  height: 100px;
+
+  a {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    margin-right: 20px;
+  }
+  a::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+
+  a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  a::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    margin: -5px;
+    border-radius: 5px;
+    inset: 0 0 0 0;
+    background: $accent-color;
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+}
 
 .projects-individual-project {
   width: 100%;
   display: flex;
-  flex: 2 1 auto;
+  // flex: 2 1 auto;
   flex-direction: row;
   height: 100%;
 
@@ -114,12 +160,11 @@
 }
 
 .projects-main-container {
-  grid-row: 3/4;
-  grid-column: 1/3;
+  // grid-row: 3/4;
+  // grid-column: 1/3;
+  padding: 100vh 0 0 0;
   display: flex;
   flex-direction: column;
-
-  padding: 0;
 }
 .projects-main-image {
   width: 100%;
@@ -143,6 +188,53 @@
 }
 .projects-main-scrollbehavior::-webkit-scrollbar {
   display: none;
+}
+.projects-return-container {
+  height: fit-content;
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+}
+
+.projects-return-container::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.projects-return-container:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.projects-return-container::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  margin: -5px;
+  border-radius: 5px;
+  inset: 0 0 0 0;
+  background: $accent-color;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.projects-return-image {
+  height: fit-content;
+  width: fit-content;
+  transition: transform 0.1s ease;
+  transform-origin: center center;
+  transform: scale(0.95, 0.95);
+  position: relative;
+  &:hover {
+    transition: transform 0.1s ease;
+    transform: scale(1, 1);
+    transform-origin: center center;
+  }
+}
+.projects-spacer {
+  width: 100%;
+  margin: 2vh 0 2vh 0;
+  border-top: 1px $font-color solid;
 }
 .projects-main-title {
   color: $accent-color;

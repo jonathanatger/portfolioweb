@@ -10,7 +10,12 @@
 .hamburger {
   z-index: 99;
   pointer-events: all;
+
   margin-right: $overall-margins;
+  @media (max-width: $media-breaking-point) {
+    margin-right: 20px;
+  }
+
   &:hover {
     transition: transform 0.1s ease;
     transform: scale(1.2, 1.2);
@@ -34,14 +39,21 @@
   height: 100%;
   position: fixed;
   bottom: 0;
+
   pointer-events: none;
   z-index: 99;
+  @media (max-width: $media-breaking-point) {
+    top: 0;
+    height: 100vh;
+  }
 }
 
 .navbar-links-inactive {
   color: $font-color;
   text-decoration: none;
   @include menu-links;
+  letter-spacing: 7px;
+  font-size: 14px;
   pointer-events: all;
 }
 
@@ -49,6 +61,8 @@
   color: $font-color;
   padding-right: -7px;
   @include menu-links;
+  letter-spacing: 7px;
+  font-size: 14px;
   pointer-events: all;
   &:hover {
     font-weight: 600;
@@ -81,6 +95,9 @@
 .navbar-menu > ul {
   padding: 20px 0 20px 0;
   margin: 0 $overall-margins 0 $overall-margins;
+  @media (max-width: $media-breaking-point) {
+    margin: 0 20px 0 20px;
+  }
 
   width: $left-side-proportion;
   height: fit-content;
@@ -126,6 +143,10 @@
 
 .navbar-side-info {
   margin: $overall-margins;
+  @media (max-width: $media-breaking-point) {
+    margin: 20px;
+  }
+
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -135,6 +156,9 @@
   display: flex;
   @include hero-section;
   font-size: 40px;
+  @media (max-width: $media-breaking-point) {
+    font-size: 30px;
+  }
   padding-right: $secondary-margins;
 }
 
@@ -144,6 +168,15 @@
   transform: scale(-1, -1);
   right: 0;
   @include menu-links;
+
+  letter-spacing: 7px;
+  font-size: 14px;
+
+  margin: 0;
+  @media (max-width: $media-breaking-point) {
+    letter-spacing: 5px;
+    font-size: 10px;
+  }
 }
 
 .navbar-visible {

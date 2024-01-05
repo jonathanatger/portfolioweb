@@ -4,25 +4,27 @@ import RevitImage from "../../../content/CaptureOB.png";
 
 export const projects = [
   {
-    key: "btg",
+    key: "blog",
     srcImage: BlogImage,
-    title: "A great art piece",
+    title: "blog thing",
     description:
       "This piece is a great example of code, AI and network used together to create an emotinal artpiece.",
+    webpage: "https://outputbuilding.wordpress.com/",
+    github: "https://outputbuilding.wordpress.com/",
+    twitter: "https://outputbuilding.wordpress.com/",
 
     otherImages: [BlogImage, BlogImage, BlogImage],
   },
   {
     key: "revit",
     srcImage: RevitImage,
-    title: "A great art piece",
-    description:
-      "This piece is a great example of code, AI and network used together to create an emotinal artpiece.",
+    title: "Revit Plugins",
+    description: "Great plugins a good fun for a bored architect",
   },
   {
     key: "dynamo",
     srcImage: RevitImage,
-    title: "A great art piece",
+    title: "Dynamo open source work",
     description:
       "This piece is a great example of code, AI and network used together to create an emotinal artpiece.",
   },

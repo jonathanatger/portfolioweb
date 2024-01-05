@@ -47,7 +47,8 @@ const App = () => {
   const debounceHandleScrollDirection = _debounce(handleScrollDirection, 20);
 
   useEffect(() => {
-    let fadeAway = scrollPosition > 250 ? true : false;
+    let threshold = window.screen.width > 600 ? 250 : 0;
+    let fadeAway = scrollPosition > threshold ? true : false;
     if (fadeAway && !fadeHeroSection) setFadeHeroSection(true);
     if (!fadeAway && fadeHeroSection) setFadeHeroSection(false);
   }, [scrollPosition]);
