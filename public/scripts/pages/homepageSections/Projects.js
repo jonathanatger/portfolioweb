@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
-import { lenis } from "../../AppIndex.js";
 import { HOMEPAGE, PROJECT, CV } from "../../AppIndex.js";
 import GithubImage from "../../../content/ico-github-96.png";
 import TwitterImage from "../../../content/ico-twitter-250.png";
